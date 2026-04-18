@@ -1,4 +1,4 @@
-import { redirect } from '@/i18n/routing';
+import { redirect } from 'next/navigation';
 
 export default async function ProgramsIndexPage({
   params,
@@ -6,5 +6,5 @@ export default async function ProgramsIndexPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  redirect({ href: '/programs/batch', locale });
+  redirect(`/${locale}/programs/batch`);
 }
