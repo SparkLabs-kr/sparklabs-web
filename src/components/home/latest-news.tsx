@@ -48,7 +48,7 @@ export async function LatestNews({ locale }: { locale: Locale }) {
             {entries.map((entry) => (
               <Link
                 key={entry.slug}
-                href="/newsroom"
+                href={`/newsroom/press/${entry.slug}` as any}
                 className="card-light group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-card-hover"
               >
                 <div className="flex items-center justify-between">

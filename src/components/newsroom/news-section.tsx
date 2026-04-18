@@ -1,20 +1,25 @@
-import { setRequestLocale, getTranslations } from 'next-intl/server';
-import { getAllNews } from '@/lib/newsroom';
-import { NewsCard, type NewsKind } from '@/components/newsroom/news-card';
+import { getTranslations } from 'next-intl/server';
+import { NewsCard, type NewsKind } from './news-card';
+import { getNewsByKind } from '@/lib/newsroom';
 import type { Locale } from '@/lib/content';
 
-export default async function NewsroomPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale: rawLocale } = await params;
-  const locale = rawLocale as Locale;
-  setRequestLocale(locale);
+interface Props {
+  kind: NewsKind;
+  locale: Locale;
+  heroTitle: { ko: string; en: string };
+  heroSubcopy: { ko: string; en: string };
+  empty: { ko: string; en: string };
+}
 
+export async function NewsSection({
+  kind,
+  locale,
+  heroTitle,
+  heroSubcopy,
+  empty,
+}: Props) {
   const t = await getTranslations('newsroom');
-  const items = getAllNews(locale);
-  const copy = content[locale];
+  const items = getNewsByKind(kind, locale);
 
   const kindLabel: Record<NewsKind, string> = {
     press: t('press'),
@@ -31,12 +36,14 @@ export default async function NewsroomPage({
           aria-hidden="true"
         />
         <div className="container-narrow relative py-20 md:py-24">
-          <span className="eyebrow !text-spark-yellow">{copy.eyebrow}</span>
+          <span className="eyebrow !text-spark-yellow">
+            {kindLabel[kind]}
+          </span>
           <h1 className="mt-4 text-display-lg max-w-3xl leading-[1.05]">
-            {copy.heroTitle}
+            {heroTitle[locale]}
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75 leading-relaxed">
-            {copy.heroSubcopy}
+            {heroSubcopy[locale]}
           </p>
         </div>
       </section>
@@ -45,7 +52,7 @@ export default async function NewsroomPage({
         <div className="container-narrow">
           {items.length === 0 ? (
             <div className="rounded-2xl border border-dashed border-surface-border p-12 text-center text-ink-soft">
-              {copy.empty}
+              {empty[locale]}
             </div>
           ) : (
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -64,20 +71,3 @@ export default async function NewsroomPage({
     </>
   );
 }
-
-const content = {
-  ko: {
-    eyebrow: 'Newsroom',
-    heroTitle: '스파크랩의 최신 소식과 인사이트.',
-    heroSubcopy:
-      '보도자료, 언론 보도, 인사이트, 공지사항까지 — 스파크랩과 포트폴리오사의 이야기를 한 곳에서 만나보세요.',
-    empty: '아직 뉴스룸 콘텐츠가 없습니다.',
-  },
-  en: {
-    eyebrow: 'Newsroom',
-    heroTitle: 'Latest news and perspectives from SparkLabs.',
-    heroSubcopy:
-      "Press releases, media coverage, insights, and announcements — everything from SparkLabs and our portfolio, in one place.",
-    empty: 'No newsroom content yet.',
-  },
-} as const;
