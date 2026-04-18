@@ -25,11 +25,10 @@
     "byEntity": "By Entity"
   },
   "programs": {
-    "accelerator": "Accelerator",
-    "biolabs": "SparkBioLabs",
+    "batch": "Batch Program",
+    "partnership": "Partnership Program",
     "sparkClaw": "Spark Claw",
-    "saudi": "Tech Founders in Korea",
-    "demoday": "Demo Day"
+    "global": "Global Program"
   },
   "newsroom": {
     "all": "All",
