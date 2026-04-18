@@ -1,8 +1,8 @@
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import { entities } from '@/lib/entities';
 import { getNewsByKind } from '@/lib/newsroom';
-import { NewsCard } from '@/components/newsroom/news-card';
+import { NewsCard, type NewsKind } from '@/components/newsroom/news-card';
 import type { Locale } from '@/lib/content';
 
 const regionOrder: Array<'APAC' | 'Americas' | 'MENA' | 'ANZ'> = [
@@ -32,6 +32,14 @@ export default async function GlobalProgramPage({
   setRequestLocale(locale);
 
   const copy = content[locale];
+
+  const tNews = await getTranslations({ locale, namespace: 'newsroom' });
+  const kindLabel: Record<NewsKind, string> = {
+    press: tNews('press'),
+    media: tNews('media'),
+    insights: tNews('insights'),
+    announcements: tNews('announcements'),
+  };
 
   // Rolling open-call announcements pulled from Newsroom → Announcements.
   // Tag-driven: items tagged 'open-call' or 'program' show up here.
@@ -127,7 +135,12 @@ export default async function GlobalProgramPage({
           {announcements.length > 0 ? (
             <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {announcements.map((item) => (
-                <NewsCard key={`${item.kind}-${item.slug}`} item={item} locale={locale} />
+                <NewsCard
+                  key={`${item.kind}-${item.slug}`}
+                  item={item}
+                  locale={locale}
+                  kindLabel={kindLabel}
+                />
               ))}
             </div>
           ) : (
