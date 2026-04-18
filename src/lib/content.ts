@@ -16,6 +16,7 @@ export type Collection =
   | 'portfolio'
   | 'programs'
   | 'press'
+  | 'media'
   | 'insights'
   | 'announcements';
 
