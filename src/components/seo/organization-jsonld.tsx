@@ -25,6 +25,7 @@ export function OrganizationJsonLd({ locale }: Props) {
       '@type': 'PostalAddress',
       streetAddress: '180 Yeoksam-ro, Gangnam-gu',
       addressLocality: 'Seoul',
+      postalCode: '06248',
       addressCountry: 'KR',
     },
     sameAs: [
