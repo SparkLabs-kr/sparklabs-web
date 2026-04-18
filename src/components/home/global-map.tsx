@@ -1,63 +1,108 @@
 'use client';
 
 import { useState } from 'react';
+import {
+  ComposableMap,
+  Geographies,
+  Geography,
+  Marker,
+  ZoomableGroup,
+} from 'react-simple-maps';
 import type { EntityMeta } from '@/lib/entities';
 
-/**
- * Lightweight SVG world-map with entity pins.
- *
- * Phase 1 uses a simplified world silhouette via dot-grid + positioned pins.
- * In Phase 2 we will swap to `react-simple-maps` with the real geo-topojson
- * for proper projections. This placeholder keeps the bundle tiny for now.
- */
+// TopoJSON world atlas (countries, 110m resolution) — ~100KB, cached at CDN edge
+const GEO_URL =
+  'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
+
 export function GlobalMap({ entities }: { entities: EntityMeta[] }) {
   const [active, setActive] = useState<string | null>(null);
 
   return (
-    <div className="relative rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.03] to-white/[0.01] p-6 md:p-10">
-      <div className="relative aspect-[16/8] w-full">
-        {/* dot-grid world silhouette */}
-        <div
-          className="absolute inset-0 opacity-50"
-          style={{
-            backgroundImage:
-              'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)',
-            backgroundSize: '14px 14px',
-            maskImage:
-              'url(https://cdn.jsdelivr.net/npm/world-atlas@2/land-110m.json)',
-          }}
-          aria-hidden="true"
-        />
-        {entities.map((e) => {
-          // Convert lng/lat to percentage (Equirectangular projection, clamped)
-          const [lng, lat] = e.coordinates;
-          const x = ((lng + 180) / 360) * 100;
-          const y = ((90 - lat) / 180) * 100;
-          const isActive = active === e.slug;
-          return (
-            <button
-              key={e.slug}
-              type="button"
-              className="group absolute -translate-x-1/2 -translate-y-1/2"
-              style={{ left: `${x}%`, top: `${y}%` }}
-              onMouseEnter={() => setActive(e.slug)}
-              onMouseLeave={() => setActive(null)}
-              onFocus={() => setActive(e.slug)}
-              onBlur={() => setActive(null)}
-              aria-label={e.name.en}
-            >
-              <span className="relative flex h-3 w-3 items-center justify-center">
-                <span className="absolute inline-flex h-full w-full animate-pulse-soft rounded-full bg-spark-orange/60" />
-                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-spark-orange ring-2 ring-navy-deep" />
-              </span>
-              {isActive && (
-                <span className="pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-white px-3 py-1.5 text-xs font-semibold text-ink shadow-card">
-                  {e.shortName ?? e.name.en}
-                </span>
-              )}
-            </button>
-          );
-        })}
+    <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.04] to-white/[0.01] p-4 md:p-6">
+      <div className="relative">
+        <ComposableMap
+          projection="geoEqualEarth"
+          projectionConfig={{ scale: 175 }}
+          width={980}
+          height={460}
+          style={{ width: '100%', height: 'auto' }}
+        >
+          <ZoomableGroup center={[20, 20]} zoom={1} disablePanning>
+            <Geographies geography={GEO_URL}>
+              {({ geographies }) =>
+                geographies.map((geo) => (
+                  <Geography
+                    key={geo.rsmKey}
+                    geography={geo}
+                    fill="rgba(255,255,255,0.06)"
+                    stroke="rgba(255,255,255,0.12)"
+                    strokeWidth={0.5}
+                    style={{
+                      default: { outline: 'none' },
+                      hover: { outline: 'none', fill: 'rgba(255,255,255,0.08)' },
+                      pressed: { outline: 'none' },
+                    }}
+                  />
+                ))
+              }
+            </Geographies>
+
+            {entities.map((e) => {
+              const isActive = active === e.slug;
+              return (
+                <Marker
+                  key={e.slug}
+                  coordinates={e.coordinates}
+                  onMouseEnter={() => setActive(e.slug)}
+                  onMouseLeave={() => setActive(null)}
+                  onFocus={() => setActive(e.slug)}
+                  onBlur={() => setActive(null)}
+                  style={{ default: { cursor: 'pointer' } }}
+                >
+                  {/* pulsing halo */}
+                  <circle
+                    r={10}
+                    fill="#F97A1F"
+                    fillOpacity={isActive ? 0.35 : 0.2}
+                    className="animate-pulse-soft"
+                  />
+                  {/* core pin */}
+                  <circle
+                    r={isActive ? 5 : 4}
+                    fill="#F97A1F"
+                    stroke="#0A1440"
+                    strokeWidth={2}
+                  />
+                  {isActive && (
+                    <g transform="translate(0, -16)">
+                      <rect
+                        x={-40}
+                        y={-14}
+                        rx={6}
+                        ry={6}
+                        width={80}
+                        height={20}
+                        fill="#FFFFFF"
+                      />
+                      <text
+                        textAnchor="middle"
+                        y={-1}
+                        style={{
+                          fontFamily: 'var(--font-inter), Inter, sans-serif',
+                          fontSize: 10,
+                          fontWeight: 600,
+                          fill: '#0A1440',
+                        }}
+                      >
+                        {e.shortName ?? e.name.en}
+                      </text>
+                    </g>
+                  )}
+                </Marker>
+              );
+            })}
+          </ZoomableGroup>
+        </ComposableMap>
       </div>
 
       <p className="mt-4 text-center text-xs uppercase tracking-[0.18em] text-white/40">

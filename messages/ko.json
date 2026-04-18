@@ -5,11 +5,11 @@
   },
   "nav": {
     "home": "홈",
-    "about": "회사 소개",
+    "about": "회사소개",
     "portfolio": "포트폴리오",
     "programs": "프로그램",
     "newsroom": "뉴스룸",
-    "contact": "문의",
+    "contact": "문의하기",
     "apply": "지원하기"
   },
   "about": {
@@ -109,8 +109,8 @@
     "cta": "모든 프로그램 보기"
   },
   "footer": {
-    "about": "회사 소개",
-    "contact": "문의",
+    "about": "회사소개",
+    "contact": "문의하기",
     "address": "서울특별시 강남구 역삼로 180, 마루180 2-3층",
     "legal": {
       "privacy": "개인정보 처리방침",
