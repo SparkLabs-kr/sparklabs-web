@@ -1,0 +1,126 @@
+{
+  "site": {
+    "name": "SparkLabs",
+    "tagline": "Entrepreneurs Growing Entrepreneurs"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "programs": "Programs",
+    "newsroom": "Newsroom",
+    "contact": "Contact",
+    "apply": "Apply"
+  },
+  "about": {
+    "overview": "Overview",
+    "team": "Team",
+    "entities": "Global Entities",
+    "partnerships": "Partnerships"
+  },
+  "portfolio": {
+    "all": "All Portfolio",
+    "ai": "AI Portfolio",
+    "byEntity": "By Entity"
+  },
+  "programs": {
+    "accelerator": "Accelerator",
+    "biolabs": "SparkBioLabs",
+    "sparkClaw": "Spark Claw",
+    "saudi": "Tech Founders in Korea",
+    "demoday": "Demo Day"
+  },
+  "newsroom": {
+    "all": "All",
+    "press": "Press Releases",
+    "media": "Media Coverage",
+    "insights": "Insights",
+    "announcements": "Announcements"
+  },
+  "hero": {
+    "badge": "Global · AI-First",
+    "headline1": "Entrepreneurs",
+    "headline2": "Growing Entrepreneurs",
+    "subcopy": "A global accelerator network across six continents, discovering and scaling the founders building the AI era.",
+    "primaryCta": "Apply to Accelerator",
+    "secondaryCta": "Explore Portfolio"
+  },
+  "impact": {
+    "title": "SparkLabs by the Numbers",
+    "metrics": {
+      "globalStartups": "Global Portfolio",
+      "koreanCore": "Korean Core",
+      "valuation": "Portfolio Valuation",
+      "exits": "Exits (IPO & M&A)",
+      "aum": "AUM",
+      "survivalRate": "Survival Rate"
+    }
+  },
+  "network": {
+    "title": "Global Network",
+    "subtitle": "Directly operated accelerators and funds across six continents",
+    "pillars": {
+      "presence": {
+        "title": "Direct Global Presence",
+        "body": "SparkLabs owns and operates accelerators and venture funds on six continents, giving founders a runway into each market."
+      },
+      "network": {
+        "title": "Global Portfolio Network",
+        "body": "Our portfolio companies connect across borders — sharing markets, tech and customers in one interconnected ecosystem."
+      },
+      "ecosystem": {
+        "title": "Ecosystem Synergy",
+        "body": "World-class partners, LPs and advisors accelerate the growth of every SparkLabs company."
+      }
+    }
+  },
+  "why": {
+    "title": "Why SparkLabs",
+    "items": {
+      "founders": {
+        "title": "By Founders, For Founders",
+        "body": "Partners who have built companies themselves invest, coach and open doors like one of your own."
+      },
+      "bornGlobal": {
+        "title": "Born Global, Not Go Global",
+        "body": "We back founders who design for the global market from day one, not as an afterthought."
+      },
+      "aiFirst": {
+        "title": "AI-First Investment Focus",
+        "body": "From OpenAI, Anthropic and Perplexity to Korea's AI leaders — we've been betting on the AI revolution early."
+      },
+      "sixContinents": {
+        "title": "Six Continents, One Ecosystem",
+        "body": "Locally run, globally connected — the SparkLabs network moves as one."
+      }
+    }
+  },
+  "ai": {
+    "title": "Strategic Focus: AI",
+    "subtitle": "$50M AIM AI Fund, backing the leaders of the AI era",
+    "cta": "Explore AI Portfolio"
+  },
+  "news": {
+    "title": "Latest News",
+    "cta": "Visit Newsroom"
+  },
+  "programsShort": {
+    "title": "Our Programs",
+    "cta": "See all programs"
+  },
+  "footer": {
+    "about": "About",
+    "contact": "Contact",
+    "address": "2-3F Maru180, 180 Yeoksam-ro, Gangnam-gu, Seoul, Korea",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "cookie": "Cookie Policy"
+    },
+    "copyright": "© {year} SparkLabs. All rights reserved."
+  },
+  "locale": {
+    "ko": "한국어",
+    "en": "English"
+  }
+}

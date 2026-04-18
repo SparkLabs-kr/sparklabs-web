@@ -1,0 +1,126 @@
+{
+  "site": {
+    "name": "SparkLabs",
+    "tagline": "Entrepreneurs Growing Entrepreneurs"
+  },
+  "nav": {
+    "home": "홈",
+    "about": "회사 소개",
+    "portfolio": "포트폴리오",
+    "programs": "프로그램",
+    "newsroom": "뉴스룸",
+    "contact": "문의",
+    "apply": "지원하기"
+  },
+  "about": {
+    "overview": "Overview",
+    "team": "팀",
+    "entities": "글로벌 엔티티",
+    "partnerships": "파트너십"
+  },
+  "portfolio": {
+    "all": "전체 포트폴리오",
+    "ai": "AI 포트폴리오",
+    "byEntity": "엔티티별"
+  },
+  "programs": {
+    "accelerator": "액셀러레이터",
+    "biolabs": "SparkBioLabs",
+    "sparkClaw": "Spark Claw",
+    "saudi": "Tech Founders in Korea",
+    "demoday": "데모데이"
+  },
+  "newsroom": {
+    "all": "전체",
+    "press": "보도자료",
+    "media": "언론 보도",
+    "insights": "인사이트",
+    "announcements": "공지사항"
+  },
+  "hero": {
+    "badge": "Global · AI-First",
+    "headline1": "Entrepreneurs",
+    "headline2": "Growing Entrepreneurs",
+    "subcopy": "스파크랩은 6대륙을 무대로, AI 시대의 글로벌 창업가를 발굴하고 키워내는 세계적 액셀러레이터 네트워크입니다.",
+    "primaryCta": "액셀러레이터 지원",
+    "secondaryCta": "포트폴리오 보기"
+  },
+  "impact": {
+    "title": "숫자로 보는 스파크랩",
+    "metrics": {
+      "globalStartups": "글로벌 투자 스타트업",
+      "koreanCore": "한국 주요 포트폴리오",
+      "valuation": "포트폴리오 가치",
+      "exits": "엑싯(IPO·M&A)",
+      "aum": "운용 자산",
+      "survivalRate": "생존율"
+    }
+  },
+  "network": {
+    "title": "글로벌 네트워크",
+    "subtitle": "직접 운영하는 6대륙의 액셀러레이터와 펀드",
+    "pillars": {
+      "presence": {
+        "title": "Direct Global Presence",
+        "body": "6대륙에서 직접 운영하는 액셀러레이터와 벤처캐피털이 창업가의 해외 진출을 뒷받침합니다."
+      },
+      "network": {
+        "title": "Global Portfolio Network",
+        "body": "글로벌 포트폴리오사들이 서로 연결되며 시장·기술·고객을 공유하는 생태계를 형성합니다."
+      },
+      "ecosystem": {
+        "title": "Ecosystem Synergy",
+        "body": "세계적 파트너·LP·어드바이저 네트워크가 포트폴리오사의 성장을 가속합니다."
+      }
+    }
+  },
+  "why": {
+    "title": "Why SparkLabs",
+    "items": {
+      "founders": {
+        "title": "By Founders, For Founders",
+        "body": "창업가 출신 파트너들이 창업가의 시각으로 투자하고 성장을 돕습니다."
+      },
+      "bornGlobal": {
+        "title": "Born Global, Not Go Global",
+        "body": "한국 시장을 넘어 처음부터 글로벌 시장을 설계하는 창업가를 지원합니다."
+      },
+      "aiFirst": {
+        "title": "AI-First Investment Focus",
+        "body": "OpenAI·Anthropic·Perplexity부터 한국의 AI 리더까지, AI 혁명에 일찍부터 베팅해왔습니다."
+      },
+      "sixContinents": {
+        "title": "Six Continents, One Ecosystem",
+        "body": "스파크랩 글로벌 네트워크는 각 지역의 독립성을 유지하면서도 하나의 생태계로 움직입니다."
+      }
+    }
+  },
+  "ai": {
+    "title": "Strategic Focus: AI",
+    "subtitle": "$50M AIM AI Fund로 AI 시대 리더들에 베팅합니다",
+    "cta": "AI 포트폴리오 살펴보기"
+  },
+  "news": {
+    "title": "Latest News",
+    "cta": "뉴스룸으로"
+  },
+  "programsShort": {
+    "title": "지원 프로그램",
+    "cta": "모든 프로그램 보기"
+  },
+  "footer": {
+    "about": "회사 소개",
+    "contact": "문의",
+    "address": "서울특별시 강남구 역삼로 180, 마루180 2-3층",
+    "legal": {
+      "privacy": "개인정보 처리방침",
+      "terms": "이용약관",
+      "cookie": "쿠키 정책"
+    },
+    "copyright": "© {year} SparkLabs. All rights reserved."
+  },
+  "locale": {
+    "ko": "한국어",
+    "en": "English"
+  }
+}

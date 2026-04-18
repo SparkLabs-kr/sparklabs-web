@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-pretendard: 'Pretendard Variable', 'Pretendard', system-ui, sans-serif;
+    --font-inter: 'Inter', system-ui, sans-serif;
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-surface text-ink font-sans antialiased;
+    font-feature-settings: 'cv11', 'ss01', 'ss03';
+  }
+
+  /* Focus ring (accessible) */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-blue;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0s !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0s !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .container-narrow {
+    @apply mx-auto w-full max-w-[1200px] px-6 md:px-10;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-primary {
+    @apply btn bg-brand-blue text-white hover:bg-brand-blue-soft;
+  }
+
+  .btn-ghost-dark {
+    @apply btn border border-white/30 text-white hover:bg-white/10;
+  }
+
+  .btn-ghost-light {
+    @apply btn border border-surface-border text-ink hover:bg-surface-subtle;
+  }
+
+  .card-light {
+    @apply rounded-2xl border border-surface-border bg-white shadow-card transition-shadow hover:shadow-card-hover;
+  }
+
+  .card-dark {
+    @apply rounded-2xl bg-navy text-white shadow-card;
+  }
+}
