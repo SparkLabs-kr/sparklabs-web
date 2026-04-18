@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
@@ -18,6 +19,51 @@ interface Frontmatter {
 }
 
 const validKinds: NewsKind[] = ['press', 'media', 'insights', 'announcements'];
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; kind: string; slug: string }>;
+}): Promise<Metadata> {
+  const { locale: rawLocale, kind, slug } = await params;
+  const locale = rawLocale as Locale;
+  if (!validKinds.includes(kind as NewsKind)) {
+    return {};
+  }
+  const entry = getEntry<Frontmatter>(kind as NewsKind, locale, slug);
+  if (!entry) return {};
+
+  const title = entry.frontmatter.title ?? slug;
+  const description =
+    entry.frontmatter.summary ??
+    (locale === 'ko'
+      ? '스파크랩 뉴스룸의 콘텐츠입니다.'
+      : 'A SparkLabs Newsroom article.');
+  const path = `/newsroom/${kind}/${slug}`;
+  const publishedTime = entry.frontmatter.date;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `/${locale}${path}`,
+      languages: {
+        ko: `/ko${path}`,
+        en: `/en${path}`,
+        'x-default': `/ko${path}`,
+      },
+    },
+    openGraph: {
+      type: 'article',
+      title,
+      description,
+      url: `/${locale}${path}`,
+      locale: locale === 'ko' ? 'ko_KR' : 'en_US',
+      ...(publishedTime ? { publishedTime } : {}),
+    },
+    twitter: { card: 'summary_large_image', title, description },
+  };
+}
 
 export async function generateStaticParams() {
   const locales: Locale[] = ['ko', 'en'];

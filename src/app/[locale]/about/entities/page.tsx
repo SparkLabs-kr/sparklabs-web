@@ -1,7 +1,18 @@
+import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { entities } from '@/lib/entities';
 import { GlobalMap } from '@/components/home/global-map';
+import { buildPageMetadata } from '@/lib/seo';
 import type { Locale } from '@/lib/content';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return buildPageMetadata({ locale, key: 'entities', path: '/about/entities' });
+}
 
 const regionOrder: Array<'APAC' | 'Americas' | 'MENA' | 'ANZ'> = [
   'APAC',

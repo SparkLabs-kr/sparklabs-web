@@ -1,7 +1,18 @@
+import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { getAllNews } from '@/lib/newsroom';
 import { NewsCard, type NewsKind } from '@/components/newsroom/news-card';
+import { buildPageMetadata } from '@/lib/seo';
 import type { Locale } from '@/lib/content';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return buildPageMetadata({ locale, key: 'newsroom', path: '/newsroom' });
+}
 
 export default async function NewsroomPage({
   params,

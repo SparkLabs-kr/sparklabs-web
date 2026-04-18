@@ -3,6 +3,97 @@
     "name": "SparkLabs",
     "tagline": "Entrepreneurs Growing Entrepreneurs"
   },
+  "seo": {
+    "brand": "SparkLabs",
+    "home": {
+      "title": "SparkLabs — Entrepreneurs Growing Entrepreneurs",
+      "description": "SparkLabs is a global AI-First investment firm with 14 entities across six continents. 550+ portfolio companies, a $50M AIM AI Fund, and early positions in OpenAI, Anthropic, and Perplexity — backing the founders of the AI era."
+    },
+    "about": {
+      "title": "About",
+      "description": "Since 2013, SparkLabs has connected founders to the world through 14 entities on six continents. Meet our team, our vision, and our global network."
+    },
+    "team": {
+      "title": "Team",
+      "description": "Serial entrepreneurs as partners, operators with 15+ years of experience, and a global advisory network — meet the people behind SparkLabs."
+    },
+    "entities": {
+      "title": "Global Entities",
+      "description": "Seoul, Daegu, Taipei, Bangkok, Ho Chi Minh City, Auckland, Dubai, Sydney, Silicon Valley — SparkLabs' global entity network."
+    },
+    "advisors": {
+      "title": "Advisors",
+      "description": "Industry leaders, serial entrepreneurs, and global executives who advise SparkLabs and its portfolio companies."
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "550+ SparkLabs portfolio companies — from early positions in OpenAI, Anthropic, and Perplexity to leading Korean AI startups."
+    },
+    "portfolioAi": {
+      "title": "AI Portfolio",
+      "description": "A curated view of SparkLabs' AI portfolio — from global frontier labs to Korea's leading AI-native startups shaping the AI-First era."
+    },
+    "programs": {
+      "title": "Programs",
+      "description": "Batch, Partnership, Spark Claw, Global — four SparkLabs programs designed for founders and organizations."
+    },
+    "programsBatch": {
+      "title": "Batch Program",
+      "description": "22-week accelerator. KRW 300M investment, a 550+ portfolio network, and a Demo Day finale — SparkLabs' flagship program for early-stage founders in Korea."
+    },
+    "programsPartnership": {
+      "title": "Partnership Program",
+      "description": "Custom accelerator programs for corporates, governments, universities, and research labs — designed to drive open innovation and cross-border expansion."
+    },
+    "programsSparkClaw": {
+      "title": "Spark Claw — AI-First Founder Program",
+      "description": "When AI becomes your team. A program for solo AI founders with KRW 50M–100M investment, API credits, a global SaaS starter pack, and an intensive bootcamp."
+    },
+    "programsGlobal": {
+      "title": "Global Program",
+      "description": "APAC, Americas, MENA, ANZ — SparkLabs' global program calendar and open calls across six continents."
+    },
+    "newsroom": {
+      "title": "Newsroom",
+      "description": "Press releases, media coverage, insights, and announcements from SparkLabs and its portfolio companies — all in one place."
+    },
+    "newsroomPress": {
+      "title": "Press Releases",
+      "description": "Official press releases issued by SparkLabs and its portfolio companies."
+    },
+    "newsroomMedia": {
+      "title": "Media Coverage",
+      "description": "Media coverage and external features of SparkLabs and its portfolio companies across major outlets."
+    },
+    "newsroomInsights": {
+      "title": "Insights",
+      "description": "Perspectives on startups, investing, AI, and global expansion — written by SparkLabs partners and portfolio founders."
+    },
+    "newsroomAnnouncements": {
+      "title": "Announcements",
+      "description": "Program calls, events, open applications, and other official SparkLabs announcements in one place."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Direct channels for founders, organizations, press, and general inquiries — reach the SparkLabs team."
+    },
+    "apply": {
+      "title": "Apply",
+      "description": "Batch, Spark Claw, Partnership — how to apply to SparkLabs programs, our evaluation criteria, and frequently asked questions."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "How SparkLabs collects, uses, shares, and retains personal information on its official website."
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "description": "The terms of service that apply when using the SparkLabs official website."
+    },
+    "cookiePolicy": {
+      "title": "Cookie Policy",
+      "description": "The cookies SparkLabs' website uses and how you can control them."
+    }
+  },
   "nav": {
     "home": "Home",
     "about": "About",

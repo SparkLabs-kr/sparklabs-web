@@ -2,9 +2,20 @@
 // Drafted 2026-04 as a placeholder following a standard Korean startup template.
 // Scope, jurisdiction, and liability language need counsel review.
 
+import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { LegalLayout } from '@/components/legal/legal-layout';
+import { buildPageMetadata } from '@/lib/seo';
 import type { Locale } from '@/lib/content';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return buildPageMetadata({ locale, key: 'terms', path: '/terms' });
+}
 
 export default async function TermsPage({
   params,

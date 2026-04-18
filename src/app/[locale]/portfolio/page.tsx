@@ -1,7 +1,18 @@
+import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { PortfolioExplorer } from '@/components/portfolio/portfolio-explorer';
 import { portfolio } from '@/lib/portfolio';
+import { buildPageMetadata } from '@/lib/seo';
 import type { Locale } from '@/lib/content';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return buildPageMetadata({ locale, key: 'portfolio', path: '/portfolio' });
+}
 
 export default async function PortfolioPage({
   params,

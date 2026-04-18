@@ -1,7 +1,22 @@
+import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
+import { buildPageMetadata } from '@/lib/seo';
 import type { Locale } from '@/lib/content';
 
 const SPARK_CLAW_URL = 'https://spark-claw.vercel.app';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return buildPageMetadata({
+    locale,
+    key: 'programsSparkClaw',
+    path: '/programs/spark-claw',
+  });
+}
 
 export default async function SparkClawPage({
   params,

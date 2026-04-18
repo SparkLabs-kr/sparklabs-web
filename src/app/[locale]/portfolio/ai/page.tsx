@@ -1,9 +1,20 @@
+import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { ArrowRight } from 'lucide-react';
 import { portfolio, type PortfolioCompany } from '@/lib/portfolio';
 import { entities } from '@/lib/entities';
+import { buildPageMetadata } from '@/lib/seo';
 import type { Locale } from '@/lib/content';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return buildPageMetadata({ locale, key: 'portfolioAi', path: '/portfolio/ai' });
+}
 
 export default async function AiPortfolioPage({
   params,

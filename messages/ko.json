@@ -3,6 +3,97 @@
     "name": "SparkLabs",
     "tagline": "Entrepreneurs Growing Entrepreneurs"
   },
+  "seo": {
+    "brand": "SparkLabs",
+    "home": {
+      "title": "SparkLabs — Entrepreneurs Growing Entrepreneurs",
+      "description": "스파크랩은 6대륙 14개 엔티티를 갖춘 글로벌 AI-First 투자사입니다. 550+ 포트폴리오, $50M AIM AI Fund, OpenAI·Anthropic 초기 투자 실적으로 AI 시대의 창업자를 지원합니다."
+    },
+    "about": {
+      "title": "회사소개",
+      "description": "2013년 설립 이후 6대륙 14개 엔티티를 통해 글로벌 창업 생태계를 연결해온 스파크랩의 비전, 팀, 네트워크를 소개합니다."
+    },
+    "team": {
+      "title": "팀",
+      "description": "연쇄 창업가 출신 파트너와 15+년 경력의 운영진, 그리고 글로벌 어드바이저로 구성된 스파크랩 팀을 만나보세요."
+    },
+    "entities": {
+      "title": "글로벌 엔티티",
+      "description": "서울, 대구, 타이베이, 방콕, 호치민, 오클랜드, 두바이, 시드니, 실리콘밸리 등 스파크랩의 글로벌 엔티티와 활동 지역을 소개합니다."
+    },
+    "advisors": {
+      "title": "Advisors",
+      "description": "업계 리더와 연쇄 창업가, 글로벌 기업 임원으로 구성된 스파크랩 어드바이저 네트워크를 소개합니다."
+    },
+    "portfolio": {
+      "title": "포트폴리오",
+      "description": "550+ 스파크랩 포트폴리오. OpenAI·Anthropic·Perplexity 초기 투자부터 국내 대표 AI 스타트업까지."
+    },
+    "portfolioAi": {
+      "title": "AI 포트폴리오",
+      "description": "AI-First 시대를 만들어가는 스파크랩의 AI 포트폴리오 큐레이션. 글로벌 리더부터 한국 대표 주자까지."
+    },
+    "programs": {
+      "title": "프로그램",
+      "description": "Batch, Partnership, Spark Claw, Global — 창업자와 조직을 위한 스파크랩의 네 가지 프로그램."
+    },
+    "programsBatch": {
+      "title": "Batch Program",
+      "description": "22주 액셀러레이팅 프로그램. 3억 원 투자, 550+ 포트폴리오 네트워크, 데모데이까지. 한국의 초기 창업자를 위한 스파크랩의 대표 프로그램."
+    },
+    "programsPartnership": {
+      "title": "Partnership Program",
+      "description": "글로벌 기업, 정부, 대학, 연구기관을 위한 맞춤형 액셀러레이팅 프로그램. 오픈 이노베이션과 글로벌 진출을 함께 설계합니다."
+    },
+    "programsSparkClaw": {
+      "title": "Spark Claw — AI-First 창업자 프로그램",
+      "description": "AI가 팀이 되는 시대. 1인 AI 창업자를 위한 5천만~1억 원 투자, API 크레딧, 글로벌 SaaS 패키지, 집중 부트캠프."
+    },
+    "programsGlobal": {
+      "title": "Global Program",
+      "description": "APAC, Americas, MENA, ANZ — 6대륙에 걸친 스파크랩의 글로벌 프로그램과 오픈 콜 일정."
+    },
+    "newsroom": {
+      "title": "뉴스룸",
+      "description": "스파크랩과 포트폴리오사의 보도자료, 언론 보도, 인사이트, 공지사항을 한곳에서 확인하세요."
+    },
+    "newsroomPress": {
+      "title": "보도자료",
+      "description": "스파크랩과 포트폴리오사가 직접 배포한 공식 보도자료 아카이브."
+    },
+    "newsroomMedia": {
+      "title": "언론 보도",
+      "description": "스파크랩과 포트폴리오사가 언급된 주요 매체 보도 및 미디어 커버리지 모음."
+    },
+    "newsroomInsights": {
+      "title": "인사이트",
+      "description": "창업, 투자, AI, 글로벌 진출 등 스파크랩 파트너와 포트폴리오 창업자가 쓴 관점과 분석."
+    },
+    "newsroomAnnouncements": {
+      "title": "공지사항",
+      "description": "프로그램 모집, 이벤트, 오픈 콜 등 스파크랩의 공식 공지를 한곳에서."
+    },
+    "contact": {
+      "title": "문의하기",
+      "description": "창업자, 조직, 언론, 일반 문의 등 용도별 담당자에게 바로 연결되는 스파크랩 공식 연락 채널."
+    },
+    "apply": {
+      "title": "지원하기",
+      "description": "Batch, Spark Claw, Partnership — 스파크랩 프로그램 지원 방법과 심사 기준, 자주 묻는 질문."
+    },
+    "privacy": {
+      "title": "개인정보 처리방침",
+      "description": "스파크랩 공식 웹사이트의 개인정보 수집·이용·제3자 제공·보유 기간에 관한 처리방침입니다."
+    },
+    "terms": {
+      "title": "이용약관",
+      "description": "스파크랩 공식 웹사이트 이용 시 적용되는 이용약관입니다."
+    },
+    "cookiePolicy": {
+      "title": "쿠키 정책",
+      "description": "스파크랩 웹사이트가 사용하는 쿠키의 종류와 이용자가 이를 제어할 수 있는 방법을 안내합니다."
+    }
+  },
   "nav": {
     "home": "홈",
     "about": "회사소개",

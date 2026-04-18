@@ -1,6 +1,17 @@
+import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { featuredAdvisors } from '@/lib/team';
+import { buildPageMetadata } from '@/lib/seo';
 import type { Locale } from '@/lib/content';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return buildPageMetadata({ locale, key: 'advisors', path: '/about/advisors' });
+}
 
 export default async function AboutAdvisorsPage({
   params,

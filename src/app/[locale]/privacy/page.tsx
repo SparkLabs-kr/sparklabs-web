@@ -2,9 +2,20 @@
 // Drafted 2026-04 as a placeholder following a standard Korean startup template
 // (개인정보보호법 · 정보통신망법). Scope and details need counsel review.
 
+import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { LegalLayout } from '@/components/legal/legal-layout';
+import { buildPageMetadata } from '@/lib/seo';
 import type { Locale } from '@/lib/content';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return buildPageMetadata({ locale, key: 'privacy', path: '/privacy' });
+}
 
 export default async function PrivacyPage({
   params,

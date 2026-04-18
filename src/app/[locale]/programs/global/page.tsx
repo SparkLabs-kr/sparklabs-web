@@ -1,9 +1,20 @@
+import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import { entities } from '@/lib/entities';
 import { getNewsByKind } from '@/lib/newsroom';
 import { NewsCard, type NewsKind } from '@/components/newsroom/news-card';
+import { buildPageMetadata } from '@/lib/seo';
 import type { Locale } from '@/lib/content';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return buildPageMetadata({ locale, key: 'programsGlobal', path: '/programs/global' });
+}
 
 const regionOrder: Array<'APAC' | 'Americas' | 'MENA' | 'ANZ'> = [
   'APAC',

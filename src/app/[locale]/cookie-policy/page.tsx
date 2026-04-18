@@ -1,6 +1,17 @@
 // TODO: Replace with legal-reviewed content before launch.
+import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { LegalLayout } from '@/components/legal/legal-layout';
+import { buildPageMetadata } from '@/lib/seo';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return buildPageMetadata({ locale, key: 'cookiePolicy', path: '/cookie-policy' });
+}
 
 export default async function CookiePolicyPage({
   params,
