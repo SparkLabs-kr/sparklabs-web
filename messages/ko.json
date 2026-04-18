@@ -13,10 +13,11 @@
     "apply": "지원하기"
   },
   "about": {
-    "overview": "Overview",
+    "overview": "개요",
     "team": "팀",
     "entities": "글로벌 엔티티",
-    "partnerships": "파트너십"
+    "partnerships": "파트너십",
+    "advisors": "어드바이저"
   },
   "portfolio": {
     "all": "전체 포트폴리오",
