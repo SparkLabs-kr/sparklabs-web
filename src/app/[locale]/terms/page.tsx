@@ -422,4 +422,4 @@ const content = {
       </p>
     ),
   },
-} as const;
+};
