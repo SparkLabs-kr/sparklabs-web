@@ -36,7 +36,7 @@ export async function Header({ locale }: { locale: string }) {
 
         <div className="flex items-center gap-2">
           <LanguageToggle currentLocale={locale} />
-          <Link href="/contact" className="btn-primary hidden sm:inline-flex">
+          <Link href="/apply" className="btn-primary hidden sm:inline-flex">
             {t('apply')}
           </Link>
         </div>
