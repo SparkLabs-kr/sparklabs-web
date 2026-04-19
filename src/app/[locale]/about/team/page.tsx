@@ -174,13 +174,10 @@ export default async function AboutTeamPage({
           <div className="mt-12 space-y-12">
             {teamByDivision.map((div) => (
               <div key={div.slug}>
-                <div className="flex items-baseline justify-between gap-4 border-b border-surface-border pb-3">
+                <div className="border-b border-surface-border pb-3">
                   <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-ink/70">
                     {div.title[locale]}
                   </h3>
-                  <span className="text-xs text-ink/50">
-                    {div.members.length} {copy.peopleWord}
-                  </span>
                 </div>
 
                 <div className="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
