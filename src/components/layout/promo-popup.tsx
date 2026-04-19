@@ -1,12 +1,13 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import type { Locale } from '@/lib/content';
 
 /**
  * 홈페이지 프로모션 팝업.
- * 기존 sparklabs.co.kr에 게재되어 있던 '모두의 창업' 페이지 안내 배너를
- * Next.js 기반 사이트로 이관. 24시간 동안 다시 보지 않기 지원.
+ * 상단 포스터 이미지 + 하단 텍스트 구조.
+ * 24시간 동안 다시 보지 않기 지원.
  */
 
 const STORAGE_KEY = 'sparklabs_promo_popup_dismissed_until';
@@ -20,6 +21,7 @@ const copy = {
     primaryCta: '자세히 보기',
     hideCta: '24시간 동안 보지 않기',
     closeLabel: '팝업 닫기',
+    posterAlt: '모두의 창업 포스터',
   },
   en: {
     tag: 'Notice',
@@ -28,10 +30,12 @@ const copy = {
     primaryCta: 'Learn more',
     hideCta: 'Hide for 24 hours',
     closeLabel: 'Close popup',
+    posterAlt: 'Modoo Startup poster',
   },
 } as const;
 
 const TARGET_URL = 'https://www.modoo.or.kr/organization/sparklab';
+const POSTER_SRC = '/promo/modoo-startup-poster.jpg';
 
 export function PromoPopup({ locale }: { locale: Locale }) {
   const [open, setOpen] = useState(false);
@@ -83,40 +87,38 @@ export function PromoPopup({ locale }: { locale: Locale }) {
         className="absolute inset-0 bg-ink/60 backdrop-blur-sm"
       />
       <div className="relative w-full max-w-md overflow-hidden rounded-3xl bg-white shadow-2xl">
-        <div className="relative h-36 bg-hero-navy">
-          <div
-            className="pointer-events-none absolute -top-16 -left-16 h-48 w-48 rounded-full bg-spark-yellow/30 blur-3xl"
-            aria-hidden="true"
+        <div className="relative aspect-[4/5] w-full bg-surface-subtle">
+          <Image
+            src={POSTER_SRC}
+            alt={t.posterAlt}
+            fill
+            sizes="(max-width: 640px) 100vw, 448px"
+            className="object-cover"
+            priority
           />
-          <div
-            className="pointer-events-none absolute -bottom-16 -right-16 h-48 w-48 rounded-full bg-spark-violet/30 blur-3xl"
-            aria-hidden="true"
-          />
-          <div className="relative flex h-full items-center justify-between px-6">
-            <span className="text-xs uppercase tracking-[0.18em] text-spark-yellow">
-              {t.tag}
-            </span>
-            <button
-              type="button"
-              onClick={close}
-              aria-label={t.closeLabel}
-              className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition"
+          <button
+            type="button"
+            onClick={close}
+            aria-label={t.closeLabel}
+            className="absolute right-3 top-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-ink/60 text-white backdrop-blur-sm hover:bg-ink/80 transition"
+          >
+            <svg
+              className="h-4 w-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
             >
-              <svg
-                className="h-4 w-4"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M18 6L6 18" />
-                <path d="M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
+              <path d="M18 6L6 18" />
+              <path d="M6 6l12 12" />
+            </svg>
+          </button>
+          <span className="absolute left-4 top-4 inline-flex items-center rounded-full bg-white/90 px-3 py-1 text-xs uppercase tracking-[0.18em] text-ink backdrop-blur-sm">
+            {t.tag}
+          </span>
         </div>
         <div className="p-6 sm:p-8">
           <h2
