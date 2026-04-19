@@ -1,6 +1,30 @@
 import { getTranslations } from 'next-intl/server';
+import { Youtube, Facebook, Instagram, Linkedin } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import { SparkLogo } from './spark-logo';
+
+const socialLinks = [
+  {
+    name: 'YouTube',
+    href: 'https://youtube.com/user/SparkLabsKorea',
+    Icon: Youtube,
+  },
+  {
+    name: 'Facebook',
+    href: 'https://facebook.com/SparkLabsKorea',
+    Icon: Facebook,
+  },
+  {
+    name: 'Instagram',
+    href: 'https://instagram.com/sparklabs_accelerator',
+    Icon: Instagram,
+  },
+  {
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/sparklabs-accelerator/',
+    Icon: Linkedin,
+  },
+];
 
 export async function Footer({ locale }: { locale: string }) {
   const t = await getTranslations({ locale, namespace: 'footer' });
@@ -75,11 +99,26 @@ export async function Footer({ locale }: { locale: string }) {
           <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-white/50">
             Connect
           </h4>
-          <ul className="space-y-2 text-white/80">
-            <li><a href="https://www.linkedin.com/company/sparklabs-korea" target="_blank" rel="noreferrer noopener" className="hover:text-white">LinkedIn</a></li>
-            <li><a href="https://x.com/sparklabskorea" target="_blank" rel="noreferrer noopener" className="hover:text-white">X / Twitter</a></li>
-            <li><a href="mailto:hello@sparklabs.co.kr" className="hover:text-white">hello@sparklabs.co.kr</a></li>
-          </ul>
+          <div className="flex items-center gap-3 text-white/70">
+            {socialLinks.map(({ name, href, Icon }) => (
+              <a
+                key={name}
+                href={href}
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label={name}
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 transition hover:border-white/40 hover:text-white"
+              >
+                <Icon className="h-4 w-4" aria-hidden="true" />
+              </a>
+            ))}
+          </div>
+          <a
+            href="mailto:hello@sparklabs.co.kr"
+            className="mt-4 inline-block text-white/80 hover:text-white"
+          >
+            hello@sparklabs.co.kr
+          </a>
         </div>
       </div>
 

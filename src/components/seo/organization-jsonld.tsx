@@ -29,9 +29,10 @@ export function OrganizationJsonLd({ locale }: Props) {
       addressCountry: 'KR',
     },
     sameAs: [
-      'https://www.linkedin.com/company/sparklabs',
-      'https://twitter.com/SparkLabsGlobal',
-      'https://www.youtube.com/@sparklabskorea',
+      'https://www.linkedin.com/company/sparklabs-accelerator/',
+      'https://youtube.com/user/SparkLabsKorea',
+      'https://facebook.com/SparkLabsKorea',
+      'https://instagram.com/sparklabs_accelerator',
     ],
   };
 
