@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { ArrowLeft, ArrowUpRight } from 'lucide-react';
@@ -18,7 +18,7 @@ interface Frontmatter {
   author?: string;
 }
 
-const validKinds: NewsKind[] = ['press', 'media', 'insights', 'announcements'];
+const validKinds: NewsKind[] = ['press', 'media', 'perspectives', 'announcements'];
 
 export async function generateMetadata({
   params,
@@ -102,6 +102,11 @@ export default async function NewsArticlePage({
   const locale = rawLocale as Locale;
   setRequestLocale(locale);
 
+  // Back-compat redirect: old "insights" URL path → new "perspectives" path.
+  if (kind === 'insights') {
+    redirect(`/${locale}/newsroom/perspectives/${slug}`);
+  }
+
   if (!validKinds.includes(kind as NewsKind)) {
     notFound();
   }
@@ -115,7 +120,7 @@ export default async function NewsArticlePage({
   const kindLabel: Record<NewsKind, string> = {
     press: t('press'),
     media: t('media'),
-    insights: t('insights'),
+    perspectives: t('perspectives'),
     announcements: t('announcements'),
   };
 

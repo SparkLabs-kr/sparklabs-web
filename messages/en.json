@@ -55,7 +55,7 @@
     },
     "newsroom": {
       "title": "Newsroom",
-      "description": "Press releases, media coverage, insights, and announcements from SparkLabs and its portfolio companies — all in one place."
+      "description": "Press releases, media coverage, perspectives, and announcements from SparkLabs and its portfolio companies — all in one place."
     },
     "newsroomPress": {
       "title": "Press Releases",
@@ -65,8 +65,8 @@
       "title": "Media Coverage",
       "description": "Media coverage and external features of SparkLabs and its portfolio companies across major outlets."
     },
-    "newsroomInsights": {
-      "title": "Insights",
+    "newsroomPerspectives": {
+      "title": "Perspectives",
       "description": "Perspectives on startups, investing, AI, and global expansion — written by SparkLabs partners and portfolio founders."
     },
     "newsroomAnnouncements": {
@@ -125,7 +125,7 @@
     "all": "All",
     "press": "Press Releases",
     "media": "Media Coverage",
-    "insights": "Insights",
+    "perspectives": "Perspectives",
     "announcements": "Announcements"
   },
   "hero": {

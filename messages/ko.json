@@ -55,7 +55,7 @@
     },
     "newsroom": {
       "title": "뉴스룸",
-      "description": "스파크랩과 포트폴리오사의 보도자료, 언론 보도, 인사이트, 공지사항을 한곳에서 확인하세요."
+      "description": "스파크랩과 포트폴리오사의 보도자료, 언론 보도, 관점, 공지사항을 한곳에서 확인하세요."
     },
     "newsroomPress": {
       "title": "보도자료",
@@ -65,8 +65,8 @@
       "title": "언론 보도",
       "description": "스파크랩과 포트폴리오사가 언급된 주요 매체 보도 및 미디어 커버리지 모음."
     },
-    "newsroomInsights": {
-      "title": "인사이트",
+    "newsroomPerspectives": {
+      "title": "관점",
       "description": "창업, 투자, AI, 글로벌 진출 등 스파크랩 파트너와 포트폴리오 창업자가 쓴 관점과 분석."
     },
     "newsroomAnnouncements": {
@@ -125,7 +125,7 @@
     "all": "전체",
     "press": "보도자료",
     "media": "언론 보도",
-    "insights": "인사이트",
+    "perspectives": "관점",
     "announcements": "공지사항"
   },
   "hero": {

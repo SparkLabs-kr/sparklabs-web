@@ -26,7 +26,7 @@ const STATIC_PATHS = [
   '/newsroom',
   '/newsroom/press',
   '/newsroom/media',
-  '/newsroom/insights',
+  '/newsroom/perspectives',
   '/newsroom/announcements',
   '/contact',
   '/apply',

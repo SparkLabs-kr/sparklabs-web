@@ -1,6 +1,6 @@
 /**
  * Newsroom data aggregator. Pulls MDX entries from 4 collections
- * (press, media, insights, announcements) and normalizes them into
+ * (press, media, perspectives, announcements) and normalizes them into
  * a single NewsItem shape for rendering.
  */
 import { getAllEntries, type Locale } from './content';
@@ -17,7 +17,7 @@ interface BaseFrontmatter {
   draft?: boolean;
 }
 
-const kinds: NewsKind[] = ['press', 'media', 'insights', 'announcements'];
+const kinds: NewsKind[] = ['press', 'media', 'perspectives', 'announcements'];
 
 function toItem(kind: NewsKind, slug: string, fm: BaseFrontmatter): NewsItem {
   return {

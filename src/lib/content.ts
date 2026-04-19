@@ -17,7 +17,7 @@ export type Collection =
   | 'programs'
   | 'press'
   | 'media'
-  | 'insights'
+  | 'perspectives'
   | 'announcements';
 
 export interface ContentEntry<TFrontmatter = Record<string, unknown>> {

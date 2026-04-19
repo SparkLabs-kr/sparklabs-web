@@ -372,13 +372,13 @@ const content = {
     naverMaps: '네이버 지도에서 보기',
 
     newsletterEyebrow: 'Newsletter',
-    newsletterTitle: '스파크랩의 인사이트를 이메일로 받아보세요.',
+    newsletterTitle: '스파크랩의 관점을 이메일로 받아보세요.',
     newsletterSubcopy:
       '창업가용 Spark Letter와 투자자용 VC Mailing — 두 개의 뉴스레터를 운영합니다. 본인의 역할에 맞는 리스트를 선택해 구독하세요.',
     newsletters: [
       {
         title: 'Spark Letter',
-        body: '창업가를 위한 스파크랩의 인사이트와 포트폴리오 소식. 프로그램 지원·투자 동향·창업 팁까지 — 매주 큐레이션해 보내드립니다.',
+        body: '창업가를 위한 스파크랩의 관점과 포트폴리오 소식. 프로그램 지원·투자 동향·창업 팁까지 — 매주 큐레이션해 보내드립니다.',
         tag: 'For Founders',
         cta: '구독하기',
         href: 'https://page.stibee.com/subscriptions/244667',
@@ -458,7 +458,7 @@ const content = {
     naverMaps: 'Open in Naver Maps',
 
     newsletterEyebrow: 'Newsletter',
-    newsletterTitle: 'Get SparkLabs insights delivered to your inbox.',
+    newsletterTitle: 'Get SparkLabs perspectives delivered to your inbox.',
     newsletterSubcopy:
       'We run two newsletters: Spark Letter for founders and VC Mailing for investors. Pick the list that fits your role.',
     newsletters: [

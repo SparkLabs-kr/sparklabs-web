@@ -30,7 +30,7 @@ export default async function NewsroomPage({
   const kindLabel: Record<NewsKind, string> = {
     press: t('press'),
     media: t('media'),
-    insights: t('insights'),
+    perspectives: t('perspectives'),
     announcements: t('announcements'),
   };
 
@@ -79,16 +79,16 @@ export default async function NewsroomPage({
 const content = {
   ko: {
     eyebrow: 'Newsroom',
-    heroTitle: '스파크랩의 최신 소식과 인사이트.',
+    heroTitle: '스파크랩의 최신 소식과 관점.',
     heroSubcopy:
-      '보도자료, 언론 보도, 인사이트, 공지사항까지 — 스파크랩과 포트폴리오사의 이야기를 한 곳에서 만나보세요.',
+      '보도자료, 언론 보도, 관점, 공지사항까지 — 스파크랩과 포트폴리오사의 이야기를 한 곳에서 만나보세요.',
     empty: '아직 뉴스룸 콘텐츠가 없습니다.',
   },
   en: {
     eyebrow: 'Newsroom',
     heroTitle: 'Latest news and perspectives from SparkLabs.',
     heroSubcopy:
-      "Press releases, media coverage, insights, and announcements — everything from SparkLabs and our portfolio, in one place.",
+      "Press releases, media coverage, perspectives, and announcements — everything from SparkLabs and our portfolio, in one place.",
     empty: 'No newsroom content yet.',
   },
 } as const;

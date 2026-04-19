@@ -2,7 +2,7 @@ import { Link } from '@/i18n/routing';
 import { ArrowUpRight } from 'lucide-react';
 import type { Locale } from '@/lib/content';
 
-export type NewsKind = 'press' | 'media' | 'insights' | 'announcements';
+export type NewsKind = 'press' | 'media' | 'perspectives' | 'announcements';
 
 export interface NewsItem {
   kind: NewsKind;
@@ -39,7 +39,7 @@ function formatDate(iso: string | undefined, locale: Locale): string {
 const kindAccent: Record<NewsKind, string> = {
   press: 'bg-spark-blue/10 text-spark-blue',
   media: 'bg-spark-orange/10 text-spark-orange',
-  insights: 'bg-spark-violet/10 text-spark-violet',
+  perspectives: 'bg-spark-violet/10 text-spark-violet',
   announcements: 'bg-spark-green/10 text-spark-green',
 };
 
