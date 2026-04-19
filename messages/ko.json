@@ -137,7 +137,7 @@
     "secondaryCta": "포트폴리오 보기"
   },
   "impact": {
-    "title": "숫자로 보는 스파크랩",
+    "title": "550개 이상의 글로벌 포트폴리오사가 증명한 스파크랩의 실적.",
     "metrics": {
       "globalStartups": "글로벌 투자 스타트업",
       "koreanCore": "한국 주요 포트폴리오",
@@ -145,7 +145,8 @@
       "exits": "엑싯(IPO·M&A)",
       "aum": "운용 자산",
       "survivalRate": "생존율"
-    }
+    },
+    "eyebrow": "Proven Results"
   },
   "network": {
     "title": "글로벌 네트워크",
@@ -218,5 +219,17 @@
   "locale": {
     "ko": "한국어",
     "en": "English"
+  },
+  "coInvestors": {
+    "eyebrow": "Co-investors",
+    "title": "스파크랩은 세계 최상위 VC와 함께 움직입니다.",
+    "subcopy": "실리콘밸리 대표 VC부터 전략적 파트너까지, 스파크랩은 글로벌 최상위 공동투자자들과 함께 포트폴리오사의 전체 성장 여정을 뒷받침합니다."
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "스파크랩과 함께 성장한 창업가들.",
+    "subcopy": "첫 투자부터 글로벌 스케일업까지 — 스파크랩의 여정을 함께한 창업가들의 생생한 목소리를 확인하세요.",
+    "prev": "이전 증언",
+    "next": "다음 증언"
   }
 }

@@ -137,7 +137,7 @@
     "secondaryCta": "Explore Portfolio"
   },
   "impact": {
-    "title": "SparkLabs by the Numbers",
+    "title": "Proven across 550+ global portfolio companies.",
     "metrics": {
       "globalStartups": "Global Portfolio",
       "koreanCore": "Korean Core",
@@ -145,7 +145,8 @@
       "exits": "Exits (IPO & M&A)",
       "aum": "AUM",
       "survivalRate": "Survival Rate"
-    }
+    },
+    "eyebrow": "Proven Results"
   },
   "network": {
     "title": "Global Network",
@@ -218,5 +219,17 @@
   "locale": {
     "ko": "한국어",
     "en": "English"
+  },
+  "coInvestors": {
+    "eyebrow": "Co-investors",
+    "title": "In great company.",
+    "subcopy": "SparkLabs invests alongside the world's most trusted global VCs and strategic investors to back every portfolio company through their full growth journey."
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "Founders who grew with us.",
+    "subcopy": "Honest reflections from founders who've walked the SparkLabs journey — from first check to global scale.",
+    "prev": "Previous testimonial",
+    "next": "Next testimonial"
   }
 }
