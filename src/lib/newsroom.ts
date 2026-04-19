@@ -14,6 +14,7 @@ interface BaseFrontmatter {
   tags?: string[];
   outlet?: string;
   sourceUrl?: string;
+  draft?: boolean;
 }
 
 const kinds: NewsKind[] = ['press', 'media', 'insights', 'announcements'];
@@ -37,6 +38,7 @@ export function getAllNews(locale: Locale): NewsItem[] {
   for (const kind of kinds) {
     const entries = getAllEntries<BaseFrontmatter>(kind, locale);
     for (const e of entries) {
+      if (e.frontmatter.draft) continue;
       all.push(toItem(kind, e.slug, e.frontmatter));
     }
   }
@@ -44,7 +46,7 @@ export function getAllNews(locale: Locale): NewsItem[] {
 }
 
 export function getNewsByKind(kind: NewsKind, locale: Locale): NewsItem[] {
-  return getAllEntries<BaseFrontmatter>(kind, locale).map((e) =>
-    toItem(kind, e.slug, e.frontmatter)
-  );
+  return getAllEntries<BaseFrontmatter>(kind, locale)
+    .filter((e) => !e.frontmatter.draft)
+    .map((e) => toItem(kind, e.slug, e.frontmatter));
 }
