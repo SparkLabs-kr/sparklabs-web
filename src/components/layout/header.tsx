@@ -2,17 +2,57 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { LanguageToggle } from './language-toggle';
 import { SparkLogo } from './spark-logo';
+import NavItems, { type NavItem } from './nav-items';
 
 export async function Header({ locale }: { locale: string }) {
-  const t = await getTranslations({ locale, namespace: 'nav' });
+  const tNav = await getTranslations({ locale, namespace: 'nav' });
+  const tAbout = await getTranslations({ locale, namespace: 'about' });
+  const tPortfolio = await getTranslations({ locale, namespace: 'portfolio' });
+  const tPrograms = await getTranslations({ locale, namespace: 'programs' });
+  const tNewsroom = await getTranslations({ locale, namespace: 'newsroom' });
 
-  const items = [
-    { href: '/about', label: t('about') },
-    { href: '/portfolio', label: t('portfolio') },
-    { href: '/programs', label: t('programs') },
-    { href: '/newsroom', label: t('newsroom') },
-    { href: '/contact', label: t('contact') },
-  ] as const;
+  const items: NavItem[] = [
+    {
+      href: '/about',
+      label: tNav('about'),
+      children: [
+        { href: '/about', label: tAbout('overview') },
+        { href: '/about/team', label: tAbout('team') },
+        { href: '/about/entities', label: tAbout('entities') },
+        { href: '/about/advisors', label: tAbout('advisors') },
+      ],
+    },
+    {
+      href: '/portfolio',
+      label: tNav('portfolio'),
+      children: [
+        { href: '/portfolio', label: tPortfolio('all') },
+        { href: '/portfolio/ai', label: tPortfolio('ai') },
+      ],
+    },
+    {
+      href: '/programs',
+      label: tNav('programs'),
+      children: [
+        { href: '/programs/batch', label: tPrograms('batch') },
+        { href: '/programs/partnership', label: tPrograms('partnership') },
+        { href: '/programs/spark-claw', label: tPrograms('sparkClaw') },
+        { href: '/programs/global', label: tPrograms('global') },
+      ],
+    },
+    {
+      href: '/newsroom',
+      label: tNav('newsroom'),
+      children: [
+        { href: '/newsroom', label: tNewsroom('all') },
+        { href: '/newsroom/press', label: tNewsroom('press') },
+        { href: '/newsroom/media', label: tNewsroom('media') },
+        { href: '/newsroom/insights', label: tNewsroom('insights') },
+        { href: '/newsroom/announcements', label: tNewsroom('announcements') },
+      ],
+    },
+    { href: '/contact', label: tNav('contact') },
+  ];
 
   return (
     <header className="sticky top-0 z-40 border-b border-surface-border/70 bg-white/80 backdrop-blur">
@@ -21,22 +61,12 @@ export async function Header({ locale }: { locale: string }) {
           <SparkLogo variant="dark" height={28} className="h-7 w-auto" />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-1">
-          {items.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="rounded-full px-4 py-2 text-sm font-medium text-ink-soft transition hover:bg-surface-subtle hover:text-ink"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        <NavItems items={items} />
 
         <div className="flex items-center gap-2">
           <LanguageToggle currentLocale={locale} />
           <Link href="/apply" className="btn-primary hidden sm:inline-flex">
-            {t('apply')}
+            {tNav('apply')}
           </Link>
         </div>
       </div>
