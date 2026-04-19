@@ -87,13 +87,13 @@ export function PromoPopup({ locale }: { locale: Locale }) {
         className="absolute inset-0 bg-ink/60 backdrop-blur-sm"
       />
       <div className="relative w-full max-w-md overflow-hidden rounded-3xl bg-white shadow-2xl">
-        <div className="relative aspect-[4/5] w-full bg-surface-subtle">
+        <div className="relative aspect-[3/4] w-full bg-ink">
           <Image
             src={POSTER_SRC}
             alt={t.posterAlt}
             fill
             sizes="(max-width: 640px) 100vw, 448px"
-            className="object-cover"
+            className="object-contain"
             priority
           />
           <button
