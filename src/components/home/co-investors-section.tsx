@@ -14,21 +14,21 @@ export async function CoInvestorsSection() {
           {t('subcopy')}
         </p>
 
-        <div className="mt-10 rounded-3xl border border-surface-border bg-white p-6 md:p-10">
-          <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7">
+        <div className="mt-10 rounded-3xl border border-surface-border bg-white p-8 md:p-14">
+          <div className="grid grid-cols-2 gap-x-8 gap-y-14 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
             {coInvestors.map((c) => (
               <div
                 key={c.slug}
-                className="relative flex h-14 items-center justify-center opacity-80 transition hover:opacity-100"
+                className="relative flex h-20 items-center justify-center opacity-85 transition hover:opacity-100 md:h-24"
                 title={c.name}
               >
                 <Image
                   src={c.logo}
                   alt={c.name}
-                  width={120}
-                  height={48}
-                  sizes="(max-width: 640px) 40vw, (max-width: 1024px) 20vw, 14vw"
-                  className="h-full w-auto max-w-[120px] object-contain"
+                  width={240}
+                  height={96}
+                  sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 20vw"
+                  className="h-full w-auto max-w-[200px] object-contain md:max-w-[220px]"
                 />
               </div>
             ))}
