@@ -1,6 +1,11 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
-import { coFounders, entityPartners } from '@/lib/team';
+import {
+  coFounders,
+  entityPartners,
+  venturePartners,
+  teamByDivision,
+} from '@/lib/team';
 import { entities } from '@/lib/entities';
 import { buildPageMetadata } from '@/lib/seo';
 import type { Locale } from '@/lib/content';
@@ -28,8 +33,15 @@ export default async function AboutTeamPage({
   const accentFor = (slug: string) =>
     entities.find((e) => e.slug === slug)?.accent ?? 'blue';
 
+  // Total count across all divisions (for stat display)
+  const fullTeamCount =
+    coFounders.length +
+    venturePartners.length +
+    teamByDivision.reduce((sum, div) => sum + div.members.length, 0);
+
   return (
     <>
+      {/* Hero */}
       <section className="relative overflow-hidden bg-hero-navy text-white">
         <div
           className="pointer-events-none absolute -top-32 -left-20 h-[480px] w-[480px] rounded-full bg-spark-ray blur-3xl opacity-80"
@@ -43,19 +55,30 @@ export default async function AboutTeamPage({
           <p className="mt-6 max-w-2xl text-lg text-white/75 leading-relaxed">
             {copy.heroSubcopy}
           </p>
+          <div className="mt-10 flex flex-wrap gap-8 text-sm">
+            <div>
+              <div className="text-4xl font-semibold">{coFounders.length + entityPartners.length}</div>
+              <p className="mt-1 text-white/70">{copy.stat1}</p>
+            </div>
+            <div>
+              <div className="text-4xl font-semibold">{venturePartners.length}</div>
+              <p className="mt-1 text-white/70">{copy.stat2}</p>
+            </div>
+            <div>
+              <div className="text-4xl font-semibold">{fullTeamCount}+</div>
+              <p className="mt-1 text-white/70">{copy.stat3}</p>
+            </div>
+          </div>
         </div>
       </section>
 
+      {/* Co-founders & Partners */}
       <section className="section">
         <div className="container-narrow">
-          <div className="flex items-end justify-between gap-4">
-            <div>
-              <span className="eyebrow">{copy.coFoundersEyebrow}</span>
-              <h2 className="mt-3 text-display-md text-ink">
-                {copy.coFoundersTitle}
-              </h2>
-            </div>
-          </div>
+          <span className="eyebrow">{copy.coFoundersEyebrow}</span>
+          <h2 className="mt-3 text-display-md text-ink">
+            {copy.coFoundersTitle}
+          </h2>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {coFounders.map((p) => (
@@ -65,20 +88,30 @@ export default async function AboutTeamPage({
               >
                 <div className={`h-1.5 w-12 rounded-full bg-spark-${accentFor(p.entity)}`} />
                 <div>
-                  <h3 className="text-xl font-semibold text-ink">{p.name}</h3>
+                  <h3 className="text-xl font-semibold text-ink">
+                    {p.name}
+                    {p.koName && (
+                      <span className="ml-2 text-sm font-normal text-ink-soft">
+                        {p.koName}
+                      </span>
+                    )}
+                  </h3>
                   <p className="mt-1 text-sm text-ink-soft">
                     {p.title[locale]}
                   </p>
                 </div>
-                <p className="text-ink-soft leading-relaxed">
-                  {p.bio[locale]}
-                </p>
+                {p.bio && (
+                  <p className="text-ink-soft leading-relaxed">
+                    {p.bio[locale]}
+                  </p>
+                )}
               </article>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Regional / Entity Partners */}
       <section className="section bg-surface-subtle">
         <div className="container-narrow">
           <span className="eyebrow">{copy.partnersEyebrow}</span>
@@ -102,10 +135,106 @@ export default async function AboutTeamPage({
                 <p className="mt-1 text-xs uppercase tracking-[0.14em] text-ink/50">
                   {p.title[locale]}
                 </p>
-                <p className="mt-4 text-sm text-ink-soft leading-relaxed">
-                  {p.bio[locale]}
-                </p>
+                {p.bio && (
+                  <p className="mt-4 text-sm text-ink-soft leading-relaxed">
+                    {p.bio[locale]}
+                  </p>
+                )}
               </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Venture Partners */}
+      <section className="section">
+        <div className="container-narrow">
+          <span className="eyebrow">{copy.ventureEyebrow}</span>
+          <h2 className="mt-3 text-display-md text-ink">
+            {copy.ventureTitle}
+          </h2>
+          <p className="mt-4 max-w-2xl text-ink-soft leading-relaxed">
+            {copy.ventureSubcopy}
+          </p>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {venturePartners.map((p) => (
+              <article
+                key={p.slug}
+                className="rounded-2xl border border-surface-border bg-white p-6 transition hover:shadow-card"
+              >
+                <div className="h-1 w-8 rounded-full bg-spark-orange" />
+                <h3 className="mt-3 text-lg font-semibold text-ink">
+                  {p.name}
+                  {p.koName && (
+                    <span className="ml-2 text-sm font-normal text-ink-soft">
+                      {p.koName}
+                    </span>
+                  )}
+                </h3>
+                <p className="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-ink/50">
+                  {p.title[locale]}
+                </p>
+                {p.bio && (
+                  <p className="mt-4 text-sm text-ink-soft leading-relaxed">
+                    {p.bio[locale]}
+                  </p>
+                )}
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Full Team by Division */}
+      <section className="section bg-surface-subtle">
+        <div className="container-narrow">
+          <span className="eyebrow">{copy.fullTeamEyebrow}</span>
+          <h2 className="mt-3 text-display-md text-ink">
+            {copy.fullTeamTitle}
+          </h2>
+          <p className="mt-4 max-w-2xl text-ink-soft leading-relaxed">
+            {copy.fullTeamSubcopy}
+          </p>
+
+          <div className="mt-12 space-y-10">
+            {teamByDivision.map((div) => (
+              <div key={div.slug}>
+                <div className="flex items-baseline justify-between gap-4 border-b border-surface-border pb-3">
+                  <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-ink/70">
+                    {div.title[locale]}
+                  </h3>
+                  <span className="text-xs text-ink/50">
+                    {div.members.length} {copy.peopleWord}
+                  </span>
+                </div>
+
+                <div className="mt-5 grid gap-4 md:grid-cols-2">
+                  {div.members.map((m) => (
+                    <div
+                      key={m.slug}
+                      className="rounded-xl border border-surface-border bg-white p-5"
+                    >
+                      <p className="text-base font-semibold text-ink">
+                        {m.name}
+                        {m.koName && (
+                          <span className="ml-2 text-sm font-normal text-ink-soft">
+                            {m.koName}
+                          </span>
+                        )}
+                      </p>
+                      <p className="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-ink/50">
+                        {m.title[locale]}
+                      </p>
+                      {m.bio && (
+                        <p className="mt-3 text-sm text-ink-soft leading-relaxed">
+                          {m.bio[locale]}
+                        </p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -117,26 +246,50 @@ export default async function AboutTeamPage({
 const content = {
   ko: {
     eyebrow: 'Team',
-    heroTitle: '창업가를 가장 잘 이해하는 팀.',
+    heroTitle: '스파크랩의 목표는 스타트업 모든 스테이지의 동반자가 되는 것입니다.',
     heroSubcopy:
-      '스파크랩의 모든 파트너는 직접 회사를 세워본 창업가입니다. 투자 판단 뒤에는 성공과 실패를 함께 겪어온 경험의 무게가 실려 있습니다.',
-    coFoundersEyebrow: 'Co-founders',
-    coFoundersTitle: '스파크랩을 만든 네 명의 창업가',
+      '공동창업자·파트너부터 벤처 파트너, 투자·액셀러레이션·혁신·운영 실무진까지 — 40여 명의 스파크랩 팀이 각 포트폴리오사의 성장을 끝까지 함께합니다.',
+    stat1: '파트너',
+    stat2: '벤처 파트너',
+    stat3: '전체 팀',
+    coFoundersEyebrow: 'Partners',
+    coFoundersTitle: '스파크랩을 이끄는 파트너',
     partnersEyebrow: 'Regional Partners',
     partnersTitle: '각 지역을 이끄는 매니징 파트너',
     partnersSubcopy:
       '스파크랩의 글로벌 네트워크는 각 지역을 깊이 이해하는 현지 파트너가 독립적으로 운영합니다. 대만·사우디·호주 등 각 시장의 관록 있는 운영자들이 포트폴리오사의 해외 진출을 직접 뒷받침합니다.',
+    ventureEyebrow: 'Venture Partners',
+    ventureTitle: '벤처 파트너',
+    ventureSubcopy:
+      '산업·기능별 전문성을 바탕으로 스파크랩의 투자 판단과 포트폴리오사 성장에 깊이 관여하는 벤처 파트너입니다.',
+    fullTeamEyebrow: 'Full Team',
+    fullTeamTitle: '투자·액셀러레이션·운영을 함께 만드는 실무진',
+    fullTeamSubcopy:
+      '스파크랩 코리아의 일상적인 투자·액셀러레이션·운영은 전담 디비전 팀이 함께 만들어 갑니다. 직접 만나보는 실무진들의 현업 전문성이 스파크랩의 실행력을 만듭니다.',
+    peopleWord: '명',
   },
   en: {
     eyebrow: 'Team',
-    heroTitle: 'Operators who understand founders best.',
+    heroTitle: 'SparkLabs exists to stand with founders at every stage.',
     heroSubcopy:
-      "Every SparkLabs partner has been a founder. Every investment decision carries the weight of having built and scaled companies through both success and failure.",
-    coFoundersEyebrow: 'Co-founders',
-    coFoundersTitle: 'The four founders who built SparkLabs',
+      'From co-founders and partners to venture partners and the working teams across investment, acceleration, innovation, and operations — the 40+ people of SparkLabs show up for every portfolio company.',
+    stat1: 'Partners',
+    stat2: 'Venture partners',
+    stat3: 'Team members',
+    coFoundersEyebrow: 'Partners',
+    coFoundersTitle: 'The partners leading SparkLabs',
     partnersEyebrow: 'Regional Partners',
     partnersTitle: 'Managing partners leading each region',
     partnersSubcopy:
       "Our global network is run by local partners who know their markets deeply. Seasoned operators across Taiwan, Saudi Arabia, Australia, and beyond directly back our portfolio companies' expansion into each region.",
+    ventureEyebrow: 'Venture Partners',
+    ventureTitle: 'Venture partners',
+    ventureSubcopy:
+      'Industry and functional experts deeply engaged in SparkLabs\' investment decisions and portfolio support.',
+    fullTeamEyebrow: 'Full Team',
+    fullTeamTitle: 'The working teams that deliver every day',
+    fullTeamSubcopy:
+      'SparkLabs Korea\'s day-to-day investment, acceleration, and operations are delivered by dedicated divisions. The operators you\'ll actually work with — organized by the teams they run.',
+    peopleWord: 'people',
   },
 } as const;
