@@ -15,7 +15,7 @@ export default async function NewsroomLayout({
     { href: '/newsroom', label: t('all') },
     { href: '/newsroom/press', label: t('press') },
     { href: '/newsroom/media', label: t('media') },
-    { href: '/newsroom/perspectives', label: t('perspectives') },
+    { href: '/newsroom/insights', label: t('insights') },
     { href: '/newsroom/announcements', label: t('announcements') },
   ];
 

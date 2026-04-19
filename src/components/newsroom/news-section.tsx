@@ -24,7 +24,7 @@ export async function NewsSection({
   const kindLabel: Record<NewsKind, string> = {
     press: t('press'),
     media: t('media'),
-    perspectives: t('perspectives'),
+    insights: t('insights'),
     announcements: t('announcements'),
   };
 

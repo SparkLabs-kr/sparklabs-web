@@ -48,7 +48,7 @@ export default async function GlobalProgramPage({
   const kindLabel: Record<NewsKind, string> = {
     press: tNews('press'),
     media: tNews('media'),
-    perspectives: tNews('perspectives'),
+    insights: tNews('insights'),
     announcements: tNews('announcements'),
   };
 

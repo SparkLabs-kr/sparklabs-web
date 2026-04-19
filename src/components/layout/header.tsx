@@ -47,7 +47,7 @@ export async function Header({ locale }: { locale: string }) {
         { href: '/newsroom', label: tNewsroom('all') },
         { href: '/newsroom/press', label: tNewsroom('press') },
         { href: '/newsroom/media', label: tNewsroom('media') },
-        { href: '/newsroom/perspectives', label: tNewsroom('perspectives') },
+        { href: '/newsroom/insights', label: tNewsroom('insights') },
         { href: '/newsroom/announcements', label: tNewsroom('announcements') },
       ],
     },

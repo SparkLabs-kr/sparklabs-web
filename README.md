@@ -52,7 +52,7 @@ content/                    # MDX content collections
 ├── portfolio/
 ├── programs/
 ├── press/
-├── perspectives/
+├── insights/
 └── announcements/
 
 messages/                   # UI string translations
