@@ -137,7 +137,7 @@ export function PromoPopup({ locale }: { locale: Locale }) {
         onClick={closeAll}
         className="absolute inset-0 bg-ink/60 backdrop-blur-sm"
       />
-      <div className="relative flex w-full max-w-5xl flex-col items-center gap-4 sm:items-stretch lg:flex-row lg:justify-center">
+      <div className="relative flex w-full max-w-5xl flex-col items-center gap-4 lg:flex-row lg:items-start lg:justify-center">
         {modooOpen && (
           <div className="relative w-full max-w-md overflow-hidden rounded-3xl bg-white shadow-2xl">
             <div className="relative aspect-[3/4] w-full bg-ink">
