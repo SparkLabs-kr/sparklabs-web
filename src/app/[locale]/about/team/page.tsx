@@ -86,7 +86,7 @@ export default async function AboutTeamPage({
             {copy.coFoundersTitle}
           </h2>
 
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {coFounders.map((p) => (
               <PersonCard
                 key={p.slug}
@@ -97,7 +97,7 @@ export default async function AboutTeamPage({
                 photo={p.photo}
                 slug={p.slug}
                 accent={accentFor(p.entity)}
-                size="lg"
+                size="sm"
               />
             ))}
           </div>
@@ -115,7 +115,7 @@ export default async function AboutTeamPage({
             {copy.partnersSubcopy}
           </p>
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {entityPartners.map((p) => (
               <PersonCard
                 key={p.slug}
@@ -126,6 +126,7 @@ export default async function AboutTeamPage({
                 photo={p.photo}
                 slug={p.slug}
                 accent={accentFor(p.entity)}
+                size="sm"
               />
             ))}
           </div>
@@ -141,7 +142,7 @@ export default async function AboutTeamPage({
             {copy.ventureSubcopy}
           </p>
 
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {venturePartners.map((p) => (
               <PersonCard
                 key={p.slug}
@@ -152,6 +153,7 @@ export default async function AboutTeamPage({
                 photo={p.photo}
                 slug={p.slug}
                 accent="orange"
+                size="sm"
               />
             ))}
           </div>
