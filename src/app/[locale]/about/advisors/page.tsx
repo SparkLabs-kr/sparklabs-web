@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { setRequestLocale } from 'next-intl/server';
 import {
   boardOfAdvisors,
@@ -83,25 +84,38 @@ export default async function AboutAdvisorsPage({
             {boardOfAdvisors.map((a) => (
               <article
                 key={a.name}
-                className="card-light p-6"
+                className="card-light flex gap-5 p-6"
               >
-                <div className="h-1 w-10 rounded-full bg-spark-yellow" />
-                <h3 className="mt-4 text-lg font-semibold text-ink">
-                  {a.name}
-                  {a.koName && (
-                    <span className="ml-2 text-sm font-normal text-ink-soft">
-                      {a.koName}
-                    </span>
-                  )}
-                </h3>
-                <p className="mt-2 text-xs font-semibold uppercase tracking-[0.14em] text-ink/60">
-                  {a.role[locale]}
-                </p>
-                {a.bio && (
-                  <p className="mt-4 text-sm text-ink-soft leading-relaxed">
-                    {a.bio[locale]}
-                  </p>
+                {a.photo && (
+                  <div className="relative h-28 w-24 shrink-0 overflow-hidden rounded-xl bg-surface-subtle">
+                    <Image
+                      src={a.photo}
+                      alt={a.name}
+                      fill
+                      sizes="96px"
+                      className="object-cover"
+                    />
+                  </div>
                 )}
+                <div className="min-w-0 flex-1">
+                  <div className="h-1 w-10 rounded-full bg-spark-yellow" />
+                  <h3 className="mt-3 text-lg font-semibold text-ink">
+                    {a.name}
+                    {a.koName && (
+                      <span className="ml-2 text-sm font-normal text-ink-soft">
+                        {a.koName}
+                      </span>
+                    )}
+                  </h3>
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-ink/60">
+                    {a.role[locale]}
+                  </p>
+                  {a.bio && (
+                    <p className="mt-3 text-sm text-ink-soft leading-relaxed">
+                      {a.bio[locale]}
+                    </p>
+                  )}
+                </div>
               </article>
             ))}
           </div>
@@ -121,25 +135,38 @@ export default async function AboutAdvisorsPage({
             {fundAdvisors.map((a) => (
               <article
                 key={a.name}
-                className="rounded-2xl border border-surface-border bg-white p-6"
+                className="flex gap-5 rounded-2xl border border-surface-border bg-white p-6"
               >
-                <div className="h-1 w-8 rounded-full bg-spark-teal" />
-                <h3 className="mt-3 text-base font-semibold text-ink">
-                  {a.name}
-                  {a.koName && (
-                    <span className="ml-2 text-sm font-normal text-ink-soft">
-                      {a.koName}
-                    </span>
-                  )}
-                </h3>
-                <p className="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-ink/50">
-                  {a.role[locale]}
-                </p>
-                {a.bio && (
-                  <p className="mt-4 text-sm text-ink-soft leading-relaxed">
-                    {a.bio[locale]}
-                  </p>
+                {a.photo && (
+                  <div className="relative h-28 w-24 shrink-0 overflow-hidden rounded-xl bg-surface-subtle">
+                    <Image
+                      src={a.photo}
+                      alt={a.name}
+                      fill
+                      sizes="96px"
+                      className="object-cover"
+                    />
+                  </div>
                 )}
+                <div className="min-w-0 flex-1">
+                  <div className="h-1 w-8 rounded-full bg-spark-teal" />
+                  <h3 className="mt-2 text-base font-semibold text-ink">
+                    {a.name}
+                    {a.koName && (
+                      <span className="ml-2 text-sm font-normal text-ink-soft">
+                        {a.koName}
+                      </span>
+                    )}
+                  </h3>
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-ink/50">
+                    {a.role[locale]}
+                  </p>
+                  {a.bio && (
+                    <p className="mt-3 text-sm text-ink-soft leading-relaxed">
+                      {a.bio[locale]}
+                    </p>
+                  )}
+                </div>
               </article>
             ))}
           </div>
