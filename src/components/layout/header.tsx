@@ -17,9 +17,8 @@ export async function Header({ locale }: { locale: string }) {
   return (
     <header className="sticky top-0 z-40 border-b border-surface-border/70 bg-white/80 backdrop-blur">
       <div className="container-narrow flex h-16 items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-2 text-ink" aria-label="SparkLabs home">
-          <SparkLogo className="h-7 w-7" />
-          <span className="text-lg font-bold tracking-tight">SparkLabs</span>
+        <Link href="/" className="flex items-center text-ink" aria-label="SparkLabs home">
+          <SparkLogo variant="dark" height={28} className="h-7 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">

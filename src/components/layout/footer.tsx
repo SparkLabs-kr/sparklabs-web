@@ -11,9 +11,8 @@ export async function Footer({ locale }: { locale: string }) {
     <footer className="mt-24 bg-navy-deep text-white">
       <div className="container-narrow py-16 grid gap-12 md:grid-cols-[1.5fr_1fr_1fr_1fr_1fr]">
         <div>
-          <div className="flex items-center gap-2">
-            <SparkLogo className="h-7 w-7" />
-            <span className="text-lg font-bold tracking-tight">SparkLabs</span>
+          <div className="flex items-center">
+            <SparkLogo variant="light" height={32} className="h-8 w-auto" />
           </div>
           <p className="mt-4 text-sm text-white/70 leading-relaxed">
             {t('address')}

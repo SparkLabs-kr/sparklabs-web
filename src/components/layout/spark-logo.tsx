@@ -1,25 +1,38 @@
-export function SparkLogo({ className }: { className?: string }) {
-  // Radial spark mark — placeholder SVG inspired by the brand logo burst.
-  // Swap for the official SVG when the asset is available at /public/brand/sparklabs-mark.svg
+import Image from 'next/image';
+
+interface SparkLogoProps {
+  variant?: 'dark' | 'light';
+  className?: string;
+  /** height in px (used to preserve aspect ratio ~3.57:1) */
+  height?: number;
+}
+
+/**
+ * Official SparkLabs wordmark + spark burst logo.
+ * `variant="dark"` renders the black logo (use on light backgrounds).
+ * `variant="light"` renders the white logo (use on dark backgrounds).
+ */
+export function SparkLogo({
+  variant = 'dark',
+  className,
+  height = 28,
+}: SparkLogoProps) {
+  const src =
+    variant === 'light'
+      ? '/brand/sparklabs-logo-white.png'
+      : '/brand/sparklabs-logo-black.png';
+  // Source aspect ratio: 1663 x 466 ≈ 3.57:1
+  const width = Math.round(height * (1663 / 466));
+
   return (
-    <svg
-      viewBox="0 0 48 48"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+    <Image
+      src={src}
+      alt="SparkLabs"
+      width={width}
+      height={height}
+      priority
+      sizes={`${width}px`}
       className={className}
-      aria-hidden="true"
-    >
-      <circle cx="24" cy="24" r="5" fill="#1E5BFF" />
-      <g stroke="#1E5BFF" strokeWidth="2.4" strokeLinecap="round">
-        <path d="M24 4 V12" stroke="#F97A1F" />
-        <path d="M24 36 V44" stroke="#2FB574" />
-        <path d="M4 24 H12" stroke="#F2C94C" />
-        <path d="M36 24 H44" stroke="#E74F8E" />
-        <path d="M10 10 L15 15" stroke="#2AA5B8" />
-        <path d="M33 33 L38 38" stroke="#7B5CFF" />
-        <path d="M10 38 L15 33" stroke="#E64545" />
-        <path d="M33 15 L38 10" stroke="#1E5BFF" />
-      </g>
-    </svg>
+    />
   );
 }
