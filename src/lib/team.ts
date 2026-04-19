@@ -11,6 +11,7 @@ export interface TeamMember {
   entity: string; // entity slug or 'group'
   bio?: { ko: string; en: string }; // Partners have bios; team members often don't
   linkedinUrl?: string;
+  photo?: string; // relative path under /public (e.g. /team/members/slug.jpg)
 }
 
 export interface Advisor {
