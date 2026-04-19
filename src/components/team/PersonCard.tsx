@@ -9,6 +9,7 @@ export interface PersonCardProps {
   title: string;
   bio?: string;
   photo?: string;
+  slug?: string;
   accent?:
     | 'yellow'
     | 'teal'
@@ -48,11 +49,18 @@ export default function PersonCard({
   title,
   bio,
   photo,
+  slug,
   accent = 'yellow',
   size = 'md',
 }: PersonCardProps) {
   const [open, setOpen] = useState(false);
+  const [photoFailed, setPhotoFailed] = useState(false);
   const hasBio = Boolean(bio);
+
+  // Auto-resolve photo path from slug if not explicitly provided.
+  // Supports .jpg / .png / .jpeg / .webp — tries .jpg first, falls back via onError.
+  const resolvedPhoto = photo ?? (slug ? `/team/members/${slug}.jpg` : undefined);
+  const showPhoto = Boolean(resolvedPhoto) && !photoFailed;
 
   // Close on Escape
   useEffect(() => {
@@ -83,13 +91,14 @@ export default function PersonCard({
       <div
         className={`relative ${photoAspect} w-full overflow-hidden rounded-xl bg-surface-subtle`}
       >
-        {photo ? (
+        {showPhoto && resolvedPhoto ? (
           <Image
-            src={photo}
+            src={resolvedPhoto}
             alt={name}
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
             className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+            onError={() => setPhotoFailed(true)}
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-surface-subtle to-white">
@@ -168,14 +177,15 @@ export default function PersonCard({
             </button>
 
             <div className="flex flex-col gap-6 md:flex-row">
-              {photo && (
+              {showPhoto && resolvedPhoto && (
                 <div className="relative h-40 w-32 shrink-0 overflow-hidden rounded-2xl bg-surface-subtle">
                   <Image
-                    src={photo}
+                    src={resolvedPhoto}
                     alt={name}
                     fill
                     sizes="128px"
                     className="object-cover"
+                    onError={() => setPhotoFailed(true)}
                   />
                 </div>
               )}

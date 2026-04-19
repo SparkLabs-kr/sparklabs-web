@@ -95,6 +95,7 @@ export default async function AboutTeamPage({
                 title={p.title[locale]}
                 bio={p.bio?.[locale]}
                 photo={p.photo}
+                slug={p.slug}
                 accent={accentFor(p.entity)}
                 size="lg"
               />
@@ -123,6 +124,7 @@ export default async function AboutTeamPage({
                 title={p.title[locale]}
                 bio={p.bio?.[locale]}
                 photo={p.photo}
+                slug={p.slug}
                 accent={accentFor(p.entity)}
               />
             ))}
@@ -148,6 +150,7 @@ export default async function AboutTeamPage({
                 title={p.title[locale]}
                 bio={p.bio?.[locale]}
                 photo={p.photo}
+                slug={p.slug}
                 accent="orange"
               />
             ))}
@@ -187,6 +190,7 @@ export default async function AboutTeamPage({
                       title={m.title[locale]}
                       bio={m.bio?.[locale]}
                       photo={m.photo}
+                      slug={m.slug}
                       accent="yellow"
                       size="sm"
                     />
