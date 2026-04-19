@@ -79,6 +79,36 @@ export default async function AboutOverviewPage({
 
       <section className="section">
         <div className="container-narrow">
+          <span className="eyebrow">{copy.timelineEyebrow}</span>
+          <h2 className="mt-3 text-display-md text-ink">{copy.timelineTitle}</h2>
+          <p className="mt-4 max-w-2xl text-ink-soft leading-relaxed">
+            {copy.timelineIntro}
+          </p>
+          <ol className="mt-12 relative border-l border-surface-border pl-8 space-y-8">
+            {copy.timeline.map((item) => {
+              const body = 'body' in item ? (item as { body?: string }).body : undefined;
+              return (
+                <li key={item.date + item.title} className="relative">
+                  <span
+                    className="absolute -left-[37px] top-1 h-3 w-3 rounded-full bg-spark-yellow ring-4 ring-white"
+                    aria-hidden="true"
+                  />
+                  <div className="text-xs font-semibold uppercase tracking-[0.16em] text-ink/50">
+                    {item.date}
+                  </div>
+                  <h3 className="mt-1 text-lg font-semibold text-ink">{item.title}</h3>
+                  {body ? (
+                    <p className="mt-1 text-ink-soft leading-relaxed">{body}</p>
+                  ) : null}
+                </li>
+              );
+            })}
+          </ol>
+        </div>
+      </section>
+
+      <section className="section bg-surface-subtle">
+        <div className="container-narrow">
           <div className="flex items-end justify-between gap-4">
             <div>
               <span className="eyebrow">{copy.entitiesEyebrow}</span>
@@ -143,8 +173,33 @@ const content = {
       },
     ],
     entitiesEyebrow: 'Global Network',
-    entitiesTitle: '8개 엔티티, 6대륙',
+    entitiesTitle: '7개 엔티티, 6대륙',
     entitiesCta: '네트워크 자세히 보기',
+    timelineEyebrow: 'Our Journey',
+    timelineTitle: '2012년부터 이어진 스파크랩의 발자취',
+    timelineIntro:
+      '한국 대표 액셀러레이터에서 6대륙을 연결하는 글로벌 네트워크로. 창업가가 창업가를 키우며 만들어 온 스파크랩의 주요 순간들.',
+    timeline: [
+      { date: '2012.12', title: '스파크랩 설립 및 액셀러레이터 1기 출범', body: '이한주·김호민·버나드 문 세 명의 창업가 출신 파트너가 한국 최초의 실리콘밸리형 액셀러레이터를 공동 창업.' },
+      { date: '2013.01', title: 'Global Accelerator Network(GAN) 회원사 선정' },
+      { date: '2014.03', title: '액셀러레이터지도자협회(ALF) 회장사 선정' },
+      { date: '2014.05', title: 'TIPS 프로그램 운영기관 선정' },
+      { date: '2016.01', title: '코워킹스페이스 스파크플러스 런칭', body: '한국 공유오피스 시장의 선도자로 자리매김, 현재 36호점 이상 운영.' },
+      { date: '2020.04', title: '신한캐피탈과 스파크랩-신한 오퍼튜니티 제1호 투자조합 결성' },
+      { date: '2021.01', title: '모태펀드 스마트 스파크랩 클라우드 제1호 펀드 결성' },
+      { date: '2021.06', title: '대우건설·베스핀글로벌과 베트남 스마트시티 플랫폼 MOU 체결' },
+      { date: '2022.03', title: '구글 스타트업 캠퍼스와 2022 부산 그린테크 액셀러레이터 프로그램 출범' },
+      { date: '2022.09', title: '시드 TIPS 운영사 선정' },
+      { date: '2022.11', title: '10주년 데모데이 개최' },
+      { date: '2022.11', title: '한화그룹과 공동 GP(Co-GP) 펀드 결성 발표' },
+      { date: '2023.07', title: 'SparkBioLabs 런칭', body: '바이오·헬스케어 전문 액셀러레이터로 영역 확장.' },
+      { date: '2024.09', title: 'Yonsei Biohealth Tech Holdings MOU 체결' },
+      { date: '2024.10', title: 'SNU Biomedical Research Institute MOU 체결' },
+      { date: '2024.09', title: '$50M AIM AI Fund 결성', body: 'AI-First 액셀러레이터로서 글로벌 AI 리더와 한국 AI 생태계에 대한 베팅 가속.' },
+      { date: '2024.09', title: '사우디 AIM-X 1기 출범', body: 'NTDP·SDAIA·KAUST와 공동으로 AI 스타트업 14개사 선발. Saudi Vision 2030 연계.' },
+      { date: '2025.09', title: 'SparkLabs Partners 경상북도 지사 개소', body: '한동대학교 캠퍼스 내 지역 거점 확장. 포항 AI·바이오 생태계 구축 시작.' },
+      { date: '2026.02', title: 'SparkLabs KSU Fund I ($20M) 출범', body: 'King Saud University·Riyadh Valley Company와 공동 조성.' },
+    ],
   },
   en: {
     heroTitle: 'Entrepreneurs Growing Entrepreneurs.',
@@ -178,7 +233,32 @@ const content = {
       },
     ],
     entitiesEyebrow: 'Global Network',
-    entitiesTitle: '8 entities across 6 continents',
+    entitiesTitle: '7 entities across 6 continents',
     entitiesCta: 'See the network',
+    timelineEyebrow: 'Our Journey',
+    timelineTitle: 'A journey that began in 2012.',
+    timelineIntro:
+      'From Korea\'s flagship accelerator to a global network spanning six continents. The milestones we\'ve built — as founders, for founders.',
+    timeline: [
+      { date: 'Dec 2012', title: 'SparkLabs founded; Batch 1 launched', body: 'Three founder-partners — HanJoo Lee, Jimmy Kim, and Bernard Moon — launched Korea\'s first Silicon Valley-style accelerator.' },
+      { date: 'Jan 2013', title: 'Joined the Global Accelerator Network (GAN)' },
+      { date: 'Mar 2014', title: 'Elected Chair of the Accelerator Leaders Forum (ALF)' },
+      { date: 'May 2014', title: 'Selected as an official TIPS program operator' },
+      { date: 'Jan 2016', title: 'Launched SparkPlus co-working spaces', body: 'Now operating 36+ locations as a leader in Korea\'s co-working market.' },
+      { date: 'Apr 2020', title: 'Formed the SparkLabs-Shinhan Opportunity Fund I with Shinhan Capital' },
+      { date: 'Jan 2021', title: 'Formed the Smart SparkLabs Cloud Fund I with Korea Fund of Funds' },
+      { date: 'Jun 2021', title: 'MOU with Daewoo E&C and Bespin Global for a Vietnam smart-city platform' },
+      { date: 'Mar 2022', title: 'Launched the 2022 Busan GreenTech Accelerator with Google for Startups Campus' },
+      { date: 'Sep 2022', title: 'Selected as a Seed TIPS operator' },
+      { date: 'Nov 2022', title: '10th anniversary Demo Day' },
+      { date: 'Nov 2022', title: 'Announced Co-GP fund with Hanwha Group' },
+      { date: 'Jul 2023', title: 'Launched SparkBioLabs', body: 'Expanded into bio and healthcare as a specialized accelerator arm.' },
+      { date: 'Sep 2024', title: 'MOU with Yonsei Biohealth Tech Holdings' },
+      { date: 'Oct 2024', title: 'MOU with SNU Biomedical Research Institute' },
+      { date: 'Sep 2024', title: '$50M AIM AI Fund established', body: 'Deepening AI-First conviction across global AI leaders and Korea\'s AI ecosystem.' },
+      { date: 'Sep 2024', title: 'Saudi AIM-X Cohort 1 launched', body: 'Selected 14 AI startups together with NTDP, SDAIA, and KAUST — aligned with Saudi Vision 2030.' },
+      { date: 'Sep 2025', title: 'SparkLabs Partners Gyeongbuk branch opened', body: 'Regional hub at Handong Global University kicks off the Pohang AI & bio ecosystem initiative.' },
+      { date: 'Feb 2026', title: 'SparkLabs KSU Fund I ($20M) launched', body: 'Co-established with King Saud University and Riyadh Valley Company.' },
+    ],
   },
 } as const;

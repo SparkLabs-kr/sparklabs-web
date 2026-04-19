@@ -274,7 +274,7 @@ const content = {
     eyebrow: 'Global Program · 6대륙 네트워크',
     heroTitle: '6대륙에서 동시에 움직이는 스파크랩 글로벌 프로그램.',
     heroSubcopy:
-      '한국 본사의 단일 프로그램이 아닙니다. 6대륙 8개 엔티티가 각 지역에서 독립적으로 운영하는 액셀러레이터·펀드·오픈콜을 한눈에 확인할 수 있는 통합 허브입니다.',
+      '한국 본사의 단일 프로그램이 아닙니다. 6대륙 7개 엔티티가 각 지역에서 독립적으로 운영하는 액셀러레이터·펀드·오픈콜을 한눈에 확인할 수 있는 통합 허브입니다.',
     statEntities: '글로벌 엔티티',
     statContinents: '대륙',
     statPortfolio: '포트폴리오',
@@ -305,7 +305,7 @@ const content = {
     eyebrow: 'Global Program · 6-Continent Network',
     heroTitle: 'SparkLabs programs, running on six continents simultaneously.',
     heroSubcopy:
-      'Not a single HQ program. 8 entities across 6 continents each run their own accelerators, funds, and open calls — this page is the unified hub where you can see them all.',
+      'Not a single HQ program. 7 entities across 6 continents each run their own accelerators, funds, and open calls — this page is the unified hub where you can see them all.',
     statEntities: 'Global entities',
     statContinents: 'Continents',
     statPortfolio: 'Portfolio',

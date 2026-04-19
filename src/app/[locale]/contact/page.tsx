@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { buildPageMetadata } from '@/lib/seo';
+import { ContactForm } from '@/components/contact/contact-form';
 import type { Locale } from '@/lib/content';
 
 export async function generateMetadata({
@@ -106,8 +107,28 @@ export default async function ContactPage({
         </div>
       </section>
 
-      {/* OFFICE */}
+      {/* INQUIRY FORM */}
       <section className="section bg-surface-subtle">
+        <div className="container-narrow">
+          <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] items-start">
+            <div>
+              <span className="eyebrow">{copy.formEyebrow}</span>
+              <h2 className="mt-3 text-display-md text-ink leading-[1.15]">
+                {copy.formTitle}
+              </h2>
+              <p className="mt-5 text-ink-soft leading-relaxed max-w-md">
+                {copy.formSubcopy}
+              </p>
+            </div>
+            <div className="rounded-3xl border border-surface-border bg-white p-6 md:p-10">
+              <ContactForm locale={locale} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* OFFICE */}
+      <section className="section">
         <div className="container-narrow">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] items-start">
             <div>
@@ -192,8 +213,68 @@ export default async function ContactPage({
         </div>
       </section>
 
-      {/* GLOBAL ENTITIES */}
+      {/* NEWSLETTERS */}
       <section className="section">
+        <div className="container-narrow">
+          <span className="eyebrow">{copy.newsletterEyebrow}</span>
+          <h2 className="mt-3 text-display-md text-ink max-w-3xl">
+            {copy.newsletterTitle}
+          </h2>
+          <p className="mt-4 max-w-2xl text-ink-soft leading-relaxed">
+            {copy.newsletterSubcopy}
+          </p>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {copy.newsletters.map((n, i) => {
+              const accents = ['yellow', 'violet'] as const;
+              const accent = accents[i % accents.length];
+              return (
+                <article
+                  key={n.href}
+                  className="card-light flex flex-col gap-5 p-8"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div className={`h-1.5 w-12 rounded-full bg-spark-${accent}`} />
+                    <span className="shrink-0 text-xs uppercase tracking-[0.14em] text-ink/50">
+                      {n.tag}
+                    </span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-ink">{n.title}</h3>
+                    <p className="mt-2 text-ink-soft leading-relaxed">{n.body}</p>
+                  </div>
+                  <div className="mt-auto pt-2">
+                    <a
+                      href={n.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white hover:bg-ink/90 transition"
+                    >
+                      {n.cta}
+                      <svg
+                        className="h-3.5 w-3.5"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M7 17L17 7" />
+                        <path d="M7 7h10v10" />
+                      </svg>
+                    </a>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* GLOBAL ENTITIES */}
+      <section className="section bg-surface-subtle">
         <div className="container-narrow">
           <span className="eyebrow">{copy.globalEyebrow}</span>
           <h2 className="mt-3 text-display-md text-ink max-w-3xl">
@@ -272,6 +353,11 @@ const content = {
       },
     ],
 
+    formEyebrow: 'Inquiry Form',
+    formTitle: '이메일이 불편하시다면 폼으로 남겨주세요.',
+    formSubcopy:
+      '문의 유형을 선택하면 담당팀 메일함으로 바로 전달됩니다. 보내주신 내용은 Notion 내부 트래커에도 자동 기록되어 누락 없이 관리됩니다.',
+
     officeEyebrow: 'Office',
     officeTitle: '서울 강남, 마루180.',
     officeSubcopy:
@@ -285,10 +371,31 @@ const content = {
     googleMaps: 'Google Maps에서 보기',
     naverMaps: '네이버 지도에서 보기',
 
+    newsletterEyebrow: 'Newsletter',
+    newsletterTitle: '스파크랩의 인사이트를 이메일로 받아보세요.',
+    newsletterSubcopy:
+      '창업가용 Spark Letter와 투자자용 VC Mailing — 두 개의 뉴스레터를 운영합니다. 본인의 역할에 맞는 리스트를 선택해 구독하세요.',
+    newsletters: [
+      {
+        title: 'Spark Letter',
+        body: '창업가를 위한 스파크랩의 인사이트와 포트폴리오 소식. 프로그램 지원·투자 동향·창업 팁까지 — 매주 큐레이션해 보내드립니다.',
+        tag: 'For Founders',
+        cta: '구독하기',
+        href: 'https://page.stibee.com/subscriptions/244667',
+      },
+      {
+        title: 'VC Mailing List',
+        body: '투자자를 위한 포트폴리오 하이라이트와 딜 업데이트. 스파크랩이 발굴한 유망 기업과 시장 흐름을 공유합니다.',
+        tag: 'For Investors',
+        cta: '구독하기',
+        href: 'https://page.stibee.com/subscriptions/207072',
+      },
+    ],
+
     globalEyebrow: 'Global Offices',
     globalTitle: '다른 지역 엔티티를 찾고 계신가요?',
     globalSubcopy:
-      '스파크랩은 6대륙 8개 엔티티 네트워크로 운영됩니다. 미국 · 대만 · 사우디 · 호주 · 바이오 등 지역·섹터별 엔티티의 연락처는 Entities 페이지에서 확인할 수 있습니다.',
+      '스파크랩은 6대륙 7개 엔티티 네트워크로 운영됩니다. 미국 · 대만 · 사우디 · 호주 · 바이오 등 지역·섹터별 엔티티의 연락처는 Entities 페이지에서 확인할 수 있습니다.',
     globalCta: 'Entities 페이지로',
   },
   en: {
@@ -332,6 +439,11 @@ const content = {
       },
     ],
 
+    formEyebrow: 'Inquiry Form',
+    formTitle: 'Prefer a form? Drop us a note.',
+    formSubcopy:
+      'Pick an inquiry type and your message routes straight to the right team. Everything is logged in our internal Notion tracker so nothing falls through the cracks.',
+
     officeEyebrow: 'Office',
     officeTitle: 'Maru180, Gangnam, Seoul.',
     officeSubcopy:
@@ -345,10 +457,31 @@ const content = {
     googleMaps: 'Open in Google Maps',
     naverMaps: 'Open in Naver Maps',
 
+    newsletterEyebrow: 'Newsletter',
+    newsletterTitle: 'Get SparkLabs insights delivered to your inbox.',
+    newsletterSubcopy:
+      'We run two newsletters: Spark Letter for founders and VC Mailing for investors. Pick the list that fits your role.',
+    newsletters: [
+      {
+        title: 'Spark Letter',
+        body: 'Weekly curation for founders — program calls, investment trends, portfolio news, and tactical advice from our partners and mentors.',
+        tag: 'For Founders',
+        cta: 'Subscribe',
+        href: 'https://page.stibee.com/subscriptions/244667',
+      },
+      {
+        title: 'VC Mailing List',
+        body: 'Portfolio highlights and deal updates for investors. A direct line to the companies and market signals SparkLabs is watching.',
+        tag: 'For Investors',
+        cta: 'Subscribe',
+        href: 'https://page.stibee.com/subscriptions/207072',
+      },
+    ],
+
     globalEyebrow: 'Global Offices',
     globalTitle: 'Looking for a regional entity?',
     globalSubcopy:
-      'SparkLabs operates 8 entities across 6 continents. For region- or sector-specific entities — US, Taiwan, Saudi, Australia, BioLabs and more — check the Entities page.',
+      'SparkLabs operates 7 entities across 6 continents. For region- or sector-specific entities — US, Taiwan, Saudi, Australia, BioLabs and more — check the Entities page.',
     globalCta: 'Go to Entities',
   },
 } as const;

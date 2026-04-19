@@ -71,6 +71,19 @@ export const coFounders: TeamMember[] = [
       en: 'Leads SparkLabs Korea\'s accelerator program. Former BD Director at Tencent Korea, with experience at Podotree, Vertigo Games, and NHN USA.',
     },
   },
+  {
+    slug: 'john-park',
+    name: 'John Park',
+    title: {
+      ko: 'Partner, SparkLabs Korea',
+      en: 'Partner, SparkLabs Korea',
+    },
+    entity: 'korea',
+    bio: {
+      ko: '스파크랩 코리아 파트너. 포트폴리오사의 후속 투자·글로벌 확장을 담당하며, 심사·멘토링·파트너십 트랙을 이끈다.',
+      en: 'Partner at SparkLabs Korea. Drives follow-on investments and global expansion for portfolio companies across the investment, mentorship, and partnership tracks.',
+    },
+  },
 ];
 
 export const entityPartners: TeamMember[] = [
@@ -164,12 +177,12 @@ export const featuredAdvisors: Advisor[] = [
   {
     name: 'Xavier Niel',
     role: { ko: 'Founder, Iliad · Co-owner, Le Monde', en: 'Founder of Iliad · Co-owner of Le Monde' },
-    affiliation: 'SparkLabs Global Ventures',
+    affiliation: 'SparkLabs Group',
   },
   {
     name: 'Jessica Jackley',
     role: { ko: 'Co-founder, Kiva', en: 'Co-founder of Kiva' },
-    affiliation: 'SparkLabs Global Ventures',
+    affiliation: 'SparkLabs Group',
   },
   {
     name: 'Jim McKelvey',
@@ -214,5 +227,13 @@ export const featuredAdvisors: Advisor[] = [
     name: 'Amr Awadallah',
     role: { ko: 'CEO, Vectara', en: 'CEO, Vectara' },
     affiliation: 'SparkLabs Saudi Arabia',
+  },
+  {
+    name: 'Tom Peters',
+    role: {
+      ko: '경영 구루 · 『초우량 기업의 조건』 저자',
+      en: 'Business thought leader · Author of "In Search of Excellence"',
+    },
+    affiliation: 'SparkLabs Korea',
   },
 ];

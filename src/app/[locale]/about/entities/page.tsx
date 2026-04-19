@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
+import { Link } from '@/i18n/routing';
+import { ArrowRight } from 'lucide-react';
 import { entities } from '@/lib/entities';
 import { GlobalMap } from '@/components/home/global-map';
 import { buildPageMetadata } from '@/lib/seo';
@@ -87,9 +89,10 @@ export default async function AboutEntitiesPage({
 
             <div className="mt-10 grid gap-6 lg:grid-cols-2">
               {group.items.map((e) => (
-                <article
+                <Link
                   key={e.slug}
-                  className="card-light flex flex-col gap-4 p-8"
+                  href={`/about/entities/${e.slug}`}
+                  className="card-light group flex flex-col gap-4 p-8 transition hover:-translate-y-0.5 hover:shadow-card-hover"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div>
@@ -113,7 +116,7 @@ export default async function AboutEntitiesPage({
                   </p>
 
                   {e.leads && e.leads.length > 0 && (
-                    <div className="mt-auto pt-4 border-t border-surface-border">
+                    <div className="pt-4 border-t border-surface-border">
                       <p className="text-xs uppercase tracking-[0.14em] text-ink/50">
                         {copy.leadsLabel}
                       </p>
@@ -122,7 +125,12 @@ export default async function AboutEntitiesPage({
                       </p>
                     </div>
                   )}
-                </article>
+
+                  <div className="mt-auto flex items-center gap-1.5 text-sm font-medium text-brand-blue">
+                    {copy.viewEntity}
+                    <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
+                  </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -135,18 +143,20 @@ export default async function AboutEntitiesPage({
 const content = {
   ko: {
     eyebrow: 'Global Network',
-    heroTitle: '8개 엔티티, 6대륙의 스파크랩 네트워크.',
+    heroTitle: '7개 엔티티, 6대륙의 스파크랩 네트워크.',
     heroSubcopy:
       '스파크랩은 한국에서 시작했지만, 지금은 6대륙에서 직접 운영하는 액셀러레이터·VC 네트워크로 자리잡았습니다. 각 엔티티는 지역의 독립성을 유지하면서도 하나의 생태계로 움직입니다.',
     entityWord: '개 엔티티',
     leadsLabel: 'Leadership',
+    viewEntity: '자세히 보기',
   },
   en: {
     eyebrow: 'Global Network',
-    heroTitle: '8 entities, one global network.',
+    heroTitle: '7 entities, one global network.',
     heroSubcopy:
       'SparkLabs started in Korea, but today we operate accelerators and venture funds on six continents. Each entity is locally run — yet connected as a single global ecosystem.',
     entityWord: 'entities',
     leadsLabel: 'Leadership',
+    viewEntity: 'Explore entity',
   },
 } as const;

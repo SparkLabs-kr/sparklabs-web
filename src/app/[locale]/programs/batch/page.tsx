@@ -204,6 +204,29 @@ export default async function BatchProgramPage({
         </div>
       </section>
 
+      {/* TESTIMONIALS */}
+      <section className="section">
+        <div className="container-narrow">
+          <span className="eyebrow">{copy.testimonialsEyebrow}</span>
+          <h2 className="mt-3 text-display-md text-ink max-w-3xl">
+            {copy.testimonialsTitle}
+          </h2>
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {copy.testimonials.map((t) => (
+              <figure key={t.founder} className="card-light p-8 flex flex-col gap-6">
+                <blockquote className="text-ink-soft leading-relaxed">
+                  &ldquo;{t.quote}&rdquo;
+                </blockquote>
+                <figcaption className="mt-auto border-t border-surface-border pt-5">
+                  <div className="font-semibold text-ink">{t.founder}</div>
+                  <div className="mt-1 text-sm text-ink/60">{t.company}</div>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* APPLY CTA */}
       <section className="section">
         <div className="container-narrow">
@@ -318,6 +341,29 @@ const content = {
       { label: 'Traction · Demoday', duration: '8주' },
     ],
 
+    testimonialsEyebrow: 'Founders\' Voice',
+    testimonialsTitle: '창업가가 추천하는 프로그램.',
+    testimonials: [
+      {
+        quote:
+          '창업자의 하루하루는 전쟁의 연속입니다. 그 길을 걸으면서 성공과 실패의 교훈을 몸에 새긴 사람들과 함께 하세요. 스파크랩의 파트너, 멘토, 모든 기수의 대표들이 당신의 편이 되어 줄 것입니다.',
+        founder: '이복기 대표',
+        company: '원티드랩 · Wanted Lab',
+      },
+      {
+        quote:
+          '스파크랩은 우리가 불과 1년 만에 시리즈A·시리즈B 단계 투자 유치하고 해외 진출하는 데 큰 도움을 주었습니다. 다양한 국가 고객에게 제품을 계속 선보이는 과정에서 스파크랩은 투자자이자 전략 파트너였습니다.',
+        founder: '하형석 대표',
+        company: '엠비엑스 · MBX',
+      },
+      {
+        quote:
+          '스파크랩 배치 프로그램 덕분에 빠르게 성장했습니다. 매주 테스트와 멘토링으로 Early Vangelist 개념을 잡았고, 20만 명의 가입자를 모집해 투자 유치에 성공했습니다.',
+        founder: '이정윤 대표',
+        company: '코코지 · Kokozi',
+      },
+    ],
+
     ctaTitle: '다음 배치에서 함께할 창업가를 찾고 있습니다.',
     ctaBody:
       '지원서는 상시 접수하며, 분기 단위로 선발합니다. 지원 전 궁금한 점은 언제든 문의 주세요.',
@@ -408,6 +454,29 @@ const content = {
       { label: 'Bootcamp', duration: '2 weeks' },
       { label: 'Main program', duration: '12 weeks' },
       { label: 'Traction · Demoday', duration: '8 weeks' },
+    ],
+
+    testimonialsEyebrow: 'Founders\' Voice',
+    testimonialsTitle: 'Recommended by founders themselves.',
+    testimonials: [
+      {
+        quote:
+          'Every day as a founder is a battle. Walk that path alongside people who have earned the lessons of success and failure in their bones. The SparkLabs partners, mentors, and founders from every batch will be on your side.',
+        founder: 'CEO Bokkee Lee',
+        company: 'Wanted Lab',
+      },
+      {
+        quote:
+          'SparkLabs played a huge role in helping us raise Series A and Series B funding and expand globally in just one year. As we kept putting product in front of customers across countries, SparkLabs was both an investor and a strategic partner.',
+        founder: 'CEO Dino Ha',
+        company: 'MBX',
+      },
+      {
+        quote:
+          'We grew rapidly thanks to the SparkLabs batch program. Weekly testing and mentoring nailed down our Early Vangelist concept, and we acquired 200,000 signups that carried us to a successful fundraise.',
+        founder: 'CEO Jeongyoon Lee',
+        company: 'Kokozi',
+      },
     ],
 
     ctaTitle: 'We are looking for the founders of the next batch.',

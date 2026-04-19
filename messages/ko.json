@@ -208,6 +208,11 @@
       "terms": "이용약관",
       "cookie": "쿠키 정책"
     },
+    "newsletter": {
+      "heading": "Newsletter",
+      "sparkLetter": "Spark Letter · 창업가용",
+      "vcMailing": "VC Mailing · 투자자용"
+    },
     "copyright": "© {year} SparkLabs. All rights reserved."
   },
   "locale": {

@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 
 import { routing } from '@/i18n/routing';
 import { getAllNews } from '@/lib/newsroom';
+import { entityDetails } from '@/lib/entity-details';
 import type { NewsKind } from '@/components/newsroom/news-card';
 
 const SITE_URL =
@@ -83,6 +84,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: item.date ? new Date(item.date) : now,
         changeFrequency: 'monthly',
         priority: 0.5,
+        alternates: { languages: buildAlternateLanguages(path) },
+      });
+    }
+  }
+
+  // Entity detail pages
+  for (const locale of routing.locales) {
+    for (const slug of Object.keys(entityDetails)) {
+      const path = `/about/entities/${slug}`;
+      entries.push({
+        url: `${SITE_URL}/${locale}${path}`,
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority: 0.7,
         alternates: { languages: buildAlternateLanguages(path) },
       });
     }

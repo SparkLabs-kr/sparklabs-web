@@ -336,7 +336,7 @@ const content = {
       },
       {
         q: '해외 창업가도 지원할 수 있나요?',
-        a: '가능합니다. 다만 한국 시장을 주요 타깃으로 하거나, 한국에 법인을 설립할 계획이 있어야 합니다. 글로벌 시장만을 대상으로 하는 팀은 SparkLabs Global Ventures로 연결해드립니다.',
+        a: '가능합니다. 다만 한국 시장을 주요 타깃으로 하거나, 한국에 법인을 설립할 계획이 있어야 합니다. 한국이 아닌 지역에 포커스가 있는 팀은 SparkLabs Taiwan · Saudi Arabia · Cultiv8 등 해당 지역 엔티티로 연결해드립니다.',
       },
       {
         q: '지원 후 회신은 언제 받나요?',
@@ -442,7 +442,7 @@ const content = {
       },
       {
         q: 'Can international founders apply?',
-        a: 'Yes — as long as Korea is a meaningful market for you or you plan to incorporate in Korea. Fully non-Korean teams are often routed to SparkLabs Global Ventures instead.',
+        a: 'Yes — as long as Korea is a meaningful market for you or you plan to incorporate in Korea. Teams focused on other regions are often routed to the relevant SparkLabs entity — Taiwan, Saudi Arabia, Cultiv8, and others.',
       },
       {
         q: 'When will I hear back?',

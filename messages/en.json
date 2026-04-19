@@ -208,6 +208,11 @@
       "terms": "Terms of Use",
       "cookie": "Cookie Policy"
     },
+    "newsletter": {
+      "heading": "Newsletter",
+      "sparkLetter": "Spark Letter · For Founders",
+      "vcMailing": "VC Mailing · For Investors"
+    },
     "copyright": "© {year} SparkLabs. All rights reserved."
   },
   "locale": {

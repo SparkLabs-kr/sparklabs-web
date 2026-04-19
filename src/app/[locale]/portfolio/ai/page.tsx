@@ -28,12 +28,8 @@ export default async function AiPortfolioPage({
   const copy = content[locale];
 
   const aiCompanies = portfolio.filter((p) => p.aiPick);
-  const global = aiCompanies.filter((c) =>
-    ['global-ventures', 'group'].includes(c.entity)
-  );
-  const korean = aiCompanies.filter(
-    (c) => !['global-ventures', 'group'].includes(c.entity)
-  );
+  const global = aiCompanies.filter((c) => c.entity === 'group');
+  const korean = aiCompanies.filter((c) => c.entity !== 'group');
 
   return (
     <>

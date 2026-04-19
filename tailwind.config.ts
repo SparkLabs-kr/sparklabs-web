@@ -1,9 +1,37 @@
 import type { Config } from 'tailwindcss';
 
+const sparkAccents = [
+  'blue',
+  'orange',
+  'yellow',
+  'green',
+  'teal',
+  'pink',
+  'red',
+  'violet',
+] as const;
+
 const config: Config = {
   content: [
     './src/**/*.{ts,tsx,mdx}',
     './content/**/*.{md,mdx}',
+  ],
+  safelist: [
+    ...sparkAccents.flatMap((c) => [
+      `bg-spark-${c}`,
+      `bg-spark-${c}/5`,
+      `bg-spark-${c}/10`,
+      `bg-spark-${c}/15`,
+      `bg-spark-${c}/20`,
+      `bg-spark-${c}/25`,
+      `bg-spark-${c}/30`,
+      `bg-spark-${c}/40`,
+      `bg-spark-${c}/90`,
+      `text-spark-${c}`,
+      `border-spark-${c}`,
+      `border-spark-${c}/40`,
+      `ring-spark-${c}`,
+    ]),
   ],
   theme: {
     extend: {
@@ -28,6 +56,7 @@ const config: Config = {
         },
         // Spark spectrum (from logo)
         spark: {
+          blue: '#1E5BFF',
           orange: '#F97A1F',
           yellow: '#F2C94C',
           green: '#2FB574',
