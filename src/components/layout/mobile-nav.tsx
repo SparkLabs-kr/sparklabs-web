@@ -23,36 +23,59 @@ export default function MobileNav({ items, applyLabel }: Props) {
 
   // Lock body scroll while the drawer is open
   useEffect(() => {
-    if (open) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
+    if (!open) return;
+    const original = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
     return () => {
-      document.body.style.overflow = '';
+      document.body.style.overflow = original;
     };
   }, [open]);
 
+  const close = () => {
+    setOpen(false);
+    setExpandedHref(null);
+  };
+
   return (
     <>
+      {/* Hamburger button — only visible below md */}
       <button
         type="button"
-        aria-label={open ? 'Close menu' : 'Open menu'}
+        aria-label="메뉴 열기"
         aria-expanded={open}
-        onClick={() => setOpen((v) => !v)}
-        className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full text-ink hover:bg-surface-subtle"
+        aria-controls="mobile-nav-drawer"
+        onClick={() => setOpen(true)}
+        className="inline-flex md:hidden h-10 w-10 items-center justify-center rounded-full text-ink hover:bg-surface-subtle"
       >
-        {open ? <X className="h-5 w-5" aria-hidden="true" /> : <Menu className="h-5 w-5" aria-hidden="true" />}
+        <Menu className="h-6 w-6" aria-hidden="true" />
       </button>
 
+      {/* Full-screen drawer */}
       {open && (
         <div
           id="mobile-nav-drawer"
           role="dialog"
           aria-modal="true"
-          className="md:hidden fixed inset-x-0 top-16 bottom-0 z-30 overflow-y-auto bg-white"
+          aria-label="사이트 메뉴"
+          className="md:hidden fixed inset-0 z-[100] flex flex-col bg-white"
         >
-          <nav className="container-narrow py-6">
+          {/* Drawer header */}
+          <div className="flex h-16 shrink-0 items-center justify-between border-b border-surface-border/70 px-6">
+            <span className="text-sm font-semibold tracking-wider uppercase text-ink/70">
+              Menu
+            </span>
+            <button
+              type="button"
+              aria-label="메뉴 닫기"
+              onClick={close}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full text-ink hover:bg-surface-subtle"
+            >
+              <X className="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
+
+          {/* Scrollable nav list */}
+          <nav className="flex-1 overflow-y-auto px-6 py-6">
             <ul className="space-y-1">
               {items.map((item) => {
                 const hasChildren = !!item.children && item.children.length > 0;
@@ -63,6 +86,7 @@ export default function MobileNav({ items, applyLabel }: Props) {
                     <div className="flex items-center">
                       <Link
                         href={item.href}
+                        onClick={close}
                         className="flex-1 rounded-xl px-4 py-3 text-base font-medium text-ink hover:bg-surface-subtle"
                       >
                         {item.label}
@@ -74,8 +98,8 @@ export default function MobileNav({ items, applyLabel }: Props) {
                             setExpandedHref(isExpanded ? null : item.href)
                           }
                           aria-expanded={isExpanded}
-                          aria-label={`${item.label} 하위 메뉴 열기`}
-                          className="ml-1 inline-flex h-11 w-11 items-center justify-center rounded-xl text-ink-soft hover:bg-surface-subtle"
+                          aria-label={`${item.label} 하위 메뉴`}
+                          className="ml-1 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-ink-soft hover:bg-surface-subtle"
                         >
                           <ChevronDown
                             className={`h-4 w-4 transition ${
@@ -93,6 +117,7 @@ export default function MobileNav({ items, applyLabel }: Props) {
                           <li key={child.href}>
                             <Link
                               href={child.href}
+                              onClick={close}
                               className="block rounded-xl px-4 py-2.5 text-sm text-ink-soft hover:bg-surface-subtle hover:text-ink"
                             >
                               {child.label}
@@ -107,7 +132,11 @@ export default function MobileNav({ items, applyLabel }: Props) {
             </ul>
 
             <div className="mt-8 border-t border-surface-border pt-6">
-              <Link href="/apply" className="btn-primary w-full justify-center">
+              <Link
+                href="/apply"
+                onClick={close}
+                className="btn-primary w-full justify-center"
+              >
                 {applyLabel}
               </Link>
             </div>
