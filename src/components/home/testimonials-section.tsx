@@ -37,7 +37,7 @@ export function TestimonialsSection({
   const next = () => setIdx((i) => (i + 1) % count);
 
   return (
-    <section className="section bg-[#EFEBFE]">
+    <section className="section bg-surface-subtle">
       <div className="container-narrow">
         <div className="grid items-start gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] md:gap-16">
           <div>
