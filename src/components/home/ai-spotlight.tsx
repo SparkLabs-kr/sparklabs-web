@@ -14,7 +14,7 @@ export async function AiSpotlight() {
   ];
 
   return (
-    <section className="section bg-white">
+    <section className="section bg-surface-subtle">
       <div className="container-narrow">
         <div className="grid gap-10 md:grid-cols-[1fr_1.3fr] md:gap-16 md:items-start">
           <div>
