@@ -32,7 +32,7 @@ export async function Footer({ locale }: { locale: string }) {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-24 bg-navy-deep text-white">
+    <footer className="mt-24 bg-brand-blue text-white">
       <div className="container-narrow py-16 grid gap-12 md:grid-cols-[1.5fr_1fr_1fr_1fr_1fr]">
         <div>
           <div className="flex items-center">
@@ -122,8 +122,8 @@ export async function Footer({ locale }: { locale: string }) {
         </div>
       </div>
 
-      <div className="border-t border-white/10">
-        <div className="container-narrow py-6 text-xs text-white/50">
+      <div className="border-t border-white/20">
+        <div className="container-narrow py-6 text-xs text-white/75">
           {t('copyright', { year })}
         </div>
       </div>

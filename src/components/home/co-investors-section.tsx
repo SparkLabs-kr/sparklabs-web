@@ -8,13 +8,15 @@ export async function CoInvestorsSection() {
   return (
     <section className="section bg-surface-subtle">
       <div className="container-narrow">
-        <span className="eyebrow">{t('eyebrow')}</span>
-        <h2 className="mt-3 text-display-md text-ink">{t('title')}</h2>
+        <span className="inline-block rounded-sm border border-brand-blue px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.1em] text-brand-blue">
+          {t('eyebrow')}
+        </span>
+        <h2 className="mt-5 text-display-lg text-ink">{t('title')}</h2>
         <p className="mt-4 max-w-2xl text-ink-soft leading-relaxed">
           {t('subcopy')}
         </p>
 
-        <div className="mt-10 rounded-3xl border border-surface-border bg-white p-10 md:p-16">
+        <div className="mt-12 bg-white p-10 md:p-16">
           <div className="grid grid-cols-2 gap-x-10 gap-y-20 sm:grid-cols-3 md:grid-cols-4">
             {coInvestors.map((c) => (
               <div

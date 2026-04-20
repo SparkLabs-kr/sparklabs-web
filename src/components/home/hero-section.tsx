@@ -30,8 +30,8 @@ export async function HeroSection() {
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">
               {t('badge')}
             </span>
-            <h1 className="mt-6 text-display-xl max-w-3xl leading-[1.02]">
-              <span className="block bg-gradient-to-r from-spark-orange via-white to-white bg-clip-text text-transparent">
+            <h1 className="mt-6 text-display-xl max-w-3xl leading-[1.0]">
+              <span className="block text-brand-blue-soft">
                 {t('headline1')}
               </span>
               <span className="block text-white">{t('headline2')}</span>

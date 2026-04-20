@@ -7,37 +7,28 @@ export async function ImpactBar({ metrics }: { metrics: readonly Metric[] }) {
   const tRoot = await getTranslations('impact');
 
   return (
-    <section className="relative overflow-hidden bg-[#4F46E5] text-white">
-      {/* decorative accents */}
-      <div
-        className="pointer-events-none absolute -top-24 -left-16 h-[360px] w-[360px] rounded-full bg-white/10 blur-3xl"
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute -bottom-24 -right-16 h-[360px] w-[360px] rounded-full bg-white/5 blur-3xl"
-        aria-hidden="true"
-      />
+    <section className="relative overflow-hidden bg-brand-blue text-white">
+      <div className="container-narrow relative py-20 md:py-24">
+        <div className="grid gap-10 md:grid-cols-[240px_1fr] md:gap-16">
+          <div>
+            <span className="eyebrow !text-white/80">{tRoot('eyebrow')}</span>
+            <h2 className="mt-3 text-display-md font-bold leading-[1.05] md:text-display-lg">
+              {tRoot('title')}
+            </h2>
+          </div>
 
-      <div className="container-narrow relative py-16 md:py-20">
-        <span className="eyebrow !text-white/80">{tRoot('eyebrow')}</span>
-        <h2 className="mt-3 text-display-md font-semibold leading-tight md:text-display-lg">
-          {tRoot('title')}
-        </h2>
-
-        <div className="mt-10 grid gap-x-8 gap-y-10 md:mt-14 md:grid-cols-2 lg:grid-cols-3">
-          {metrics.map((m) => (
-            <div
-              key={m.key}
-              className="border-t border-white/25 pt-5"
-            >
-              <div className="text-4xl font-semibold tracking-tight md:text-5xl">
-                {m.value}
+          <div className="grid gap-x-12 gap-y-12 sm:grid-cols-2">
+            {metrics.map((m) => (
+              <div key={m.key} className="border-t border-white/40 pt-5">
+                <div className="text-5xl font-extrabold tracking-tight md:text-6xl">
+                  {m.value}
+                </div>
+                <div className="mt-2 text-sm text-white/85 md:text-base">
+                  {t(m.key)}
+                </div>
               </div>
-              <div className="mt-2 text-sm text-white/80 md:text-base">
-                {t(m.key)}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

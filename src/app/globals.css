@@ -38,11 +38,11 @@
 
 @layer components {
   .container-narrow {
-    @apply mx-auto w-full max-w-[1200px] px-6 md:px-10;
+    @apply mx-auto w-full max-w-[1240px] px-6 md:px-10;
   }
 
   .section {
-    @apply py-16 md:py-24;
+    @apply py-20 md:py-28;
   }
 
   .eyebrow {
@@ -50,7 +50,7 @@
   }
 
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all disabled:opacity-50 disabled:pointer-events-none;
+    @apply inline-flex items-center justify-center gap-2 rounded-sm px-7 py-3.5 text-[13px] font-semibold uppercase tracking-[0.08em] transition-all disabled:opacity-50 disabled:pointer-events-none;
   }
 
   .btn-primary {
@@ -62,7 +62,7 @@
   }
 
   .btn-ghost-light {
-    @apply btn border border-surface-border text-ink hover:bg-surface-subtle;
+    @apply btn border border-ink text-ink hover:bg-ink hover:text-white;
   }
 
   .card-light {

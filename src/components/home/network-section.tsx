@@ -14,19 +14,25 @@ export async function NetworkSection() {
   return (
     <section className="section bg-navy-deep text-white">
       <div className="container-narrow">
-        <span className="eyebrow !text-spark-yellow">Global Network</span>
+        <span className="eyebrow !text-brand-blue-soft">Global Network</span>
         <h2 className="mt-3 text-display-lg">{t('title')}</h2>
-        <p className="mt-3 max-w-2xl text-lg text-white/70">{t('subtitle')}</p>
+        <p className="mt-4 max-w-2xl text-lg text-white/70">{t('subtitle')}</p>
 
-        <div className="mt-12">
+        <div className="mt-14">
           <GlobalMap entities={entities} />
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
-          {pillars.map((p) => (
-            <div key={p.key} className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <h3 className="text-lg font-semibold">{p.title}</h3>
-              <p className="mt-3 text-sm text-white/70 leading-relaxed">{p.body}</p>
+        <div className="mt-16 grid gap-0 md:grid-cols-3 md:gap-8">
+          {pillars.map((p, idx) => (
+            <div
+              key={p.key}
+              className="group border-t border-white/15 py-8 md:border-t-0 md:border-l md:pl-8 md:py-0 md:first:border-l-0 md:first:pl-0"
+            >
+              <span className="inline-block rounded-full border border-brand-blue-soft px-3 py-1 text-xs font-semibold tracking-[0.08em] text-brand-blue-soft">
+                {String(idx + 1).padStart(2, '0')}
+              </span>
+              <h3 className="mt-4 text-xl font-bold tracking-tight">{p.title}</h3>
+              <p className="mt-3 text-sm text-white/65 leading-relaxed">{p.body}</p>
             </div>
           ))}
         </div>
