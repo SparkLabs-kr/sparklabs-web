@@ -3,6 +3,7 @@ import { Link } from '@/i18n/routing';
 import { LanguageToggle } from './language-toggle';
 import { SparkLogo } from './spark-logo';
 import NavItems, { type NavItem } from './nav-items';
+import MobileNav from './mobile-nav';
 
 export async function Header({ locale }: { locale: string }) {
   const tNav = await getTranslations({ locale, namespace: 'nav' });
@@ -65,9 +66,10 @@ export async function Header({ locale }: { locale: string }) {
 
         <div className="flex items-center gap-2">
           <LanguageToggle currentLocale={locale} />
-          <Link href="/apply" className="btn-primary hidden sm:inline-flex">
+          <Link href="/apply" className="btn-primary hidden md:inline-flex">
             {tNav('apply')}
           </Link>
+          <MobileNav items={items} applyLabel={tNav('apply')} />
         </div>
       </div>
     </header>
