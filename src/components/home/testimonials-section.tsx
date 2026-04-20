@@ -37,7 +37,7 @@ export function TestimonialsSection({
   const next = () => setIdx((i) => (i + 1) % count);
 
   return (
-    <section className="section bg-white">
+    <section className="section bg-[#EFEBFE]">
       <div className="container-narrow">
         <div className="grid items-start gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] md:gap-16">
           <div>
@@ -52,7 +52,7 @@ export function TestimonialsSection({
                   type="button"
                   onClick={prev}
                   aria-label={copy.prev}
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-surface-border bg-white text-ink transition hover:border-ink hover:text-ink"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-ink/20 bg-white text-ink transition hover:border-ink hover:text-ink"
                 >
                   <ArrowLeft className="h-4 w-4" />
                 </button>
@@ -60,7 +60,7 @@ export function TestimonialsSection({
                   type="button"
                   onClick={next}
                   aria-label={copy.next}
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-surface-border bg-white text-ink transition hover:border-ink hover:text-ink"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-ink/20 bg-white text-ink transition hover:border-ink hover:text-ink"
                 >
                   <ArrowRight className="h-4 w-4" />
                 </button>
@@ -72,7 +72,7 @@ export function TestimonialsSection({
             )}
           </div>
 
-          <div className="relative rounded-3xl border border-surface-border bg-surface-subtle p-8 md:p-12">
+          <div className="relative rounded-3xl border border-surface-border bg-white p-8 md:p-12">
             <Quote
               className="absolute -top-5 left-8 h-10 w-10 text-spark-yellow"
               fill="currentColor"

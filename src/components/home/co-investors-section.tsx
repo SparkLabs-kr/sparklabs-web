@@ -6,7 +6,7 @@ export async function CoInvestorsSection() {
   const t = await getTranslations('coInvestors');
 
   return (
-    <section className="section bg-surface-subtle">
+    <section className="section bg-white">
       <div className="container-narrow">
         <span className="inline-block rounded-sm border border-brand-blue px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.1em] text-brand-blue">
           {t('eyebrow')}
@@ -16,7 +16,7 @@ export async function CoInvestorsSection() {
           {t('subcopy')}
         </p>
 
-        <div className="mt-12 bg-white p-10 md:p-16">
+        <div className="mt-12 border border-surface-border p-10 md:p-16">
           <div className="grid grid-cols-2 gap-x-10 gap-y-20 sm:grid-cols-3 md:grid-cols-4">
             {coInvestors.map((c) => (
               <div

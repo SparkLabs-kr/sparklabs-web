@@ -30,7 +30,7 @@ export async function LatestNews({ locale }: { locale: Locale }) {
   const entries = getAllEntries<PressFrontmatter>('press', locale).slice(0, 3);
 
   return (
-    <section className="section bg-surface-subtle">
+    <section className="section bg-[#ECE8DF]">
       <div className="container-narrow">
         <div className="flex items-end justify-between gap-4">
           <h2 className="text-display-md text-ink">{t('title')}</h2>
