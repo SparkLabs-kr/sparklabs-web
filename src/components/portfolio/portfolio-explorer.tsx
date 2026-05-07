@@ -171,19 +171,28 @@ function PortfolioCard({
 
   return (
     <article className="flex h-full flex-col rounded-2xl border border-surface-border bg-white p-6 transition hover:-translate-y-0.5 hover:shadow-card">
-      {/* 로고 + 배지 영역 */}
       <div className="flex items-start justify-between gap-3">
-        {/* 로고 */}
-        <div className="flex h-16 w-32 items-center justify-start">
+        <div className="flex h-16 w-32 shrink-0 items-center justify-center overflow-hidden">
           {company.logoFile ? (
-            <Image
-              src={`/portfolio/logos/${company.logoFile}`}
-              alt={company.name}
-              width={128}
-              height={64}
-              className="h-12 w-auto max-w-[128px] object-contain"
-              unoptimized
-            />
+            company.logoFile.endsWith('.svg') ? (
+              <Image
+                src={`/portfolio/logos/${company.logoFile}`}
+                alt={company.name}
+                width={110}
+                height={36}
+                className="h-9 w-auto max-w-[110px] object-contain"
+                unoptimized
+              />
+            ) : (
+              <Image
+                src={`/portfolio/logos/${company.logoFile}`}
+                alt={company.name}
+                width={128}
+                height={64}
+                className="h-16 w-auto scale-[2.2] object-contain"
+                unoptimized
+              />
+            )
           ) : (
             <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-surface-subtle">
               <span className="text-base font-bold text-ink-soft">
@@ -192,7 +201,6 @@ function PortfolioCard({
             </div>
           )}
         </div>
-        {/* 배지 */}
         <div className="flex flex-wrap gap-1.5">
           {company.aiPick && (
             <span className="rounded-full bg-spark-violet/10 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-spark-violet">
