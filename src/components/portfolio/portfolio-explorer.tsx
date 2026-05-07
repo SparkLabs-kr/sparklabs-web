@@ -225,16 +225,11 @@ function PortfolioCard({
         </p>
       )}
       <div className="mt-auto flex flex-wrap items-center gap-2 pt-4 text-xs text-ink/50">
-        {company.stage && (
-          <span className="rounded-full border border-surface-border px-2 py-0.5">
-            {company.stage}
-          </span>
-        )}
         <span className="rounded-full border border-surface-border px-2 py-0.5">
-          {entityMeta?.shortName ?? company.entity}
+          {categoryLabel[company.category][locale]}
         </span>
         <span className="rounded-full border border-surface-border px-2 py-0.5">
-          {company.country}
+          {entityMeta?.shortName ?? company.entity}
         </span>
       </div>
     </article>

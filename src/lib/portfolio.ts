@@ -187,19 +187,6 @@ const koreaCore: PortfolioCompany[] = [
     featured: true,
   },
   {
-    slug: 'alganize',
-    name: 'Alganize',
-    tagline: {
-      ko: '문서 중심 AI 리서치 어시스턴트',
-      en: 'AI research assistant for documents',
-    },
-    category: 'ai',
-    entity: 'korea',
-    country: 'KR',
-    stage: 'Series A',
-    aiPick: true,
-  },
-  {
     slug: 'fescaro',
     name: 'FESCARO',
     tagline: {
