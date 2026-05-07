@@ -282,7 +282,7 @@ const koreaCore: PortfolioCompany[] = [
     slug: 'reco',
     name: 'Reco',
     tagline: {
-      ko: 'SaaS 보안 거버넌스',
+      ko: '기업형 폐기물 수집·운반 토탈 서비스 업박스를 운영하는 자원순환 솔루션 기업',
       en: 'SaaS security governance platform',
     },
     category: 'security',
@@ -309,7 +309,7 @@ const koreaCore: PortfolioCompany[] = [
     slug: 'ssenstone',
     name: 'SSenStone',
     tagline: {
-      ko: '동적 본인인증 보안 플랫폼',
+      ko: '동적 일회용 코드 기반 차세대 인증 보안 플랫폼',
       en: 'Dynamic authentication security platform',
     },
     category: 'security',
@@ -322,7 +322,7 @@ const koreaCore: PortfolioCompany[] = [
     slug: 'gint',
     name: 'GINT',
     tagline: {
-      ko: '스포츠 데이터·커뮤니티',
+      ko: '자율주행 농기계 키트로 노지 농업의 스마트화를 이끄는 AgTech 기업',
       en: 'Sports data & community platform',
     },
     category: 'consumer',
@@ -348,7 +348,7 @@ const koreaCore: PortfolioCompany[] = [
     slug: 'mbx',
     name: 'MBX',
     tagline: {
-      ko: 'Web3 게임·컨슈머 앱 플랫폼',
+      ko: '전 세계 4,000여 뷰티 브랜드가 입점한 글로벌 뷰티 이커머스 플랫폼',
       en: 'Web3 gaming & consumer app platform',
     },
     category: 'consumer',
@@ -442,7 +442,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'equal-table-inc',
     name: '주식회사 이퀄테이블',
     tagline: {
-      ko: 'Foodtech',
+      ko: 'AI 기반 커피 밸류체인 탄소배출 정량화·관리 자동화 플랫폼',
       en: 'foodtech',
     },
     category: 'ai',
@@ -454,7 +454,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'danstruct-co-ltd',
     name: '주식회사 댄스트럭트',
     tagline: {
-      ko: 'Media',
+      ko: '모션캡처 기반 3D 모션 데이터를 제작·가공·판매하는 콘텐츠 플랫폼',
       en: 'Media',
     },
     category: 'media',
@@ -466,7 +466,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'spring-again-co-ltd',
     name: '주식회사 스프링어게인',
     tagline: {
-      ko: 'Medicaltech',
+      ko: '거동이 어려운 시니어를 위한 B2B2C 방문 케어 솔루션',
       en: 'Medicaltech',
     },
     category: 'saas',
@@ -478,7 +478,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'bueno-company-co-ltd',
     name: '(주)부에노컴퍼니',
     tagline: {
-      ko: 'Distribution',
+      ko: '오프라인 매장의 홍보 자동화와 디지털 마케팅 전환을 지원하는 솔루션',
       en: 'Distribution',
     },
     category: 'ai',
@@ -490,7 +490,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'polymerize-korea-llc',
     name: '폴리머라이즈코리아유한회사',
     tagline: {
-      ko: '폴리머라이즈는 AI 기반 산업 연구개발 플랫폼으로, 기업의 실험 데이터를 하나로 통합하고 AI를 활용해 더 빠르고 정확한 실험 설계를 지원합니다.',
+      ko: '기업 실험 데이터를 통합하고 AI로 다음 실험 방향을 예측하는 R&D 가속화 플랫폼',
       en: 'Polymerize is an AI-based industrial research and development platform that integrates a company\'s experimental data into one and utilizes AI to support faster and more accurate experimental design.',
     },
     category: 'deeptech',
@@ -502,7 +502,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'skylabs',
     name: '스카이랩스',
     tagline: {
-      ko: 'Healthcare',
+      ko: '사용자 조작 없는 연속 건강 모니터링이 가능한 AI 기반 헬스케어 플랫폼',
       en: 'Healthcare',
     },
     category: 'ai',
@@ -514,7 +514,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'queen-live-queen-of-shopping',
     name: '퀸라이브 (쇼핑의 여왕)',
     tagline: {
-      ko: '여성 패션을 책임지는 라이브쇼핑 플랫폼, 쇼핑의여왕!',
+      ko: '40·50대 여성을 위한 패션 전문 라이브쇼핑 플랫폼',
       en: 'A live shopping platform responsible for women’s fashion, Queen of Shopping!',
     },
     category: 'commerce',
@@ -526,7 +526,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'wave-corp',
     name: '웨이브코퍼레이션',
     tagline: {
-      ko: '그룹 영상통화를 통해 게임·콘텐츠를 함께 즐기는 플랫폼 \'웨이브(WAVE)\' 운영사',
+      ko: '그룹 영상통화로 게임·영상 콘텐츠를 함께 즐기는 소셜 엔터테인먼트 플랫폼',
       en: 'Operator of ‘WAVE’, a platform to enjoy games and content together through group video calls',
     },
     category: 'media',
@@ -538,7 +538,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'doubleme',
     name: '더블미',
     tagline: {
-      ko: 'VR',
+      ko: '실제 공간에 상대방의 실물 크기 3D 홀로그램을 구현하는 XR 솔루션',
       en: 'VR',
     },
     category: 'deeptech',
@@ -550,7 +550,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'h2o-hospitality',
     name: 'H2O호스피탈리티',
     tagline: {
-      ko: '숙박, 레저 산업의 DX 를 선도하는 아시아 1위 호스피탈리티 테크 기업',
+      ko: '호텔·리조트 숙박·레저 산업의 디지털 전환을 선도하는 아시아 1위 호스피탈리티 테크 기업',
       en: 'Asia\'s No. 1 hospitality tech company leading DX in the lodging and leisure industry',
     },
     category: 'proptech',
@@ -562,7 +562,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'impactus',
     name: '임팩터스',
     tagline: {
-      ko: '학생 개인 맞춤형 수업 개설-운영-피드백-평가 올인원 솔루션, 임팩트 스페이스를 운영하고 있습니다.',
+      ko: '학생 맞춤형 수업 개설·운영·피드백·평가를 지원하는 AI 에듀테크 플랫폼',
       en: 'We operate Impact Space, an all-in-one solution for creating personalized classes for students - operation - feedback - evaluation.',
     },
     category: 'other',
@@ -574,7 +574,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'pierrot-company-inc',
     name: '(주)피에로컴퍼니',
     tagline: {
-      ko: 'ESG',
+      ko: '기업 유휴 IT기기를 회수·리퍼비시해 글로벌 시장에 재배치하는 순환경제 플랫폼',
       en: 'ESG',
     },
     category: 'ai',
@@ -586,7 +586,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'kangsters-corp',
     name: '캥스터즈 주식회사',
     tagline: {
-      ko: 'Able-Tech',
+      ko: '휠체어 사용자를 위한 유산소·근력 운동 보조 기기 휠리엑스 제조 소셜벤처',
       en: 'Able-Tech',
     },
     category: 'bio',
@@ -598,7 +598,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'zest-inc',
     name: '제스트 주식회사',
     tagline: {
-      ko: 'ESG',
+      ko: 'AI 기반 탄소중립 최적화 디지털 트윈 솔루션을 제공하는 기후테크 스타트업',
       en: 'ESG',
     },
     category: 'ai',
@@ -610,7 +610,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'havehad',
     name: '해브해드',
     tagline: {
-      ko: '시티보이 패션의 옷을 판매하며 다양한 이벤트를 동시에 진행하는 기업',
+      ko: '도시 일상에서 영감을 받아 다채로운 라이프스타일을 제안하는 감성 브랜드',
       en: 'A company that sells City Boy Fashion clothes and holds various events at the same time.',
     },
     category: 'consumer',
@@ -622,7 +622,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'allganize',
     name: '올거나이즈',
     tagline: {
-      ko: '엔터프라이즈 AI 솔루션 기업',
+      ko: '기업 업무 데이터 기반 AI를 실행 가능한 형태로 자동화하는 엔터프라이즈 AI 솔루션',
       en: 'Enterprise AI solution company',
     },
     category: 'other',
@@ -634,7 +634,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'gapt',
     name: '갭텍',
     tagline: {
-      ko: 'ESG',
+      ko: '반도체 특수가스 저감과 CCUS 온실가스 감축 기술을 보유한 저탄소 솔루션 기업',
       en: 'ESG',
     },
     category: 'ai',
@@ -646,7 +646,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'shutagen',
     name: '슈타겐',
     tagline: {
-      ko: 'Manufacturing',
+      ko: '자동차·조선·방산 등 제조 산업의 디지털 전환을 위한 엔지니어링 전문기업',
       en: 'Manufacturing',
     },
     category: 'other',
@@ -658,7 +658,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'gelko',
     name: '젤코',
     tagline: {
-      ko: 'Hardware',
+      ko: '자동화 연질캡슐 생산장비 및 AI 비전검수기를 제조하는 제약 설비 전문기업',
       en: 'Hardware',
     },
     category: 'ai',
@@ -670,7 +670,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'slowave',
     name: '슬로웨이브',
     tagline: {
-      ko: 'Healthcare',
+      ko: '초소형 뇌파 분석 기기로 수면·정신건강 모니터링을 제공하는 헬스케어 스타트업',
       en: 'Healthcare',
     },
     category: 'ai',
@@ -682,7 +682,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'lehosah',
     name: '르호사',
     tagline: {
-      ko: 'Fashion',
+      ko: '스케치·텍스트 입력만으로 주얼리 디자인을 자동 생성하는 AI 주얼리 플랫폼',
       en: 'Fashion',
     },
     category: 'ai',
@@ -694,7 +694,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'beamstudio',
     name: '빔스튜디오',
     tagline: {
-      ko: 'Entertainment',
+      ko: '영화·방송급 디지털 휴먼 콘텐츠 제작 및 유명인 IP 에이전시',
       en: 'Entertainment',
     },
     category: 'ai',
@@ -706,7 +706,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'logispot',
     name: '로지스팟',
     tagline: {
-      ko: 'Platform',
+      ko: '디지털 플랫폼 기반 기업 맞춤형 운송·창고 물류 서비스',
       en: 'Platform',
     },
     category: 'mobility',
@@ -766,7 +766,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'draftype',
     name: '드래프타입',
     tagline: {
-      ko: '커스텀모델 제작 기반 콘텐츠 제작, 드래프타입 스튜디오',
+      ko: '유명인 없이도 효과적인 광고 모델 전략을 구현하는 커스텀 광고 모델 플랫폼',
       en: 'Content production based on custom model production, DraftType Studio',
     },
     category: 'ai',
@@ -790,7 +790,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'stylemate',
     name: '스타일메이트',
     tagline: {
-      ko: 'Fashion',
+      ko: '패션 크리에이터와 브랜드를 데이터로 연결하는 패션 전문 마케팅 플랫폼',
       en: 'Fashion',
     },
     category: 'ai',
@@ -838,7 +838,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'uuuuu',
     name: '유유유유유',
     tagline: {
-      ko: '글로벌 디자이너들과의 콜라보레이션을 통한 감각적인 디자인의 셀프젤네일 서비스',
+      ko: 'AI 프린트 시스템과 특허 신소재로 밀착력 높은 셀프 젤네일을 제공하는 서비스',
       en: 'Self-gel nail service with sensuous design through collaboration with global designers',
     },
     category: 'consumer',
@@ -850,7 +850,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'edgecross-1',
     name: '엣지크로스',
     tagline: {
-      ko: 'Software Development',
+      ko: '조립식 IoT 컨트롤러 MODLINK로 스마트팩토리 구현 기간을 10배 단축하는 솔루션',
       en: 'Software Development',
     },
     category: 'media',
@@ -862,7 +862,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'carmerce',
     name: '카머스',
     tagline: {
-      ko: 'Mobility',
+      ko: '복잡한 중고차 거래를 간편하게 해결하는 국내 최초 중고차 이커머스 플랫폼',
       en: 'Mobility',
     },
     category: 'commerce',
@@ -886,7 +886,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'toothnote',
     name: '지아이빌리언스 (투스노트)',
     tagline: {
-      ko: 'Life Style',
+      ko: '화학 성분 없이 천연성분으로만 만드는 안전한 구강관리 치약 브랜드',
       en: 'Lifestyle',
     },
     category: 'consumer',
@@ -898,7 +898,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'eatmapl',
     name: '잇마플 (맛있저염)',
     tagline: {
-      ko: 'Medifood',
+      ko: '환자 개인 건강 데이터 기반 맞춤형 식단 정기구독 서비스',
       en: 'Medifood',
     },
     category: 'bio',
@@ -910,7 +910,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'vanilabrain-sellerking',
     name: '바닐라브레인 (장사왕)',
     tagline: {
-      ko: 'SaaS',
+      ko: '여러 쇼핑몰의 매출·정산 데이터를 한눈에 통합 관리하는 온라인 셀러 플랫폼',
       en: 'SaaS',
     },
     category: 'commerce',
@@ -922,7 +922,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'astar-copykle',
     name: '아스타 (카피클)',
     tagline: {
-      ko: 'Copywriting',
+      ko: '마케팅 카피라이팅을 실시간으로 자동 생성하는 AI 카피라이팅 서비스',
       en: 'Copywriting',
     },
     category: 'ai',
@@ -934,7 +934,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'mineis-charan',
     name: '마인이스 (차란)',
     tagline: {
-      ko: '품질보증된 상품을 구매할수있는 온라인 세컨핸드 백화점',
+      ko: '명품 브랜드를 합리적인 가격에 구매할 수 있는 온라인 세컨핸드 백화점',
       en: 'Online second hand department store where you can purchase quality guaranteed products',
     },
     category: 'commerce',
@@ -946,7 +946,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'dosigotgan',
     name: '도시곳간',
     tagline: {
-      ko: 'F&B',
+      ko: '도시 소비자와 시골 생산자를 연결하는 신선 반찬·식품 큐레이션 플랫폼',
       en: 'F&B',
     },
     category: 'commerce',
@@ -970,7 +970,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'baegen',
     name: '배젠',
     tagline: {
-      ko: 'Pharmaceuticals',
+      ko: '한의학 성분에서 분리 합성한 만성폐쇄성폐질환(COPD) 치료제 개발 바이오기업',
       en: 'Pharmaceuticals',
     },
     category: 'bio',
@@ -982,7 +982,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'damhwa-company',
     name: '담화컴퍼니 (술담화)',
     tagline: {
-      ko: 'F&B',
+      ko: '전통주의 가치와 이야기를 담은 술 구독·커머스 플랫폼',
       en: 'F&B',
     },
     category: 'commerce',
@@ -1090,7 +1090,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'motiv-intelligence-onnuri-dmc',
     name: '모티브인텔리전스 (온누리DMC)',
     tagline: {
-      ko: 'Software Development',
+      ko: 'CTV 기반 기업 마케팅 자동화와 미디어 수익화를 지원하는 애드테크 기업',
       en: 'Software Development',
     },
     category: 'media',
@@ -1102,7 +1102,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'ninehire-hackit',
     name: '나인하이어',
     tagline: {
-      ko: '공고 작성부터 최종 합격까지 여러 구인구직 채널에서 진행되는 채용의 전 과정을 한 곳에 모아 관리할 수 있는 채용 관리 솔루션',
+      ko: '여러 채용 채널의 지원자를 한 곳에서 통합 관리하는 채용 관리 솔루션',
       en: 'A recruitment management solution that allows you to collect and manage the entire recruitment process across multiple job search channels in one place, from posting an announcement to final acceptance.',
     },
     category: 'hrtech',
@@ -1114,7 +1114,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'eargada-nadio',
     name: '이어가다',
     tagline: {
-      ko: '내가 쓴 글을 내 목소리로 들려주고 공유하는 숏폼 힐링 오디오 - 나디오',
+      ko: '오디오 작가의 숏폼 에세이를 공유하는 힐링 오디오 플랫폼',
       en: 'A short-form healing audio that lets you hear and share what you wrote in your own voice - Nadio',
     },
     category: 'media',
@@ -1138,7 +1138,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'better-monday-korea',
     name: '베러먼데이코리아',
     tagline: {
-      ko: '직장인들을 위한 온&오프라인 통합 커뮤니티 플랫폼, 베러먼데이',
+      ko: '직장인 라이프스타일을 위한 온·오프라인 통합 커뮤니티 플랫폼',
       en: 'Better Monday, an integrated online and offline community platform for office workers',
     },
     category: 'consumer',
@@ -1150,7 +1150,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'elroilab',
     name: '엘로이랩',
     tagline: {
-      ko: '초분광 영상 처리 기술과 AI 기술을 결합한 솔루션, 스펙트럴에이아이',
+      ko: '초분광 카메라와 AI로 식품 제조 공정의 이물질을 검출하는 식품 안전 솔루션',
       en: 'Spectral AI, a solution that combines hyperspectral image processing technology and AI technology',
     },
     category: 'ai',
@@ -1186,7 +1186,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'tutoring',
     name: '튜터링',
     tagline: {
-      ko: '튜더링 (언제 어디서나 실시간으로 글로벌 개인 튜터를 연결하여 실시간 스피킹 레슨을 제공하는 교육 플랫폼)',
+      ko: '언제 어디서나 실시간 원어민 튜터와 스피킹 레슨을 연결하는 온디맨드 영어 교육 플랫폼',
       en: 'Tudoring (an education platform that provides real-time speaking lessons by connecting global personal tutors in real time, anytime, anywhere)',
     },
     category: 'other',
@@ -1210,7 +1210,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'thinggotingoland',
     name: '틴고랜드',
     tagline: {
-      ko: 'Energy',
+      ko: '100만 개 이상 캐릭터 상품을 개인 취향에 맞춰 큐레이션하는 커머스 플랫폼',
       en: 'Energy',
     },
     category: 'commerce',
@@ -1222,7 +1222,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'onesoftdigm',
     name: '원소프트다임',
     tagline: {
-      ko: 'Medicaltech',
+      ko: '휴대용 생체정보 측정기와 앱 기반 개인 맞춤형 헬스케어 솔루션',
       en: 'Medicaltech',
     },
     category: 'bio',
@@ -1234,7 +1234,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'specter',
     name: '스펙터',
     tagline: {
-      ko: '지원자의 평판을 조회할 수 있는 평판 조회 플랫폼',
+      ko: '이름과 전화번호만으로 재직 기업 임원이 작성한 지원자 평판을 조회하는 서비스',
       en: 'Reputation inquiry platform where you can check the reputation of applicants',
     },
     category: 'hrtech',
@@ -1246,7 +1246,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'softlanders',
     name: '소프트랜더스',
     tagline: {
-      ko: '임직원 해외파견을 위한 해외사업지원 서비스 글로벌 리로케이션 플랫폼, 소프트랜더스',
+      ko: '기업 임직원 해외파견을 위한 이사·비자·보험 등 글로벌 리로케이션 플랫폼',
       en: 'Soft Landers, a global relocation platform that provides overseas business support services for dispatching employees overseas',
     },
     category: 'saas',
@@ -1258,7 +1258,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'moverse',
     name: '무버스',
     tagline: {
-      ko: '메타버스와 버추얼휴먼을 위한 3D 모션 창작과 공급 솔루션',
+      ko: '메타버스와 버추얼 휴먼을 위한 3D 모션 창작·공급 솔루션',
       en: '3D motion creation and supply solution for metaverse and virtual humans',
     },
     category: 'media',
@@ -1270,7 +1270,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'logstack',
     name: '로그스택',
     tagline: {
-      ko: '실시간 회계부정 탐지를 위한 내부통제 솔루션 전문기업',
+      ko: '실시간 회계부정 탐지를 위한 내부통제 솔루션',
       en: 'Internal control solution specialist for real-time accounting fraud detection',
     },
     category: 'ai',
@@ -1282,7 +1282,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'xcrew',
     name: '엑스크루',
     tagline: {
-      ko: '퇴근 후의 여가 시간을 특별하게 만들어주는 액티비티 플랫폼',
+      ko: '퇴근 후 여가 시간을 특별하게 만들어주는 전문 크루 기반 액티비티 플랫폼',
       en: 'An activity platform that makes leisure time after work special',
     },
     category: 'consumer',
@@ -1306,7 +1306,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'reharvest',
     name: '리하베스트',
     tagline: {
-      ko: 'Energy',
+      ko: '식품 제조 부산물을 업사이클해 밀가루 대체 가루를 만드는 푸드업사이클 전문 기업',
       en: 'Energy',
     },
     category: 'other',
@@ -1318,7 +1318,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'kitchen-in-the-lab',
     name: '키친인더랩',
     tagline: {
-      ko: '프롬쉐프 (레스토랑에서 먹었던 맛 그래로 퀄리티 높은 요리를 간편하게 레토르 형식으로 만드는 회사)',
+      ko: '레스토랑 품질 요리를 간편식 형태로 제공하는 식품 SPA 브랜드',
       en: 'From Chef (a company that makes high-quality dishes with the same taste as those eaten at restaurants in a simple retort format)',
     },
     category: 'agrifood',
@@ -1330,7 +1330,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'ondo',
     name: '온도',
     tagline: {
-      ko: 'Fashion',
+      ko: '신소재 특허 기술 기반 북미 타겟 윤리적 D2C 패션 브랜드',
       en: 'Fashion',
     },
     category: 'consumer',
@@ -1342,7 +1342,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'personal-ai',
     name: '퍼스널에이아이',
     tagline: {
-      ko: '마이디 (내 금융 데이터를 관리하고 거래하는 마이데이터 플랫폼)',
+      ko: '개인정보 수집 없이 개인 데이터를 안전하게 활용할 수 있는 온디바이스 데이터 플랫폼',
       en: 'MyD (My Data Platform to manage and trade my financial data)',
     },
     category: 'ai',
@@ -1354,7 +1354,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'casting',
     name: '캐스팅',
     tagline: {
-      ko: '다양한 분야의 인플루언서들이 팬들과 1:1로 소통할 수 있는 플랫폼',
+      ko: '팬이 인플루언서와 1:1로 직접 소통하고 인플루언서는 수익을 창출하는 팬 소통 플랫폼',
       en: 'A platform where influencers in various fields can communicate 1:1 with fans',
     },
     category: 'media',
@@ -1366,7 +1366,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'softment',
     name: '소프트먼트',
     tagline: {
-      ko: 'Human Resource',
+      ko: 'F&B 가맹 창업 시장의 공정 거래를 지원하는 창업 매칭 플랫폼',
       en: 'Human Resources',
     },
     category: 'hrtech',
@@ -1378,7 +1378,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'cloa',
     name: '클로아',
     tagline: {
-      ko: '클로아 (방대한 데이터를 실시간으로 처리하는데 최적화된 데이터 파이프라인 솔루션)',
+      ko: '방대한 데이터를 실시간으로 처리하는 고성능 데이터 파이프라인 솔루션',
       en: 'Cloa (data pipeline solution optimized for processing massive amounts of data in real time)',
     },
     category: 'ai',
@@ -1390,7 +1390,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'octatco',
     name: '옥타코',
     tagline: {
-      ko: 'E-Commerce',
+      ko: '지문 기반 패스워드리스 강력 인증 솔루션 EzFinger 개발사',
       en: 'E-Commerce',
     },
     category: 'security',
@@ -1402,7 +1402,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'rawlabs',
     name: '로랩스 (에어서플라이)',
     tagline: {
-      ko: '에어서플라이 (기업의 전자결재, 비품 가격비교를 제공하는 SaaS형 구매관리솔루션)',
+      ko: '중소기업을 위한 SaaS형 구매관리(MRO) 솔루션',
       en: 'Air Supply (SaaS-type purchase management solution that provides corporate electronic payment and equipment price comparison)',
     },
     category: 'commerce',
@@ -1414,7 +1414,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'peopet',
     name: '페오펫',
     tagline: {
-      ko: '페오펫 (간편 모바일 반려동물등록 서비스)',
+      ko: '모바일로 3일 내 반려동물 등록번호를 발급받는 간편 반려동물 등록 서비스',
       en: 'Peopet (simple mobile pet registration service)',
     },
     category: 'commerce',
@@ -1426,7 +1426,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'crepass',
     name: '크레파스솔루션',
     tagline: {
-      ko: '청년5.5 (대안신용평가를 통한 새로운 P2P 투자 플랫폼)',
+      ko: '대안 신용평가로 더 많은 사람에게 금융 기회를 제공하는 크레딧 플랫폼',
       en: 'Youth 5.5 (new P2P investment platform through alternative credit rating)',
     },
     category: 'fintech',
@@ -1438,7 +1438,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'edgecross',
     name: '엣지크로스',
     tagline: {
-      ko: 'AIoT 기술 기반 스마트 머신 전환 전문 기업. 기계 장비 원격 모니터링, 제어, 관제 솔루션 제공.',
+      ko: 'AIoT 기반 기계장비 원격 모니터링·제어로 스마트 팩토리를 구현하는 전문기업',
       en: 'A company specializing in smart machine conversion based on AIoT technology. Providing remote monitoring, control, and management solutions for mechanical equipment.',
     },
     category: 'deeptech',
@@ -1450,7 +1450,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'veluga',
     name: '벨루가',
     tagline: {
-      ko: '벨루가 (맥주 정기배송서비스)',
+      ko: '크래프트 맥주와 페어링 야식을 정기 배달하는 멤버십 구독 서비스',
       en: 'Beluga (regular beer delivery service)',
     },
     category: 'agrifood',
@@ -1462,7 +1462,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'perfitt',
     name: '펄핏',
     tagline: {
-      ko: '펄핏 (신발 사이즈 추천 솔루션)',
+      ko: 'AI 기반 개인 발 사이즈 측정으로 신발 온라인 구매 반품을 줄이는 핏테크 솔루션',
       en: 'Pearl Fit (shoe size recommendation solution)',
     },
     category: 'ai',
@@ -1474,7 +1474,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'knowre',
     name: '노리',
     tagline: {
-      ko: '노리 (인공지능 기반 개인화 수학교육 서비스)',
+      ko: 'AI 기반 개인화 수학 학습으로 학생의 자기주도 교육을 지원하는 에듀테크',
       en: 'Nori (artificial intelligence-based personalized math education service)',
     },
     category: 'other',
@@ -1486,7 +1486,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'weplanet',
     name: '위플래닛',
     tagline: {
-      ko: '모바일, 웹 서비스 프로토타입 개발 전문 서비스 및 자체 커머스 운영',
+      ko: '아이콘 기반 체크인으로 일상을 빠르게 기록하는 모바일 라이프로그 서비스',
       en: 'Mobile and web service prototype development professional services and own commerce operation',
     },
     category: 'ai',
@@ -1498,7 +1498,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'tapjoy-5rocks',
     name: '탭조이 (파이브락스)',
     tagline: {
-      ko: '모바일 광고, 시장 조사 및 앱 수익화 솔루션',
+      ko: '모바일 게임사를 위한 데이터 분석 및 마케팅 컨설팅 솔루션',
       en: 'Mobile advertising, market research and app monetization solutions',
     },
     category: 'ai',
@@ -1510,7 +1510,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'zoyi',
     name: '조이코퍼레이션',
     tagline: {
-      ko: '자체 개발 센서를 통한 오프라인 매장 방문자 데이터 취합 및 분석 인사이트 제공 서비스',
+      ko: '오프라인 매장 방문자 데이터를 분석해 이커머스 수준의 고객 인사이트를 제공하는 서비스',
       en: 'Offline store visitor data collection and analysis insight service through self-developed sensors',
     },
     category: 'ai',
@@ -1522,7 +1522,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'landing-international',
     name: '랜딩인터내셔널',
     tagline: {
-      ko: '뷰티 B2B 유통 (한국 뷰티 브랜드 미국 B2B 유통 서비스)',
+      ko: '글로벌 네트워크 기반 우수 제조사와 해외 파트너를 연결하는 B2B 유통 플랫폼',
       en: 'Beauty B2B distribution (Korean beauty brand US B2B distribution service)',
     },
     category: 'commerce',
@@ -1534,7 +1534,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'chartmetric',
     name: '차트메트릭',
     tagline: {
-      ko: '차트메트릭 (빅데이터 음악 분석 서비스)',
+      ko: '스트리밍·소셜 데이터로 아티스트 성과를 분석하는 음악 산업 인텔리전스 플랫폼',
       en: 'Chartmetric (big data music analysis service)',
     },
     category: 'ai',
@@ -1546,7 +1546,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'treeplanet',
     name: '트리플래닛',
     tagline: {
-      ko: 'Agritech',
+      ko: '시민·기업·정부가 함께 나무를 심는 숲 조성 소셜벤처',
       en: 'Agritech',
     },
     category: 'agrifood',
@@ -1558,7 +1558,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'piquant',
     name: '파이퀀트',
     tagline: {
-      ko: 'Medicaltech',
+      ko: '분광학과 AI로 공기·수질·피부 성분을 정밀 분석하는 IoT 모니터링 플랫폼',
       en: 'Medicaltech',
     },
     category: 'bio',
@@ -1582,7 +1582,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'stayes',
     name: '스테이즈',
     tagline: {
-      ko: 'Real Estate',
+      ko: '한국 거주 외국인을 위한 한·중·영 다국어 부동산 중개 O2O 서비스',
       en: 'Real Estate',
     },
     category: 'proptech',
@@ -1594,7 +1594,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'pentapress',
     name: '펜타프레스',
     tagline: {
-      ko: '국내외 포토 서비스 플랫폼을 운영하는 국내 최초 글로벌 사진통신사',
+      ko: '국내외 25개국 40여 명의 사진가 네트워크를 보유한 국내 최초 글로벌 사진통신사',
       en: 'Korea’s first global photo communication company that operates domestic and international photo service platforms',
     },
     category: 'media',
@@ -1606,7 +1606,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'ekne',
     name: '에크네',
     tagline: {
-      ko: '창작자와 제작자를 혁신적으로 연결하는 스토리콘텐츠 플랫폼',
+      ko: '창작자와 제작자를 혁신적으로 연결하는 스토리 콘텐츠 플랫폼',
       en: 'A story content platform that innovatively connects creators and producers',
     },
     category: 'saas',
@@ -1618,7 +1618,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'topolog',
     name: '토폴로그',
     tagline: {
-      ko: 'B2B의 미래 파트너십을 위한 혁신적 기업 데이터 플랫폼!',
+      ko: 'B2B 영업 우선순위 결정과 결정권자 접근을 지원하는 세일즈 테크 플랫폼',
       en: 'An innovative corporate data platform for future B2B partnerships!',
     },
     category: 'saas',
@@ -1630,7 +1630,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'hiritsoft',
     name: '히릿소프트',
     tagline: {
-      ko: '노코드 혁명의 선두주자, 히릿소프트의 \'메이더\': 중소기업 디지털 전환 가속화',
+      ko: '코딩 없이 3분 만에 iOS·Android 앱을 동시에 제작하는 노코드 앱 빌더',
       en: 'Leader of the no-code revolution, Hiritsoft’s ‘Mader’: Accelerating digital transformation of small and medium-sized businesses',
     },
     category: 'commerce',
@@ -1642,7 +1642,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'mangoplate',
     name: '망고플레이트',
     tagline: {
-      ko: '사용자의 객관적인 리뷰를 기반으로 한 위치 기반 맛집 검색 및 추천 서비스',
+      ko: '전문 에디터 큐레이션과 빅데이터를 결합한 위치 기반 맛집 추천 플랫폼',
       en: 'Location-based restaurant search and recommendation service based on users’ objective reviews',
     },
     category: 'agrifood',
@@ -1654,7 +1654,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'splab',
     name: '스플랩',
     tagline: {
-      ko: '네트워킹의 혁신! 온·오프라인 행사 네트워킹을 위한 \'스페이스\'로 연결의 새 시대를 열다.',
+      ko: '온·오프라인 행사에서 참가자 간 네트워킹을 효율화하는 B2B 스케줄링 플랫폼',
       en: 'Innovation in networking! Opening a new era of connection with ‘Space’ for online and offline event networking.',
     },
     category: 'saas',
@@ -1666,7 +1666,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'look-insight-yakollyeo',
     name: '룩인사이트 (약올려)',
     tagline: {
-      ko: '의약품 B2B 전자상거래 플랫폼 \'약올려\'를 운영하는 기업',
+      ko: '불용재고 의약품 문제를 해결하는 약국 대상 의약품 B2B 전자상거래 플랫폼',
       en: 'A company that operates the pharmaceutical B2B e-commerce platform ‘Yakollyeo’',
     },
     category: 'commerce',
@@ -1678,7 +1678,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'kzone',
     name: '케이존',
     tagline: {
-      ko: '케이존, 국내 첫 미국 아마존 SPN 지정 역물류 SW 스타트업!',
+      ko: '미국 아마존 SPN 지정 반품·역물류 전문 솔루션 기업',
       en: 'K-Zone, the first reverse logistics software startup in Korea to be designated as SPN by the US Amazon!',
     },
     category: 'mobility',
@@ -1690,7 +1690,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'fluentt',
     name: '플루언트',
     tagline: {
-      ko: '플루언트, 3D 아바타 혁신의 선봉자로 중기부 팁스에 선정!',
+      ko: '별도 장치 없이 3D 아바타 움직임을 실시간 구현하는 AI 모션캡처 전문기업',
       en: '',
     },
     category: 'other',
@@ -1702,7 +1702,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'vetflux',
     name: '벳플럭스',
     tagline: {
-      ko: 'AI 챗봇 \'늘펫플러스\'로 동물병원 업무 자동화',
+      ko: '동물병원 예약부터 고객 상담까지 자동화하는 AI 기반 수의료 업무 관리 솔루션',
       en: 'Automation of animal hospital work with AI chatbot ‘Neul Pet Plus’',
     },
     category: 'saas',
@@ -1714,7 +1714,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'ggq',
     name: '지지큐',
     tagline: {
-      ko: 'AI로 게임 전략과 플레이 기법을 코칭하는 스타트업.',
+      ko: 'AI로 게임 전략·플레이 기법을 분석 코칭하는 e스포츠 테크 스타트업',
       en: 'A startup that coaches game strategies and play techniques using AI.',
     },
     category: 'consumer',
@@ -1738,7 +1738,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'amondy',
     name: '아몬디',
     tagline: {
-      ko: '상담에 집중, 번거로운 행정 업무는 우리에게 맡기세요',
+      ko: '상담 일정·정산 관리를 자동화하는 심리 상담사 전용 업무 관리 솔루션',
       en: 'Focus on consultation, leave the cumbersome administrative work to us.',
     },
     category: 'bio',
@@ -1750,7 +1750,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'growth-fit',
     name: '그로스핏',
     tagline: {
-      ko: '전문가들의 협업을 위한 애널리틱스 연계 협업툴로 업무 효율 극대화',
+      ko: '애널리틱스와 연계한 전문가 협업 프로젝트 관리 플랫폼',
       en: 'Maximize work efficiency with analytics-linked collaboration tools for collaboration between experts',
     },
     category: 'ai',
@@ -1762,7 +1762,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'iclave',
     name: '아이클레이브',
     tagline: {
-      ko: '아이클레이브는 AI를 활용한 이커머스 운영 자동화 SaaS 솔루션을 제공하는 선도 기업입니다.',
+      ko: 'AI와 머신러닝으로 이커머스 배너 등록·운영을 자동화하는 SaaS 솔루션',
       en: 'iCave is a leading company that provides SaaS solutions for e-commerce operation automation using AI.',
     },
     category: 'consumer',
@@ -1774,7 +1774,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'mask-moments',
     name: '마스크모먼트',
     tagline: {
-      ko: '마스크모먼트는 미국 기반의 피부 관리 전자 상거래 스타트업으로, 2018년에 소피아 홍 CEO에 의해 창립되었습니다.',
+      ko: '한국 스킨케어 방식 기반 미국 D2C 피부 관리 이커머스 스타트업',
       en: 'Maskmoment is a US-based skin care e-commerce startup founded in 2018 by CEO Sophia Hong.',
     },
     category: 'commerce',
@@ -1786,7 +1786,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'moonriver',
     name: '문리버',
     tagline: {
-      ko: 'E-Commerce',
+      ko: '이커머스 셀러를 위한 상품 검색량·경쟁 강도 등 시장 데이터 분석 플랫폼',
       en: 'E-Commerce',
     },
     category: 'ai',
@@ -1798,7 +1798,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'seoul-bund',
     name: '서울번드',
     tagline: {
-      ko: '서울번드 (동아시아 리빙디자인 전문몰)',
+      ko: '동아시아 장인 문화에서 영감을 받은 리빙 디자인 전문 편집샵',
       en: 'Seoul Bund (East Asian living design specialty mall)',
     },
     category: 'commerce',
@@ -1810,7 +1810,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'shark-market',
     name: '샤크마켓',
     tagline: {
-      ko: '베트남 시장을 겨냥한 신선식품 배송 서비스',
+      ko: '베트남 신선식품 배송의 품질과 안전을 혁신하는 신선식품 배송 서비스',
       en: 'Fresh food delivery service targeting the Vietnamese market',
     },
     category: 'commerce',
@@ -1822,7 +1822,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'gmg',
     name: '지엠지',
     tagline: {
-      ko: 'Real Estate',
+      ko: '비시민권자도 해외 주거용 부동산을 쉽게 구매할 수 있는 글로벌 부동산 플랫폼',
       en: 'Real Estate',
     },
     category: 'proptech',
@@ -1834,7 +1834,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'lablaco',
     name: '라블라코',
     tagline: {
-      ko: '패션 브랜드간의 온라인, 오프라인, 물류를 결합하여 소비자와 브랜드, 소매업체 간의 관계를 재정의하는 원스톱 옴니채널 솔루션을 제공',
+      ko: '패션 브랜드의 온·오프라인과 물류를 통합하는 원스톱 옴니채널 솔루션',
       en: 'Provides a one-stop omnichannel solution that redefines the relationship between consumers, brands, and retailers by combining online, offline, and logistics between fashion brands.',
     },
     category: 'fintech',
@@ -1846,7 +1846,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'oinng-pickit',
     name: '오닝 (픽잇)',
     tagline: {
-      ko: 'Entertainment',
+      ko: '취향 기반 디지털 콜렉터블 수집 및 공유 플랫폼',
       en: 'Entertainment',
     },
     category: 'commerce',
@@ -1858,7 +1858,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'tkit',
     name: '티킷',
     tagline: {
-      ko: '티킷 (공연 초대권 / 전자 티켓 서비스)',
+      ko: '누구나 이벤트 티켓을 제작하고 판매할 수 있는 자기 주도형 티켓팅 플랫폼',
       en: 'Ticket (performance invitation / electronic ticket service)',
     },
     category: 'media',
@@ -1870,7 +1870,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'a-impact',
     name: '에이임팩트',
     tagline: {
-      ko: 'Agritech',
+      ko: 'SNS 직거래 사기를 AI로 예방하는 빅데이터 기반 안전 직거래 플랫폼',
       en: 'Agritech',
     },
     category: 'agrifood',
@@ -1882,7 +1882,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'curiochips',
     name: '큐리오칩스',
     tagline: {
-      ko: 'Medicaltech',
+      ko: '3D 인체장기칩 플랫폼으로 신약 전임상 동물실험을 대체하는 바이오텍',
       en: 'Medicaltech',
     },
     category: 'bio',
@@ -1894,7 +1894,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'abuhakim',
     name: '아부하킴',
     tagline: {
-      ko: '한국 제조사들이 중동 소비자들에게 직접 제품을 판매하고 마케팅할 수 있도록 현지 언어, 문화, 결제, 배송에 최적화된 솔루션을 제공.',
+      ko: '한국 제조사의 중동 소비자 직접 판매를 위한 현지화 이커머스 솔루션',
       en: 'Provides solutions optimized for local language, culture, payment, and delivery so that Korean manufacturers can sell and market products directly to Middle Eastern consumers.',
     },
     category: 'commerce',
@@ -1906,7 +1906,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'inpock',
     name: '인포크',
     tagline: {
-      ko: '인포크 (인플루언서 기반 소셜커머스)',
+      ko: '인플루언서가 직접 큐레이션한 제품을 모아 판매하는 소셜 커머스 플랫폼',
       en: 'Infork (Influencer-based social commerce)',
     },
     category: 'commerce',
@@ -1918,7 +1918,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'vlogr',
     name: '브이로거',
     tagline: {
-      ko: '브이로거 (영상 편집 애플리케이션)',
+      ko: '자막·타이포·음악 효과로 유튜버 수준의 영상을 모바일에서 편집하는 영상 편집 앱',
       en: 'Vlogger (video editing application)',
     },
     category: 'media',
@@ -1930,7 +1930,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'fluid',
     name: '플루이드',
     tagline: {
-      ko: '플루이드 (단순 광고와 기존의 유료 구독 사이트를 벗어나, 참신한 수익 모델이 필요한 컨텐츠 생산자를 위한 솔루션)',
+      ko: '콘텐츠 생산자에게 새로운 수익 모델을 제공하고 소비자에게 보상을 주는 마케팅 플랫폼',
       en: 'Fluid (a solution for content producers who need a novel revenue model beyond simple advertising and existing paid subscription sites)',
     },
     category: 'media',
@@ -1942,7 +1942,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'zhenhub',
     name: '젠허브',
     tagline: {
-      ko: '젠허브 (클라우드 기반 물류 플랫폼)',
+      ko: '클라우드 기반 글로벌 이커머스 물류 관리 플랫폼',
       en: 'ZenHub (cloud-based logistics platform)',
     },
     category: 'mobility',
@@ -1966,7 +1966,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'profound',
     name: '프로파운드',
     tagline: {
-      ko: '프로파운드 (글로벌 비즈니스 전문가 연결 플랫폼)',
+      ko: '글로벌 비즈니스 전문가의 지식과 인사이트를 연결하는 스팟 컨설팅 마켓플레이스',
       en: 'Profound (global business expert connection platform)',
     },
     category: 'hrtech',
@@ -1978,7 +1978,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'swingvy',
     name: '스윙비',
     tagline: {
-      ko: '스윙비 (동남아 소기업 클라우드 인사관리 소프트웨어)',
+      ko: '동남아 중소기업을 위한 급여·휴가·성과 관리 클라우드 인사관리 소프트웨어',
       en: 'Swingbee (Southeast Asian small business cloud human resource management software)',
     },
     category: 'hrtech',
@@ -1990,7 +1990,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'kooding',
     name: '쿠딩',
     tagline: {
-      ko: 'Fashion',
+      ko: '글로벌 로컬 패션 브랜드와 밀레니얼 소비자를 연결하는 패션 마켓플레이스',
       en: 'Fashion',
     },
     category: 'consumer',
@@ -2002,7 +2002,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'jocoos',
     name: '요쿠스',
     tagline: {
-      ko: 'JPlayer (실시간 스트리밍 솔루션 및 트랜스 코더로 구성된 비디오 기술을 제공), SURT (모바일 오디션 플랫폼)',
+      ko: '모든 모바일 기기에서 영상 스트리밍·녹화·편집이 가능한 비디오 기술 플랫폼',
       en: 'JPlayer (provides video technology consisting of a live streaming solution and transcoder), SURT (mobile audition platform)',
     },
     category: 'media',
@@ -2014,7 +2014,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'water-strider',
     name: '워터스트라이더',
     tagline: {
-      ko: '3D 근접 공간 감지 원천 기술 기반 비접촉 솔루션 개발사',
+      ko: '3D 근접 공간 감지 원천 기술 기반 비접촉 센싱 솔루션',
       en: 'Non-contact solution developer based on 3D proximity space sensing original technology',
     },
     category: 'deeptech',
@@ -2026,7 +2026,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'slab-asia',
     name: '에스랩아시아',
     tagline: {
-      ko: '아시아를 대표하는 의약품 콜드체인 서비스 기업입니다',
+      ko: '아시아를 대표하는 의약품 콜드체인 전문 기업',
       en: 'Asia\'s leading pharmaceutical cold chain service company.',
     },
     category: 'mobility',
@@ -2038,7 +2038,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'swatchon',
     name: '스와치온',
     tagline: {
-      ko: '패션 소재 생산자와 브랜드를 연결해 효율적인 소재 공급 관리를 돕는 온라인 플랫폼',
+      ko: '패션 소재 생산자와 브랜드를 연결하는 글로벌 소재 소싱 플랫폼',
       en: 'An online platform that connects fashion material producers and brands to help manage material supply efficiently.',
     },
     category: 'commerce',
@@ -2050,7 +2050,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'bringko',
     name: '브링코',
     tagline: {
-      ko: '브링코 (한국의 유명 오픈마켓, 대형쇼핑몰, 아이템몰을 한꺼번에 해외에서도 편리하게 구매가능한 아이템 몰)',
+      ko: '한국 쇼핑몰 상품을 해외 교민이 편리하게 구매할 수 있는 역직구 메타 서비스',
       en: 'Bringco (Item mall where you can conveniently purchase Korea’s famous open market, large shopping mall, and item mall all at once from overseas)',
     },
     category: 'commerce',
@@ -2062,7 +2062,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'xsync',
     name: '엑씽크',
     tagline: {
-      ko: 'xSync (현장에서 참가자와 소통할 수 있는 이벤트 매니지먼트 플랫폼)',
+      ko: '오프라인 행사 참가자 간 네트워킹과 이벤트 참여를 지원하는 이벤트 매니지먼트 플랫폼',
       en: 'xSync (event management platform that allows you to communicate with participants on site)',
     },
     category: 'media',
@@ -2074,7 +2074,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'balaan',
     name: '발란',
     tagline: {
-      ko: '국내에서 가장 많은 브랜드 상품을 유통하는 명품 판매 플랫폼',
+      ko: '국내 최다 명품 브랜드 상품을 투명한 가격으로 유통하는 명품 커머스 플랫폼',
       en: 'Luxury goods sales platform that distributes the largest number of branded products in Korea',
     },
     category: 'commerce',
@@ -2086,7 +2086,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'xbrain',
     name: '엑스브레인',
     tagline: {
-      ko: '다리아 (클라우드기반 머신러닝 모델링 어시스턴트 소프트웨어)',
+      ko: '전문 지식 없이도 머신러닝 모델을 쉽게 구축·활용할 수 있는 AI 플랫폼',
       en: 'Daria (cloud-based machine learning modeling assistant software)',
     },
     category: 'ai',
@@ -2098,7 +2098,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'fasket',
     name: '패스켓',
     tagline: {
-      ko: '반려동물 온오프라인 통합 플랫폼',
+      ko: '온라인 상품과 동네 맛집 상품을 1시간 내 합배달하는 밀크런 퀵커머스 서비스',
       en: 'Pet online/offline integrated platform',
     },
     category: 'commerce',
@@ -2110,7 +2110,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'collegenie-ai',
     name: '컬리지니에이아이',
     tagline: {
-      ko: 'SaaS',
+      ko: '아이비리그 입학사정관 평가 방식 기반 미국 대학 지원 에세이 AI 튜터',
       en: 'SaaS',
     },
     category: 'ai',
@@ -2122,7 +2122,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'noda-labs',
     name: '노다랩',
     tagline: {
-      ko: 'Data Analytics',
+      ko: '한국 식품 시장 빅데이터를 해외 공급사에 제공하는 B2B 무역거래 플랫폼',
       en: 'Data Analytics',
     },
     category: 'other',
@@ -2146,7 +2146,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'careerday-1',
     name: '커리어데이',
     tagline: {
-      ko: 'HR tech',
+      ko: 'IT·금융·바이오 등 전문 분야 인재와 기업을 정밀 매칭하는 HRtech 플랫폼',
       en: 'HR tech',
     },
     category: 'other',
@@ -2158,7 +2158,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'standingtall',
     name: '스탠딩톨',
     tagline: {
-      ko: '척추보조기 \'플렉스파인\'으로 국내와 해외 시장에서 활발한 경쟁을 펼치고 있다.',
+      ko: '척추 건강 보조 기기 플렉스파인을 개발·판매하는 척추 건강관리 전문 기업',
       en: 'The company is actively competing in domestic and overseas markets with its spinal brace \'Flexfine\'.',
     },
     category: 'bio',
@@ -2170,7 +2170,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'instant-tattoo-1',
     name: '인스턴트타투',
     tagline: {
-      ko: '인스턴트타투™는 자연스럽고 아름다운 시티라이프를 제안하는 템포러리 타투 브랜드입니다.',
+      ko: '10초 만에 리얼타투의 생동감을 재현하는 건식 템포러리 타투 브랜드',
       en: 'Instant Tattoo™ is a temporary tattoo brand that offers a natural and beautiful city life.',
     },
     category: 'consumer',
@@ -2194,7 +2194,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'tella',
     name: '텔라',
     tagline: {
-      ko: 'Edutech',
+      ko: '원어민 전문 강사의 실시간 채팅 교정으로 영어 회화를 학습하는 에듀테크 플랫폼',
       en: 'Edutech',
     },
     category: 'other',
@@ -2230,7 +2230,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'whelp',
     name: '웰프',
     tagline: {
-      ko: '세일즈 및 고객관리 직원들이 서로 다른 대화 채널을 사용하는 고객들과 한 곳에서 소통할 수 있게 도와주는 플랫폼',
+      ko: '다양한 대화 채널을 하나로 통합해 고객 소통 효율을 높이는 옴니채널 고객관리 플랫폼',
       en: 'A platform that helps sales and customer management employees communicate with customers using different conversation channels in one place.',
     },
     category: 'ai',
@@ -2242,7 +2242,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'paywatch-global',
     name: '페이워치',
     tagline: {
-      ko: '페이워치 (사장님/알바생을 위한 출퇴근 인증,전자근로계약, 당일급여정산 서비스)',
+      ko: '시급제 근로자를 위한 채용·근태 관리·실시간 급여 정산 원스톱 HR 플랫폼',
       en: 'Paywatch (commuting authentication, electronic employment contract, same-day salary settlement service for bosses/part-time workers)',
     },
     category: 'fintech',
@@ -2254,7 +2254,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'bitbyte',
     name: '비트바이트',
     tagline: {
-      ko: '플레이키보드 (캐릭터, 일러스트 등 다양한 콘텐츠로 스마트폰 키보드를 꾸밀 수 있는 앱)',
+      ko: '캐릭터·연예인 반응 효과로 스마트폰 키보드를 꾸미는 개인화 키보드 앱',
       en: 'Play Keyboard (an app that allows you to decorate your smartphone keyboard with various content such as characters and illustrations)',
     },
     category: 'media',
@@ -2266,7 +2266,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'featuring',
     name: '피처링',
     tagline: {
-      ko: 'SNS 인플루언서의 ‘진짜\' 영향력을 측정해주는 플랫폼',
+      ko: 'SNS 인플루언서의 실제 영향력을 정량 측정하는 마케팅 분석 플랫폼',
       en: 'A platform that measures the ‘real’ influence of SNS influencers',
     },
     category: 'ai',
@@ -2278,7 +2278,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'smartjack',
     name: '스마트잭',
     tagline: {
-      ko: '랩매니저 (물품/안전/행정/HR 관리 기능을 제공하는 연구실 토탈 관리 솔루션)',
+      ko: '물품·안전·행정·HR 관리를 통합 제공하는 연구실 토탈 관리 솔루션',
       en: 'Lab Manager (laboratory total management solution providing product/safety/administrative/HR management functions)',
     },
     category: 'ai',
@@ -2290,7 +2290,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'activity-exchange',
     name: '액스(AX)',
     tagline: {
-      ko: '전세계 현지 여행사를 위해 여행상품 퍼블리싱과 예약관리 솔루션을 개발하는 스타트업',
+      ko: '전 세계 현지 여행사를 위한 여행상품 퍼블리싱·예약관리 솔루션',
       en: 'A startup that develops travel product publishing and reservation management solutions for local travel agencies around the world.',
     },
     category: 'consumer',
@@ -2302,7 +2302,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'global-bridge',
     name: '글로벌브릿지',
     tagline: {
-      ko: 'Guardian RF SoC (IoT 및 ICT를 위한 무선 SoC 솔루션)',
+      ko: 'IoT·ICT를 위한 보안 강화 바이너리 CDMA 무선 데이터 솔루션',
       en: 'Guardian RF SoC (wireless SoC solution for IoT and ICT)',
     },
     category: 'security',
@@ -2314,7 +2314,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'thirteenth-floor',
     name: '서틴스플로어',
     tagline: {
-      ko: 'VR',
+      ko: '시네마틱·인터랙티브 VR 콘텐츠 제작과 유통을 전문으로 하는 VR 스튜디오',
       en: 'VR',
     },
     category: 'deeptech',
@@ -2326,7 +2326,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'simple-kitchen-hat-company',
     name: '심플키친',
     tagline: {
-      ko: '외식업 창업자들에게 주방공간과 시설을 제공해주고 다양한 비용을 공유함으로서 매출을 극대화 시켜주는 공유주방 플랫폼',
+      ko: '외식업 창업자에게 주방 공간·시설·비용 공유로 매출을 극대화하는 공유주방 플랫폼',
       en: 'A shared kitchen platform that maximizes sales by providing kitchen space and facilities to restaurant entrepreneurs and sharing various costs.',
     },
     category: 'proptech',
@@ -2338,7 +2338,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'fleapop',
     name: '플리팝',
     tagline: {
-      ko: '러블리마켓 (10~20대 여성들을 위한 크로스오버 쇼핑채널)',
+      ko: '10~20대 여성을 위한 체험형 크로스오버 쇼핑 플랫폼',
       en: 'Lovely Market (crossover shopping channel for women in their teens and twenties)',
     },
     category: 'commerce',
@@ -2350,7 +2350,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'emolize-payvil',
     name: '에몰라이즈',
     tagline: {
-      ko: 'Fintech',
+      ko: '알리페이 연동 기반 외국인 결제를 지원하는 국제 간편결제 서비스',
       en: 'Fintech',
     },
     category: 'fintech',
@@ -2362,7 +2362,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'kadho',
     name: '캐드호',
     tagline: {
-      ko: '캐드호 (두뇌 훈련 커리큘럼 전문 기업으로 뇌 학습 효율 향상 주력)',
+      ko: '뇌 과학과 AI 기반 커리큘럼으로 전문 지식 습득을 가속하는 두뇌 훈련 플랫폼',
       en: 'CADHO (a company specializing in brain training curriculum, focusing on improving brain learning efficiency)',
     },
     category: 'other',
@@ -2374,7 +2374,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'the-clozet',
     name: '더클로젯컴퍼니',
     tagline: {
-      ko: 'Fashion',
+      ko: '사용자 간 패션 아이템을 공유·대여하는 패션 공유 서비스 플랫폼',
       en: 'Fashion',
     },
     category: 'consumer',
@@ -2386,7 +2386,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'asian-boss',
     name: '아시안보스',
     tagline: {
-      ko: '아시안보스 (아시아 전역의 최신 뉴스와 트랜드를 전세계에 전달하는 뉴미디어 기업으로 현재 유튜브 활동 중)',
+      ko: '아시아 최신 뉴스와 트렌드를 모바일 최적화 포맷으로 전 세계에 전달하는 뉴미디어',
       en: 'Asian Boss (a new media company that delivers the latest news and trends from across Asia to the world, currently active on YouTube)',
     },
     category: 'media',
@@ -2398,7 +2398,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'kloser',
     name: '클로저',
     tagline: {
-      ko: '클로저 (고객 채널 관리 플랫폼)',
+      ko: '고객을 홍보 채널로 활용하는 클라우드 기반 고객 채널 관리 플랫폼',
       en: 'Closure (Customer Channel Management Platform)',
     },
     category: 'media',
@@ -2410,7 +2410,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'queensbucket',
     name: '쿠엔즈버킷',
     tagline: {
-      ko: '쿠엔즈버킷 참기름 (참기름)',
+      ko: '전통 방식 착유법으로 만드는 프리미엄 참기름·들기름 브랜드',
       en: 'Queen\'s Bucket Sesame Oil (Sesame Oil)',
     },
     category: 'agrifood',
@@ -2422,7 +2422,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'paymonths',
     name: '페이먼스',
     tagline: {
-      ko: '도매 사입도 후불로 페이먼스 후불 결제',
+      ko: '머신러닝 신용평가 기반 국내 최초 후불결제(BNPL) 서비스',
       en: 'Wholesale purchases are also made with deferred payment.',
     },
     category: 'fintech',
@@ -2434,7 +2434,7 @@ const scrapedCompanies: PortfolioCompany[] = [
     slug: 'urbanbase',
     name: '어반베이스',
     tagline: {
-      ko: 'VR',
+      ko: '2D 도면을 3D로 자동 변환하는 공간 데이터 기술 및 VR·AR 솔루션',
       en: 'VR',
     },
     category: 'deeptech',
