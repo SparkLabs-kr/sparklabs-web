@@ -189,7 +189,7 @@ function PortfolioCard({
                 alt={company.name}
                 width={128}
                 height={64}
-                className="h-16 w-auto scale-[2.2] object-contain"
+                className="h-16 w-auto scale-[1.3] object-contain"
                 unoptimized
               />
             )
