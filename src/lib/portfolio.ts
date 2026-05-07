@@ -60,6 +60,7 @@ const globalAiLeaders: PortfolioCompany[] = [
     category: 'ai',
     entity: 'group',
     country: 'US',
+    logoFile: 'openai.svg',
     stage: 'Series C+',
     aiPick: true,
     featured: true,
@@ -78,6 +79,7 @@ const globalAiLeaders: PortfolioCompany[] = [
     category: 'ai',
     entity: 'group',
     country: 'US',
+    logoFile: 'anthropic.svg',
     stage: 'Series C+',
     aiPick: true,
     featured: true,
@@ -92,6 +94,7 @@ const globalAiLeaders: PortfolioCompany[] = [
     category: 'ai',
     entity: 'group',
     country: 'US',
+    logoFile: 'perplexity.svg',
     stage: 'Series C+',
     aiPick: true,
     featured: true,
@@ -106,6 +109,7 @@ const globalAiLeaders: PortfolioCompany[] = [
     category: 'ai',
     entity: 'group',
     country: 'US',
+    logoFile: 'xai.svg',
     stage: 'Series C+',
     aiPick: true,
     featured: true,
@@ -124,6 +128,7 @@ const globalAiLeaders: PortfolioCompany[] = [
     category: 'ai',
     entity: 'group',
     country: 'US',
+    logoFile: 'groq.svg',
     stage: 'Exited',
     aiPick: true,
     featured: true,
@@ -145,6 +150,7 @@ const koreaCore: PortfolioCompany[] = [
     category: 'bio',
     entity: 'biolabs',
     country: 'KR',
+    logoFile: 'quadmedicine.png',
     stage: 'Public',
     featured: true,
     highlight: {
@@ -162,6 +168,7 @@ const koreaCore: PortfolioCompany[] = [
     category: 'proptech',
     entity: 'korea',
     country: 'KR',
+    logoFile: 'sparkplus.png',
     stage: 'Series C+',
     featured: true,
   },
@@ -175,6 +182,7 @@ const koreaCore: PortfolioCompany[] = [
     category: 'hrtech',
     entity: 'korea',
     country: 'KR',
+    logoFile: 'wanted.png',
     stage: 'Public',
     featured: true,
   },
@@ -188,6 +196,7 @@ const koreaCore: PortfolioCompany[] = [
     category: 'ai',
     entity: 'korea',
     country: 'KR',
+    logoFile: 'alganize.png',
     stage: 'Series A',
     aiPick: true,
   },
@@ -201,6 +210,7 @@ const koreaCore: PortfolioCompany[] = [
     category: 'security',
     entity: 'korea',
     country: 'KR',
+    logoFile: 'fescaro.png',
     stage: 'Series B',
   },
   {
@@ -213,6 +223,7 @@ const koreaCore: PortfolioCompany[] = [
     category: 'media',
     entity: 'korea',
     country: 'KR',
+    logoFile: 'muzlive.png',
     stage: 'Series B',
   },
   {
@@ -225,6 +236,7 @@ const koreaCore: PortfolioCompany[] = [
     category: 'media',
     entity: 'korea',
     country: 'KR',
+    logoFile: 'kokozi.png',
     stage: 'Series B',
   },
   {
@@ -237,6 +249,7 @@ const koreaCore: PortfolioCompany[] = [
     category: 'bio',
     entity: 'korea',
     country: 'KR',
+    logoFile: 'genoplan.png',
     stage: 'Series B',
   },
   {
@@ -249,6 +262,7 @@ const koreaCore: PortfolioCompany[] = [
     category: 'deeptech',
     entity: 'korea',
     country: 'KR',
+    logoFile: 'blocko.png',
     stage: 'Series B',
   },
   {
@@ -261,6 +275,7 @@ const koreaCore: PortfolioCompany[] = [
     category: 'fintech',
     entity: 'korea',
     country: 'KR',
+    logoFile: 'obzen.png',
     stage: 'Series B',
     aiPick: true,
   },
@@ -274,6 +289,7 @@ const koreaCore: PortfolioCompany[] = [
     category: 'security',
     entity: 'korea',
     country: 'KR',
+    logoFile: 'reco.png',
     stage: 'Series A',
   },
   {
@@ -286,6 +302,7 @@ const koreaCore: PortfolioCompany[] = [
     category: 'deeptech',
     entity: 'korea',
     country: 'KR',
+    logoFile: 'switchon.png',
     stage: 'Series A',
     aiPick: true,
   },
@@ -299,6 +316,7 @@ const koreaCore: PortfolioCompany[] = [
     category: 'security',
     entity: 'korea',
     country: 'KR',
+    logoFile: 'ssenstone.png',
     stage: 'Series B',
   },
   {
@@ -311,6 +329,7 @@ const koreaCore: PortfolioCompany[] = [
     category: 'consumer',
     entity: 'korea',
     country: 'KR',
+    logoFile: 'gint.png',
     stage: 'Series A',
   },
   {
@@ -323,6 +342,7 @@ const koreaCore: PortfolioCompany[] = [
     category: 'commerce',
     entity: 'korea',
     country: 'KR',
+    logoFile: 'bemyfriends.png',
     stage: 'Series B',
   },
   {
@@ -335,6 +355,7 @@ const koreaCore: PortfolioCompany[] = [
     category: 'consumer',
     entity: 'korea',
     country: 'KR',
+    logoFile: 'mbx.png',
     stage: 'Series B',
   },
   {
@@ -347,6 +368,7 @@ const koreaCore: PortfolioCompany[] = [
     category: 'agrifood',
     entity: 'korea',
     country: 'KR',
+    logoFile: 'nthing.png',
     stage: 'Series B',
   },
   {
@@ -359,6 +381,7 @@ const koreaCore: PortfolioCompany[] = [
     category: 'fintech',
     entity: 'korea',
     country: 'KR',
+    logoFile: 'sentbe.png',
     stage: 'Series C+',
   },
   {
@@ -371,6 +394,7 @@ const koreaCore: PortfolioCompany[] = [
     category: 'mobility',
     entity: 'korea',
     country: 'KR',
+    logoFile: 'peaches.png',
     stage: 'Series A',
   },
   {
@@ -383,6 +407,7 @@ const koreaCore: PortfolioCompany[] = [
     category: 'saas',
     entity: 'korea',
     country: 'KR',
+    logoFile: 'caredoc.png',
     stage: 'Series B',
   },
   {
@@ -395,6 +420,7 @@ const koreaCore: PortfolioCompany[] = [
     category: 'ai',
     entity: 'korea',
     country: 'KR',
+    logoFile: 'aboraLabs.png',
     stage: 'Seed',
     aiPick: true,
   },

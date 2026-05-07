@@ -174,19 +174,19 @@ function PortfolioCard({
       {/* 로고 + 배지 영역 */}
       <div className="flex items-start justify-between gap-3">
         {/* 로고 */}
-        <div className="flex h-12 w-24 items-center justify-start">
+        <div className="flex h-16 w-32 items-center justify-start">
           {company.logoFile ? (
             <Image
               src={`/portfolio/logos/${company.logoFile}`}
               alt={company.name}
-              width={96}
-              height={48}
-              className="h-10 w-auto max-w-[96px] object-contain"
+              width={128}
+              height={64}
+              className="h-12 w-auto max-w-[128px] object-contain"
               unoptimized
             />
           ) : (
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-surface-subtle">
-              <span className="text-sm font-bold text-ink-soft">
+            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-surface-subtle">
+              <span className="text-base font-bold text-ink-soft">
                 {company.name.charAt(0)}
               </span>
             </div>
