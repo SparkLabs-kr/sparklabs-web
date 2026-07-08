@@ -1,15 +1,38 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'SparkLabs — Entrepreneurs Growing Entrepreneurs';
+export const alt = 'SparkLabs — We Ignite Entrepreneurs';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
 // Brand tokens inlined so we don't pull Tailwind into the edge runtime.
-const HERO_NAVY = '#0b1532';
-const SPARK_YELLOW = '#facc15';
-const SPARK_BLUE = '#38bdf8';
+const INK = '#0B0C0E';
+const SPARK_BLUE = '#2F6EB8';
+const SPARK_BLUE_SOFT = '#5B96D8';
 const INK_SOFT = 'rgba(255,255,255,0.72)';
+
+// Logo-style burst: tapered rays fanning left from a focal point,
+// cycling through the spark spectrum (blue, orange, magenta, green, yellow).
+const BURST_COLORS = ['#2F6EB8', '#F5941F', '#E8326F', '#56B948', '#F2C230'];
+const BURST_RAYS = Array.from({ length: 14 }, (_, i) => {
+  const t = i / 13;
+  const ang = ((110 + 140 * t) * Math.PI) / 180;
+  const len = 34 + ((i * 7919) % 28);
+  const gap = 9;
+  const halfW = 2.6 + ((i * 104729) % 10) / 4;
+  const cx = 86;
+  const cy = 50;
+  const x1 = cx + Math.cos(ang) * gap;
+  const y1 = cy + Math.sin(ang) * gap;
+  const x2 = cx + Math.cos(ang) * (gap + len);
+  const y2 = cy + Math.sin(ang) * (gap + len);
+  const px = -Math.sin(ang) * halfW;
+  const py = Math.cos(ang) * halfW;
+  return {
+    points: `${x1},${y1} ${x2 + px},${y2 + py} ${x2 - px},${y2 - py}`,
+    fill: BURST_COLORS[i % BURST_COLORS.length],
+  };
+});
 
 export default async function OpengraphImage() {
   return new ImageResponse(
@@ -22,7 +45,7 @@ export default async function OpengraphImage() {
           flexDirection: 'column',
           justifyContent: 'space-between',
           padding: '80px 96px',
-          background: `radial-gradient(ellipse at 85% 15%, ${SPARK_BLUE}33 0%, transparent 55%), ${HERO_NAVY}`,
+          background: `radial-gradient(ellipse at 85% 15%, ${SPARK_BLUE}40 0%, transparent 55%), ${INK}`,
           color: 'white',
           fontFamily: 'Inter, system-ui',
         }}
@@ -31,17 +54,16 @@ export default async function OpengraphImage() {
           style={{
             display: 'flex',
             alignItems: 'center',
-            gap: 16,
+            gap: 14,
             fontSize: 28,
             fontWeight: 700,
             letterSpacing: -0.5,
           }}
         >
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M12 2L14.39 8.26L21 9.27L16 13.97L17.18 20.56L12 17.27L6.82 20.56L8 13.97L3 9.27L9.61 8.26L12 2Z"
-              fill={SPARK_YELLOW}
-            />
+          <svg width="40" height="40" viewBox="0 0 100 100">
+            {BURST_RAYS.map((r, i) => (
+              <polygon key={i} points={r.points} fill={r.fill} />
+            ))}
           </svg>
           <span>SparkLabs</span>
         </div>
@@ -52,11 +74,11 @@ export default async function OpengraphImage() {
               fontSize: 20,
               fontWeight: 600,
               letterSpacing: 2,
-              color: SPARK_YELLOW,
+              color: SPARK_BLUE_SOFT,
               textTransform: 'uppercase',
             }}
           >
-            Entrepreneurs Growing Entrepreneurs
+            We Ignite Entrepreneurs
           </div>
           <div
             style={{

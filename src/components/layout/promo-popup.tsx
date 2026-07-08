@@ -229,7 +229,7 @@ export function PromoPopup({ locale }: { locale: Locale }) {
                   height={36}
                   className="h-9 w-9"
                 />
-                <span className="inline-flex items-center rounded-full bg-[#E74F8E]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#E74F8E]">
+                <span className="inline-flex items-center rounded-full bg-[#E8326F]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#E8326F]">
                   {scam.tag}
                 </span>
               </div>

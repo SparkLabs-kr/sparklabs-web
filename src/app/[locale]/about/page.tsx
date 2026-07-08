@@ -142,7 +142,7 @@ export default async function AboutOverviewPage({
 
 const content = {
   ko: {
-    heroTitle: '창업가가 창업가를 키웁니다.',
+    heroTitle: '창업가가 만든, 창업가를 위한.',
     heroSubcopy:
       '스파크랩은 2013년 설립 이래, 6대륙에서 글로벌 창업가를 발굴·육성해온 AI-First 액셀러레이터 네트워크입니다. 550개 이상의 포트폴리오와 17건의 엑싯, 86.7%의 생존율로 한국을 대표하는 글로벌 VC로 자리잡았습니다.',
     missionEyebrow: 'Our Mission',
@@ -202,7 +202,7 @@ const content = {
     ],
   },
   en: {
-    heroTitle: 'Entrepreneurs Growing Entrepreneurs.',
+    heroTitle: 'Founded by entrepreneurs, for entrepreneurs.',
     heroSubcopy:
       'Since 2013, SparkLabs has been a global AI-First accelerator network spanning six continents. With 550+ portfolio companies, 17 exits, and an 86.7% survival rate, we have become one of Asia\'s leading global venture platforms.',
     missionEyebrow: 'Our Mission',

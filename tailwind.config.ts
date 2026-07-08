@@ -36,7 +36,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Primary brand — vivid indigo purple
+        // Primary brand — Spark Blue, extracted from the logo burst (brand guide v1.0)
         ink: {
           DEFAULT: '#0A0A0A',
           soft: '#3A3A3A',
@@ -46,22 +46,23 @@ const config: Config = {
           deep: '#000000',
         },
         brand: {
-          blue: '#5046E5',
-          'blue-soft': '#6B5FFF',
+          blue: '#2F6EB8',
+          'blue-soft': '#5B96D8',
+          'blue-deep': '#215089',
         },
         surface: {
           DEFAULT: '#FFFFFF',
-          subtle: '#F5F3EF',
-          border: '#E8E5DF',
+          subtle: '#F2F4F7',
+          border: '#E4E7EC',
         },
-        // Spark spectrum (from logo) — re-tuned around indigo primary
+        // Spark spectrum — logo-extracted values; accents only (entities, data, points)
         spark: {
-          blue: '#5046E5',
-          orange: '#F97A1F',
-          yellow: '#F2C94C',
-          green: '#2FB574',
+          blue: '#2F6EB8',
+          orange: '#F5941F',
+          yellow: '#F2C230',
+          green: '#56B948',
           teal: '#2AA5B8',
-          pink: '#E74F8E',
+          pink: '#E8326F',
           red: '#E64545',
           violet: '#7B5CFF',
         },
@@ -91,11 +92,11 @@ const config: Config = {
       },
       boxShadow: {
         card: '0 1px 2px rgba(10, 10, 10, 0.04), 0 8px 24px rgba(10, 10, 10, 0.06)',
-        'card-hover': '0 1px 2px rgba(10, 10, 10, 0.06), 0 16px 40px rgba(80, 70, 229, 0.14)',
+        'card-hover': '0 1px 2px rgba(10, 10, 10, 0.06), 0 16px 40px rgba(47, 110, 184, 0.16)',
       },
       backgroundImage: {
         'hero-navy': 'radial-gradient(ellipse at top left, #141414 0%, #000000 70%)',
-        'spark-ray': 'linear-gradient(135deg, rgba(80,70,229,0.55) 0%, rgba(107,95,255,0) 60%)',
+        'spark-ray': 'linear-gradient(135deg, rgba(47,110,184,0.55) 0%, rgba(91,150,216,0) 60%)',
       },
       animation: {
         'fade-up': 'fadeUp 600ms ease-out both',

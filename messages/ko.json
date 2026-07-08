@@ -1,12 +1,12 @@
 {
   "site": {
     "name": "SparkLabs",
-    "tagline": "Entrepreneurs Growing Entrepreneurs"
+    "tagline": "창업가를 점화하다"
   },
   "seo": {
     "brand": "SparkLabs",
     "home": {
-      "title": "SparkLabs — Entrepreneurs Growing Entrepreneurs",
+      "title": "SparkLabs — 창업가를 점화하다",
       "description": "스파크랩은 6대륙 14개 엔티티를 갖춘 글로벌 AI-First 투자사입니다. 550+ 포트폴리오, $50M AIM AI Fund, OpenAI·Anthropic 초기 투자 실적으로 AI 시대의 창업자를 지원합니다."
     },
     "about": {
@@ -130,8 +130,8 @@
   },
   "hero": {
     "badge": "Global · AI-First",
-    "headline1": "Entrepreneurs",
-    "headline2": "Growing Entrepreneurs",
+    "headline1": "창업가를",
+    "headline2": "점화하다",
     "subcopy": "스파크랩은 6대륙을 무대로, AI 시대의 글로벌 창업가를 발굴하고 키워내는 세계적 액셀러레이터 네트워크입니다.",
     "primaryCta": "액셀러레이터 지원",
     "secondaryCta": "포트폴리오 보기"

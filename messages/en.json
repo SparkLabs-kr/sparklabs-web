@@ -1,12 +1,12 @@
 {
   "site": {
     "name": "SparkLabs",
-    "tagline": "Entrepreneurs Growing Entrepreneurs"
+    "tagline": "We Ignite Entrepreneurs"
   },
   "seo": {
     "brand": "SparkLabs",
     "home": {
-      "title": "SparkLabs — Entrepreneurs Growing Entrepreneurs",
+      "title": "SparkLabs — We Ignite Entrepreneurs",
       "description": "SparkLabs is a global AI-First investment firm with 14 entities across six continents. 550+ portfolio companies, a $50M AIM AI Fund, and early positions in OpenAI, Anthropic, and Perplexity — backing the founders of the AI era."
     },
     "about": {
@@ -130,8 +130,8 @@
   },
   "hero": {
     "badge": "Global · AI-First",
-    "headline1": "Entrepreneurs",
-    "headline2": "Growing Entrepreneurs",
+    "headline1": "We Ignite",
+    "headline2": "Entrepreneurs",
     "subcopy": "A global accelerator network across six continents, discovering and scaling the founders building the AI era.",
     "primaryCta": "Apply to Accelerator",
     "secondaryCta": "Explore Portfolio"

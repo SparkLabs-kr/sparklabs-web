@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.sparklabs.co.kr'
   ),
   title: {
-    default: 'SparkLabs — Entrepreneurs Growing Entrepreneurs',
+    default: 'SparkLabs — We Ignite Entrepreneurs',
     template: '%s — SparkLabs',
   },
   description:
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'SparkLabs',
-    title: 'SparkLabs — Entrepreneurs Growing Entrepreneurs',
+    title: 'SparkLabs — We Ignite Entrepreneurs',
     description:
       'A global AI-First investment firm across six continents, backing the founders of the AI era.',
     locale: 'ko_KR',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SparkLabs — Entrepreneurs Growing Entrepreneurs',
+    title: 'SparkLabs — We Ignite Entrepreneurs',
     description:
       'A global AI-First investment firm across six continents, backing the founders of the AI era.',
     creator: '@SparkLabsGlobal',
