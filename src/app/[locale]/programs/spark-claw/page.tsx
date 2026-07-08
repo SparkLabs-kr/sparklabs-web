@@ -33,11 +33,12 @@ export default async function SparkClawPage({
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-hero-navy text-white">
-        {/* Program accent (red) on the standard hero-ray geometry */}
+        {/* Program accent (red) top-right, on the standard hero gradient geometry */}
         <div
-          className="pointer-events-none absolute -top-40 -right-40 h-[520px] w-[520px] rotate-12 rounded-full bg-spark-red/30 blur-3xl"
+          className="pointer-events-none absolute -top-40 -right-40 h-[520px] w-[520px] rounded-full bg-spark-red/30 blur-3xl"
           aria-hidden="true"
         />
+        <div className="hero-ember" aria-hidden="true" />
         <div className="container-narrow relative py-20 md:py-28">
           <span className="inline-flex items-center gap-2 rounded-full border border-spark-red/40 bg-spark-red/10 px-3 py-1 text-xs font-medium text-spark-red">
             <span className="h-1.5 w-1.5 rounded-full bg-spark-red animate-pulse" />

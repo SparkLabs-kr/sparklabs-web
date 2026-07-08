@@ -32,6 +32,7 @@ export async function NewsSection({
     <>
       <section className="relative overflow-hidden bg-hero-navy text-white">
         <div className="hero-ray" aria-hidden="true" />
+        <div className="hero-ember" aria-hidden="true" />
         <div className="container-narrow relative py-20 md:py-24">
           <span className="eyebrow !text-spark-yellow">
             {kindLabel[kind]}

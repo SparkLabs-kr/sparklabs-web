@@ -30,6 +30,7 @@ export default async function ContactPage({
       {/* HERO */}
       <section className="relative overflow-hidden bg-hero-navy text-white">
         <div className="hero-ray" aria-hidden="true" />
+        <div className="hero-ember" aria-hidden="true" />
         <div className="container-narrow relative py-20 md:py-28">
           <span className="eyebrow !text-spark-yellow">{copy.eyebrow}</span>
           <h1 className="mt-4 text-display-lg max-w-3xl leading-[1.05]">

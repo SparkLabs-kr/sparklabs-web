@@ -32,6 +32,7 @@ export default async function AboutOverviewPage({
     <>
       <section className="relative overflow-hidden bg-hero-navy text-white">
         <div className="hero-ray" aria-hidden="true" />
+        <div className="hero-ember" aria-hidden="true" />
         <div className="container-narrow relative py-24 md:py-28">
           <span className="eyebrow !text-spark-yellow">About SparkLabs</span>
           <h1 className="mt-4 text-display-xl max-w-3xl leading-[1.02]">

@@ -80,11 +80,12 @@ export default async function EntityDetailPage({
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-hero-navy text-white">
-        {/* Entity pages keep the accent hue but share the standard hero-ray geometry */}
+        {/* Entity pages keep the accent hue top-right, on the standard hero gradient geometry */}
         <div
-          className={`pointer-events-none absolute -top-40 -right-40 h-[520px] w-[520px] rotate-12 rounded-full bg-spark-${accent}/30 blur-3xl`}
+          className={`pointer-events-none absolute -top-40 -right-40 h-[520px] w-[520px] rounded-full bg-spark-${accent}/30 blur-3xl`}
           aria-hidden="true"
         />
+        <div className="hero-ember" aria-hidden="true" />
         <div className="container-narrow relative py-20 md:py-24">
           <Link
             href="/about/entities"

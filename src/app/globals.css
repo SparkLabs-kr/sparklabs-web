@@ -65,9 +65,13 @@
     @apply btn border border-ink text-ink hover:bg-ink hover:text-white;
   }
 
-  /* Standard hero glow — one ray per hero, always top-right (brand guide §7) */
+  /* Standard hero gradient — the same two glows on every dark hero:
+     Spark Blue top-right + warm ember bottom-left (logo pairing, "ignition") */
   .hero-ray {
-    @apply pointer-events-none absolute -top-40 -right-40 h-[520px] w-[520px] rotate-12 rounded-full bg-spark-ray blur-3xl;
+    @apply pointer-events-none absolute -top-40 -right-40 h-[520px] w-[520px] rounded-full bg-spark-blue/30 blur-3xl;
+  }
+  .hero-ember {
+    @apply pointer-events-none absolute -bottom-32 -left-32 h-[520px] w-[520px] rounded-full bg-spark-orange/20 blur-3xl;
   }
 
   .card-light {
