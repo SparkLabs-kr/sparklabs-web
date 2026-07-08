@@ -32,13 +32,10 @@ export default async function SparkClawPage({
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden bg-[#1a0f0a] text-white">
+      <section className="relative overflow-hidden bg-hero-navy text-white">
+        {/* Program accent (red) on the standard hero-ray geometry */}
         <div
-          className="pointer-events-none absolute -top-32 -left-32 h-[520px] w-[520px] rounded-full bg-spark-red/25 blur-3xl"
-          aria-hidden="true"
-        />
-        <div
-          className="pointer-events-none absolute -bottom-24 -right-24 h-[520px] w-[520px] rounded-full bg-spark-orange/25 blur-3xl"
+          className="pointer-events-none absolute -top-40 -right-40 h-[520px] w-[520px] rotate-12 rounded-full bg-spark-red/30 blur-3xl"
           aria-hidden="true"
         />
         <div className="container-narrow relative py-20 md:py-28">
@@ -227,7 +224,7 @@ export default async function SparkClawPage({
       {/* CTA — go to dedicated site */}
       <section className="section">
         <div className="container-narrow">
-          <div className="rounded-3xl bg-[#1a0f0a] text-white p-10 md:p-14 relative overflow-hidden">
+          <div className="rounded-3xl bg-hero-navy text-white p-10 md:p-14 relative overflow-hidden">
             <div
               className="pointer-events-none absolute -top-24 -right-24 h-[360px] w-[360px] rounded-full bg-spark-red/20 blur-3xl"
               aria-hidden="true"

@@ -29,10 +29,7 @@ export function LegalLayout({
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-hero-navy text-white">
-        <div
-          className="pointer-events-none absolute -top-32 -left-32 h-[420px] w-[420px] rounded-full bg-spark-blue/25 blur-3xl"
-          aria-hidden="true"
-        />
+        <div className="hero-ray" aria-hidden="true" />
         <div className="container-narrow relative py-20 md:py-24">
           <span className="eyebrow !text-spark-yellow">{eyebrow}</span>
           <h1 className="mt-4 text-display-lg max-w-3xl leading-[1.1]">

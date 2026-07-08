@@ -32,14 +32,7 @@ export default async function PartnershipProgramPage({
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-hero-navy text-white">
-        <div
-          className="pointer-events-none absolute -top-32 -right-32 h-[520px] w-[520px] rounded-full bg-spark-blue/30 blur-3xl"
-          aria-hidden="true"
-        />
-        <div
-          className="pointer-events-none absolute -bottom-24 -left-24 h-[520px] w-[520px] rounded-full bg-spark-violet/30 blur-3xl"
-          aria-hidden="true"
-        />
+        <div className="hero-ray" aria-hidden="true" />
         <div className="container-narrow relative py-20 md:py-28">
           <span className="eyebrow !text-spark-yellow">{copy.eyebrow}</span>
           <h1 className="mt-4 text-display-lg max-w-4xl leading-[1.05]">

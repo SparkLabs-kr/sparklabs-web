@@ -65,6 +65,11 @@
     @apply btn border border-ink text-ink hover:bg-ink hover:text-white;
   }
 
+  /* Standard hero glow — one ray per hero, always top-right (brand guide §7) */
+  .hero-ray {
+    @apply pointer-events-none absolute -top-40 -right-40 h-[520px] w-[520px] rotate-12 rounded-full bg-spark-ray blur-3xl;
+  }
+
   .card-light {
     @apply rounded-2xl border border-surface-border bg-white shadow-card transition-shadow hover:shadow-card-hover;
   }

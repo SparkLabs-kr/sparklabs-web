@@ -44,10 +44,7 @@ export default async function AboutTeamPage({
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-hero-navy text-white">
-        <div
-          className="pointer-events-none absolute -top-32 -left-20 h-[480px] w-[480px] rounded-full bg-spark-ray blur-3xl opacity-80"
-          aria-hidden="true"
-        />
+        <div className="hero-ray" aria-hidden="true" />
         <div className="container-narrow relative py-20 md:py-24">
           <span className="eyebrow !text-spark-yellow">{copy.eyebrow}</span>
           <h1 className="mt-4 text-display-lg max-w-3xl leading-[1.05]">

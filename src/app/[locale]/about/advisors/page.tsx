@@ -42,10 +42,7 @@ export default async function AboutAdvisorsPage({
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-hero-navy text-white">
-        <div
-          className="pointer-events-none absolute -top-40 -right-32 h-[520px] w-[520px] rounded-full bg-spark-ray blur-3xl opacity-75"
-          aria-hidden="true"
-        />
+        <div className="hero-ray" aria-hidden="true" />
         <div className="container-narrow relative py-20 md:py-24">
           <span className="eyebrow !text-spark-yellow">{copy.eyebrow}</span>
           <h1 className="mt-4 text-display-lg max-w-3xl leading-[1.05]">

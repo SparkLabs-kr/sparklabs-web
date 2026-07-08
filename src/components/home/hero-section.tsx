@@ -8,10 +8,7 @@ export async function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-hero-navy text-white">
       {/* Light ray */}
-      <div
-        className="pointer-events-none absolute -top-40 -right-40 h-[520px] w-[520px] rotate-12 rounded-full bg-spark-ray blur-3xl"
-        aria-hidden="true"
-      />
+      <div className="hero-ray" aria-hidden="true" />
       {/* Subtle dot grid */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.06]"

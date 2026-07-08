@@ -74,14 +74,7 @@ export default async function GlobalProgramPage({
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-hero-navy text-white">
-        <div
-          className="pointer-events-none absolute -top-32 -left-32 h-[560px] w-[560px] rounded-full bg-spark-blue/25 blur-3xl"
-          aria-hidden="true"
-        />
-        <div
-          className="pointer-events-none absolute -bottom-24 -right-24 h-[560px] w-[560px] rounded-full bg-spark-green/25 blur-3xl"
-          aria-hidden="true"
-        />
+        <div className="hero-ray" aria-hidden="true" />
         <div className="container-narrow relative py-20 md:py-28">
           <span className="eyebrow !text-spark-yellow">{copy.eyebrow}</span>
           <h1 className="mt-4 text-display-lg max-w-4xl leading-[1.05]">
