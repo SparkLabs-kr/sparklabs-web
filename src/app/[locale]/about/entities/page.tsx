@@ -87,8 +87,9 @@ export default async function AboutEntitiesPage({
               {group.items.map((e) => (
                 <Link
                   key={e.slug}
+                  id={`entity-${e.slug}`}
                   href={`/about/entities/${e.slug}`}
-                  className="card-light group flex flex-col gap-4 p-8 transition hover:-translate-y-0.5 hover:shadow-card-hover"
+                  className="card-light group flex scroll-mt-24 flex-col gap-4 p-8 transition hover:border-ink"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div>
