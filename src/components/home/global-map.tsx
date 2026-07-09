@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import {
   ComposableMap,
   Geographies,
@@ -23,13 +23,30 @@ const SPARK: Record<EntityMeta['accent'], string> = {
   green: '#55BA47',
 };
 
-// Seoul — where the network begins; arcs radiate from here
-const ORIGIN: [number, number] = [126.978, 37.5665];
+interface NetworkNode {
+  coordinates: [number, number];
+  slugs: string[];
+}
 
-/** Entities far enough from Seoul to draw a visible arc to */
-function hasArc(e: EntityMeta) {
-  const [lng, lat] = e.coordinates;
-  return Math.abs(lng - ORIGIN[0]) > 6 || Math.abs(lat - ORIGIN[1]) > 6;
+/**
+ * Every hub connects to every other hub — one mesh, one ecosystem.
+ * Entities within ~3° of each other (the Seoul cluster) share a node
+ * so the mesh stays legible.
+ */
+function buildMesh(entities: EntityMeta[]) {
+  const nodes: NetworkNode[] = [];
+  for (const e of entities) {
+    const near = nodes.find(
+      (n) =>
+        Math.abs(n.coordinates[0] - e.coordinates[0]) < 3 &&
+        Math.abs(n.coordinates[1] - e.coordinates[1]) < 3
+    );
+    if (near) near.slugs.push(e.slug);
+    else nodes.push({ coordinates: e.coordinates, slugs: [e.slug] });
+  }
+  return nodes.flatMap((a, i) =>
+    nodes.slice(i + 1).map((b) => ({ a, b, key: `${a.slugs[0]}-${b.slugs[0]}` }))
+  );
 }
 
 /**
@@ -40,6 +57,10 @@ function hasArc(e: EntityMeta) {
  */
 export function GlobalMap({ entities }: { entities: EntityMeta[] }) {
   const [active, setActive] = useState<string | null>(null);
+  const edges = useMemo(() => buildMesh(entities), [entities]);
+  const activeAccent = active
+    ? SPARK[entities.find((e) => e.slug === active)!.accent]
+    : null;
 
   const jumpToCard = (slug: string) => {
     document
@@ -85,16 +106,18 @@ export function GlobalMap({ entities }: { entities: EntityMeta[] }) {
             }
           </Geographies>
 
-          {/* great-circle arcs from Seoul to each frontier */}
-          {entities.filter(hasArc).map((e) => {
-            const lit = active === e.slug;
+          {/* full mesh of great-circle arcs — every hub linked to every other */}
+          {edges.map((edge) => {
+            const lit =
+              active !== null &&
+              (edge.a.slugs.includes(active) || edge.b.slugs.includes(active));
             return (
               <Line
-                key={`arc-${e.slug}`}
-                from={ORIGIN}
-                to={e.coordinates}
-                stroke={lit ? SPARK[e.accent] : '#FFFFFF'}
-                strokeOpacity={lit ? 0.7 : 0.14}
+                key={edge.key}
+                from={edge.a.coordinates}
+                to={edge.b.coordinates}
+                stroke={lit && activeAccent ? activeAccent : '#FFFFFF'}
+                strokeOpacity={lit ? 0.75 : 0.13}
                 strokeWidth={lit ? 1.4 : 1}
                 strokeLinecap="round"
                 strokeDasharray="1 5"
