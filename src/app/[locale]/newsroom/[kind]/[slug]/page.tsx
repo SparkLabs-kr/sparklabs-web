@@ -138,7 +138,7 @@ export default async function NewsArticlePage({
 
         <header className="mt-10">
           <div className="flex flex-wrap items-center gap-3 text-xs text-ink/60">
-            <span className="rounded-full bg-surface-subtle px-2.5 py-1 font-semibold uppercase tracking-wider text-ink">
+            <span className="bg-surface-subtle px-2.5 py-1 font-semibold uppercase tracking-wider text-ink">
               {kindLabel[kind as NewsKind]}
             </span>
             {frontmatter.date && (

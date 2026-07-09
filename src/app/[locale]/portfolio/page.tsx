@@ -29,8 +29,6 @@ export default async function PortfolioPage({
   return (
     <>
       <section className="relative overflow-hidden bg-hero-navy text-white">
-        <div className="hero-ray" aria-hidden="true" />
-        <div className="hero-ember" aria-hidden="true" />
         <div className="container-narrow relative py-20 md:py-24">
           <span className="eyebrow !text-spark-yellow">{copy.eyebrow}</span>
           <h1 className="mt-4 text-display-lg max-w-3xl leading-[1.05]">
@@ -41,7 +39,7 @@ export default async function PortfolioPage({
           </p>
 
           <div className="mt-10 flex flex-wrap gap-6 text-sm">
-            <Stat value="550+" label={copy.stat1} />
+            <Stat value="320+" label={copy.stat1} />
             <Stat value="17" label={copy.stat2} />
             <Stat value="86.7%" label={copy.stat3} />
           </div>
@@ -83,9 +81,9 @@ function Stat({ value, label }: { value: string; label: string }) {
 const content = {
   ko: {
     eyebrow: 'Portfolio',
-    heroTitle: '550여 창업가, 17건의 엑싯, 86.7%의 생존율.',
+    heroTitle: '320여 창업가, 17건의 엑싯, 86.7%의 생존율.',
     heroSubcopy:
-      '스파크랩은 2013년 이래 6대륙에서 550여 개 스타트업에 투자해왔습니다. 아래에서 엔티티·카테고리로 포트폴리오를 탐색해보세요.',
+      '스파크랩은 2013년 이래 6대륙에서 320여 개 스타트업에 투자해왔습니다. 아래에서 엔티티·카테고리로 포트폴리오를 탐색해보세요.',
     stat1: '글로벌 포트폴리오',
     stat2: '엑싯 (IPO·M&A)',
     stat3: '생존율',
@@ -106,9 +104,9 @@ const content = {
   },
   en: {
     eyebrow: 'Portfolio',
-    heroTitle: '550+ founders. 17 exits. 86.7% survival.',
+    heroTitle: '320+ founders. 17 exits. 86.7% survival.',
     heroSubcopy:
-      "Since 2013, SparkLabs has backed over 550 startups across six continents. Explore our portfolio below — filter by entity or by category.",
+      "Since 2013, SparkLabs has backed over 320 startups across six continents. Explore our portfolio below — filter by entity or by category.",
     stat1: 'Global portfolio',
     stat2: 'Exits (IPO & M&A)',
     stat3: 'Survival rate',

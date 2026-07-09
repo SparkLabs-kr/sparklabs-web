@@ -1,40 +1,50 @@
 import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/routing';
 import { entities } from '@/lib/entities';
-import { GlobalMap } from './global-map';
+import type { Locale } from '@/lib/content';
+import { Reveal } from '@/components/ui/reveal';
 
-export async function NetworkSection() {
-  const t = await getTranslations('network');
-
-  const pillars = [
-    { key: 'presence', title: t('pillars.presence.title'), body: t('pillars.presence.body') },
-    { key: 'network', title: t('pillars.network.title'), body: t('pillars.network.body') },
-    { key: 'ecosystem', title: t('pillars.ecosystem.title'), body: t('pillars.ecosystem.body') },
-  ];
+export async function NetworkSection({ locale }: { locale: Locale }) {
+  const t = await getTranslations('home.network');
 
   return (
-    <section className="section bg-navy-deep text-white">
+    <section className="section" id="network">
       <div className="container-narrow">
-        <span className="eyebrow !text-brand-blue-soft">Global Network</span>
-        <h2 className="mt-3 text-display-lg">{t('title')}</h2>
-        <p className="mt-4 max-w-2xl text-lg text-white/70">{t('subtitle')}</p>
-
-        <div className="mt-14">
-          <GlobalMap entities={entities} />
-        </div>
-
-        <div className="mt-16 grid gap-0 md:grid-cols-3 md:gap-8">
-          {pillars.map((p, idx) => (
-            <div
-              key={p.key}
-              className="group border-t border-white/15 py-8 md:border-t-0 md:border-l md:pl-8 md:py-0 md:first:border-l-0 md:first:pl-0"
-            >
-              <span className="inline-block rounded-full border border-brand-blue-soft px-3 py-1 text-xs font-semibold tracking-[0.08em] text-brand-blue-soft">
-                {String(idx + 1).padStart(2, '0')}
-              </span>
-              <h3 className="mt-4 text-xl font-bold tracking-tight">{p.title}</h3>
-              <p className="mt-3 text-sm text-white/65 leading-relaxed">{p.body}</p>
-            </div>
-          ))}
+        <div className="grid items-start gap-11 lg:grid-cols-[340px_1fr] lg:gap-20">
+          <Reveal>
+            <span className="eyebrow text-spark-blue">{t('label')}</span>
+            <h2 className="mt-5 font-display text-display-lg">
+              One Spark,
+              <br />
+              <span className="font-normal text-muted">Seven Frontiers</span>
+            </h2>
+            <p className="mt-4 max-w-[540px] text-[16.5px] text-muted">
+              {t('sub')}
+            </p>
+          </Reveal>
+          <Reveal className="ink-rule">
+            {entities.map((entity) => (
+              <Link
+                key={entity.slug}
+                href={`/about/entities/${entity.slug}`}
+                className="grid grid-cols-[1fr_auto] items-baseline gap-5 border-b border-surface-border px-1 py-6 transition-all duration-200 hover:bg-surface-subtle hover:pl-3.5"
+              >
+                <div>
+                  <b className="font-display text-[19px] font-bold tracking-[-0.02em]">
+                    {entity.name.en}
+                  </b>
+                  <small className="mt-0.5 block text-[13.5px] font-normal text-muted">
+                    {entity.tagline[locale]}
+                  </small>
+                </div>
+                <span
+                  className={`font-display text-[11px] font-semibold uppercase tracking-[0.2em] text-spark-${entity.accent}`}
+                >
+                  {entity.location.en.split(/[,·]/)[0].trim()}
+                </span>
+              </Link>
+            ))}
+          </Reveal>
         </div>
       </div>
     </section>

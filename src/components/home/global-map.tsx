@@ -15,7 +15,7 @@ const GEO_URL =
   'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
 
 // SparkLabs brand purple for pins on light map
-const PIN_COLOR = '#2F6EB8';
+const PIN_COLOR = '#2C6CB6';
 const PIN_STROKE = '#FFFFFF';
 
 export function GlobalMap({ entities }: { entities: EntityMeta[] }) {

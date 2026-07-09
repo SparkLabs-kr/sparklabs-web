@@ -33,14 +33,8 @@ export default async function SparkClawPage({
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-hero-navy text-white">
-        {/* Program accent (red) top-right, on the standard hero gradient geometry */}
-        <div
-          className="pointer-events-none absolute -top-40 -right-40 h-[520px] w-[520px] rounded-full bg-spark-red/30 blur-3xl"
-          aria-hidden="true"
-        />
-        <div className="hero-ember" aria-hidden="true" />
         <div className="container-narrow relative py-20 md:py-28">
-          <span className="inline-flex items-center gap-2 rounded-full border border-spark-red/40 bg-spark-red/10 px-3 py-1 text-xs font-medium text-spark-red">
+          <span className="inline-flex items-center gap-2 border border-spark-red/40 bg-spark-red/10 px-3 py-1 text-xs font-medium text-spark-red">
             <span className="h-1.5 w-1.5 rounded-full bg-spark-red animate-pulse" />
             {copy.badge}
           </span>
@@ -59,7 +53,7 @@ export default async function SparkClawPage({
               href={SPARK_CLAW_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-spark-red px-6 py-3 text-sm font-semibold text-white hover:bg-spark-red/90 transition"
+              className="inline-flex items-center gap-2 border border-spark-pink bg-spark-pink px-7 py-3.5 font-display text-sm font-semibold text-white transition-colors hover:bg-white hover:border-white hover:text-ink"
             >
               {copy.ctaVisit}
               <svg
@@ -80,7 +74,7 @@ export default async function SparkClawPage({
               href={`${SPARK_CLAW_URL}/#subscribe`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white hover:bg-white/5 transition"
+              className="inline-flex items-center border border-white/40 px-7 py-3.5 font-display text-sm font-semibold text-white transition-colors hover:bg-white hover:text-ink"
             >
               {copy.ctaSubscribe}
             </a>
@@ -225,11 +219,7 @@ export default async function SparkClawPage({
       {/* CTA — go to dedicated site */}
       <section className="section">
         <div className="container-narrow">
-          <div className="rounded-3xl bg-hero-navy text-white p-10 md:p-14 relative overflow-hidden">
-            <div
-              className="pointer-events-none absolute -top-24 -right-24 h-[360px] w-[360px] rounded-full bg-spark-red/20 blur-3xl"
-              aria-hidden="true"
-            />
+          <div className="bg-ink text-white p-10 md:p-14 relative overflow-hidden">
             <div className="relative grid gap-6 md:grid-cols-[1.4fr_1fr] md:items-center">
               <div>
                 <span className="text-xs uppercase tracking-[0.18em] text-spark-red">
@@ -249,7 +239,7 @@ export default async function SparkClawPage({
                   href={SPARK_CLAW_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-spark-red px-6 py-3 text-sm font-semibold text-white hover:bg-spark-red/90 transition"
+                  className="inline-flex items-center gap-2 border border-spark-pink bg-spark-pink px-7 py-3.5 font-display text-sm font-semibold text-white transition-colors hover:bg-white hover:border-white hover:text-ink"
                 >
                   {copy.ctaVisit}
                   <svg
@@ -270,7 +260,7 @@ export default async function SparkClawPage({
                   href={`${SPARK_CLAW_URL}/#subscribe`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white hover:bg-white/5 transition"
+                  className="inline-flex items-center border border-white/40 px-7 py-3.5 font-display text-sm font-semibold text-white transition-colors hover:bg-white hover:text-ink"
                 >
                   {copy.ctaSubscribe}
                 </a>

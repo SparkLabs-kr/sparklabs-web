@@ -80,12 +80,6 @@ export default async function EntityDetailPage({
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-hero-navy text-white">
-        {/* Entity pages keep the accent hue top-right, on the standard hero gradient geometry */}
-        <div
-          className={`pointer-events-none absolute -top-40 -right-40 h-[520px] w-[520px] rounded-full bg-spark-${accent}/30 blur-3xl`}
-          aria-hidden="true"
-        />
-        <div className="hero-ember" aria-hidden="true" />
         <div className="container-narrow relative py-20 md:py-24">
           <Link
             href="/about/entities"
@@ -95,7 +89,7 @@ export default async function EntityDetailPage({
           </Link>
 
           <div className="mt-10 flex items-start gap-4">
-            <div className={`h-1.5 w-12 rounded-full bg-spark-${accent}`} />
+            <div className={`h-[3px] w-12 bg-spark-${accent}`} />
           </div>
 
           <h1 className="mt-6 text-display-lg max-w-3xl leading-[1.05]">
@@ -153,7 +147,7 @@ export default async function EntityDetailPage({
                   key={l.name}
                   className="card-light flex flex-col gap-3 p-6"
                 >
-                  <div className={`h-1 w-10 rounded-full bg-spark-${accent}`} />
+                  <div className={`h-[3px] w-10 bg-spark-${accent}`} />
                   <h3 className="mt-2 text-lg font-semibold text-ink">
                     {l.name}
                   </h3>
@@ -185,7 +179,7 @@ export default async function EntityDetailPage({
                   key={i}
                   className="card-light flex flex-col gap-3 p-8"
                 >
-                  <div className={`h-1 w-10 rounded-full bg-spark-${accent}`} />
+                  <div className={`h-[3px] w-10 bg-spark-${accent}`} />
                   <h3 className="mt-2 text-xl font-semibold text-ink">
                     {p.title[locale]}
                   </h3>
@@ -224,7 +218,7 @@ export default async function EntityDetailPage({
                   key={p.name}
                   className="card-light flex h-full flex-col gap-3 p-6"
                 >
-                  <div className={`h-1 w-10 rounded-full bg-spark-${accent}`} />
+                  <div className={`h-[3px] w-10 bg-spark-${accent}`} />
                   <h3 className="mt-2 text-lg font-semibold text-ink">
                     {p.name}
                   </h3>
@@ -232,7 +226,7 @@ export default async function EntityDetailPage({
                     {p.blurb[locale]}
                   </p>
                   {p.tag && (
-                    <span className="mt-auto inline-flex w-fit rounded-full border border-surface-border px-2.5 py-0.5 text-xs text-ink/60">
+                    <span className="mt-auto inline-flex w-fit border border-surface-border px-2.5 py-0.5 text-xs text-ink/60">
                       {p.tag[locale]}
                     </span>
                   )}
@@ -349,7 +343,7 @@ export default async function EntityDetailPage({
                     href={`/about/entities/${e.slug}`}
                     className="group flex flex-col gap-2 rounded-2xl border border-surface-border bg-white p-5 transition hover:-translate-y-0.5 hover:shadow-card"
                   >
-                    <div className={`h-1 w-10 rounded-full bg-spark-${e.accent}`} />
+                    <div className={`h-[3px] w-10 bg-spark-${e.accent}`} />
                     <h3 className="mt-2 font-semibold text-ink group-hover:text-ink">
                       {e.name[locale]}
                     </h3>

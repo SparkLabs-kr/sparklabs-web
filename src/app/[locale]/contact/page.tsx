@@ -29,8 +29,6 @@ export default async function ContactPage({
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-hero-navy text-white">
-        <div className="hero-ray" aria-hidden="true" />
-        <div className="hero-ember" aria-hidden="true" />
         <div className="container-narrow relative py-20 md:py-28">
           <span className="eyebrow !text-spark-yellow">{copy.eyebrow}</span>
           <h1 className="mt-4 text-display-lg max-w-3xl leading-[1.05]">
@@ -63,7 +61,7 @@ export default async function ContactPage({
                   className="card-light flex flex-col gap-4 p-8"
                 >
                   <div className="flex items-start justify-between gap-4">
-                    <div className={`h-1.5 w-12 rounded-full bg-spark-${accent}`} />
+                    <div className={`h-[3px] w-12 bg-spark-${accent}`} />
                     <span className="shrink-0 text-xs uppercase tracking-[0.14em] text-ink/50">
                       {c.tag}
                     </span>
@@ -163,7 +161,7 @@ export default async function ContactPage({
                   href="https://maps.google.com/?q=마루180+서울+강남구+역삼로+180"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-surface-border bg-white px-5 py-2.5 text-sm font-semibold text-ink hover:bg-surface-subtle transition"
+                  className="inline-flex items-center gap-2 border border-surface-border bg-white px-5 py-2.5 text-sm font-semibold text-ink hover:bg-surface-subtle transition"
                 >
                   {copy.googleMaps}
                   <svg
@@ -184,7 +182,7 @@ export default async function ContactPage({
                   href="https://map.naver.com/p/search/마루180"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-surface-border bg-white px-5 py-2.5 text-sm font-semibold text-ink hover:bg-surface-subtle transition"
+                  className="inline-flex items-center gap-2 border border-surface-border bg-white px-5 py-2.5 text-sm font-semibold text-ink hover:bg-surface-subtle transition"
                 >
                   {copy.naverMaps}
                   <svg
@@ -228,7 +226,7 @@ export default async function ContactPage({
                   className="card-light flex flex-col gap-5 p-8"
                 >
                   <div className="flex items-start justify-between gap-4">
-                    <div className={`h-1.5 w-12 rounded-full bg-spark-${accent}`} />
+                    <div className={`h-[3px] w-12 bg-spark-${accent}`} />
                     <span className="shrink-0 text-xs uppercase tracking-[0.14em] text-ink/50">
                       {n.tag}
                     </span>
@@ -242,7 +240,7 @@ export default async function ContactPage({
                       href={n.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white hover:bg-ink/90 transition"
+                      className="inline-flex items-center gap-2 bg-ink px-5 py-2.5 text-sm font-semibold text-white hover:bg-ink/90 transition"
                     >
                       {n.cta}
                       <svg
@@ -281,7 +279,7 @@ export default async function ContactPage({
           <div className="mt-10">
             <Link
               href={`/${locale}/about/entities`}
-              className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white hover:bg-ink/90 transition"
+              className="inline-flex items-center gap-2 bg-ink px-6 py-3 text-sm font-semibold text-white hover:bg-ink/90 transition"
             >
               {copy.globalCta}
               <svg

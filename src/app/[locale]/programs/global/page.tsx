@@ -74,8 +74,6 @@ export default async function GlobalProgramPage({
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-hero-navy text-white">
-        <div className="hero-ray" aria-hidden="true" />
-        <div className="hero-ember" aria-hidden="true" />
         <div className="container-narrow relative py-20 md:py-28">
           <span className="eyebrow !text-spark-yellow">{copy.eyebrow}</span>
           <h1 className="mt-4 text-display-lg max-w-4xl leading-[1.05]">
@@ -101,7 +99,7 @@ export default async function GlobalProgramPage({
               </p>
             </div>
             <div>
-              <p className="text-3xl font-semibold text-spark-yellow">550+</p>
+              <p className="text-3xl font-semibold text-spark-yellow">320+</p>
               <p className="mt-1 text-xs uppercase tracking-[0.14em] text-white/60">
                 {copy.statPortfolio}
               </p>
@@ -155,7 +153,7 @@ export default async function GlobalProgramPage({
               </p>
               <Link
                 href={`/${locale}/newsroom/announcements`}
-                className="mt-6 inline-flex items-center rounded-full border border-surface-border bg-white px-5 py-2.5 text-sm font-semibold text-ink hover:bg-surface-subtle transition"
+                className="mt-6 inline-flex items-center border border-surface-border bg-white px-5 py-2.5 text-sm font-semibold text-ink hover:bg-surface-subtle transition"
               >
                 {copy.viewAllAnnouncements}
               </Link>
@@ -194,7 +192,7 @@ export default async function GlobalProgramPage({
                       className="card-light flex flex-col gap-3 p-6"
                     >
                       <div className="flex items-start justify-between gap-3">
-                        <div className={`h-1.5 w-10 rounded-full bg-spark-${e.accent}`} />
+                        <div className={`h-[3px] w-10 bg-spark-${e.accent}`} />
                         {e.founded && (
                           <span className="text-xs text-ink/50">
                             Est. {e.founded}
@@ -222,7 +220,7 @@ export default async function GlobalProgramPage({
           <div className="mt-12">
             <Link
               href={`/${locale}/about/entities`}
-              className="inline-flex items-center rounded-full border border-surface-border bg-white px-5 py-2.5 text-sm font-semibold text-ink hover:bg-white/80 transition"
+              className="inline-flex items-center border border-surface-border bg-white px-5 py-2.5 text-sm font-semibold text-ink hover:bg-white/80 transition"
             >
               {copy.viewAllEntities} →
             </Link>
@@ -245,13 +243,13 @@ export default async function GlobalProgramPage({
             <div className="flex flex-wrap gap-3 md:justify-end">
               <Link
                 href={`/${locale}/programs/batch`}
-                className="inline-flex items-center rounded-full bg-spark-yellow px-6 py-3 text-sm font-semibold text-ink hover:bg-spark-yellow/90 transition"
+                className="inline-flex items-center border border-white bg-white px-7 py-3.5 font-display text-sm font-semibold text-ink transition-colors hover:border-spark-pink hover:bg-spark-pink hover:text-white"
               >
                 {copy.ctaBatch}
               </Link>
               <Link
                 href={`/${locale}/programs/partnership`}
-                className="inline-flex items-center rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white hover:bg-white/5 transition"
+                className="inline-flex items-center border border-white/40 px-7 py-3.5 font-display text-sm font-semibold text-white transition-colors hover:bg-white hover:text-ink"
               >
                 {copy.ctaPartnership}
               </Link>

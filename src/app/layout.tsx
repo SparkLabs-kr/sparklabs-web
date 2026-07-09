@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { IBM_Plex_Mono, Inter } from 'next/font/google';
 
 import './globals.css';
 
@@ -9,16 +9,22 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
+const plexMono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  display: 'swap',
+  variable: '--font-plex-mono',
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.sparklabs.co.kr'
   ),
-  title: {
-    default: 'SparkLabs — We Ignite Entrepreneurs',
-    template: '%s — SparkLabs',
-  },
+  // Plain string, no template — the [locale] layout defines its own title
+  // template, and stacking both produced a doubled "… — SparkLabs" suffix.
+  title: 'SparkLabs — Global AI-First Investor',
   description:
-    'SparkLabs is a global AI-First investment firm across six continents, backing the founders of the AI era.',
+    'Entrepreneurs Growing Entrepreneurs. SparkLabs is a global, AI-first startup investor — 13 years, 320+ portfolio companies, 7 entities.',
   applicationName: 'SparkLabs',
   keywords: [
     'SparkLabs',
@@ -43,17 +49,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'SparkLabs',
-    title: 'SparkLabs — We Ignite Entrepreneurs',
+    title: 'SparkLabs — Global AI-First Investor',
     description:
-      'A global AI-First investment firm across six continents, backing the founders of the AI era.',
+      'Entrepreneurs Growing Entrepreneurs. A global, AI-first startup investor — 13 years, 320+ portfolio companies, 7 entities.',
     locale: 'ko_KR',
     alternateLocale: ['en_US'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SparkLabs — We Ignite Entrepreneurs',
+    title: 'SparkLabs — Global AI-First Investor',
     description:
-      'A global AI-First investment firm across six continents, backing the founders of the AI era.',
+      'Entrepreneurs Growing Entrepreneurs. A global, AI-first startup investor — 13 years, 320+ portfolio companies, 7 entities.',
     creator: '@SparkLabsGlobal',
   },
   robots: {
@@ -83,7 +89,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ko" className={inter.variable} suppressHydrationWarning>
+    <html
+      lang="ko"
+      className={`${inter.variable} ${plexMono.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         <link
           rel="stylesheet"

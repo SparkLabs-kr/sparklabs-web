@@ -34,8 +34,6 @@ export default async function AiPortfolioPage({
   return (
     <>
       <section className="relative overflow-hidden bg-hero-navy text-white">
-        <div className="hero-ray" aria-hidden="true" />
-        <div className="hero-ember" aria-hidden="true" />
         <div className="container-narrow relative py-20 md:py-28">
           <span className="eyebrow !text-spark-violet">{copy.eyebrow}</span>
           <h1 className="mt-4 text-display-xl max-w-3xl leading-[1.02]">
@@ -138,7 +136,7 @@ function AiSpotlightCard({
 
   return (
     <article className="flex h-full flex-col rounded-2xl border border-surface-border bg-white p-6 transition hover:-translate-y-0.5 hover:shadow-card">
-      <div className={`h-1.5 w-12 rounded-full bg-spark-${accent}`} />
+      <div className={`h-[3px] w-12 bg-spark-${accent}`} />
       <h3 className="mt-4 text-xl font-semibold text-ink">{company.name}</h3>
       <p className="mt-2 text-sm text-ink-soft leading-relaxed">
         {company.tagline[locale]}
@@ -150,11 +148,11 @@ function AiSpotlightCard({
       )}
       <div className="mt-auto flex flex-wrap items-center gap-2 pt-4 text-xs text-ink/50">
         {company.stage && (
-          <span className="rounded-full border border-surface-border px-2 py-0.5">
+          <span className="border border-surface-border px-2 py-0.5">
             {company.stage}
           </span>
         )}
-        <span className="rounded-full border border-surface-border px-2 py-0.5">
+        <span className="border border-surface-border px-2 py-0.5">
           {entityMeta?.shortName ?? company.entity}
         </span>
       </div>
@@ -184,7 +182,7 @@ const content = {
       'AI 언어 학습부터 산업 AI·금융 AI·리서치 AI까지, 한국 AI 생태계의 다음 챕터를 만들고 있는 스파크랩 포트폴리오사입니다.',
     ctaTitle: '전체 포트폴리오를 만나보세요.',
     ctaSubcopy:
-      'AI 외에도 핀테크·바이오·모빌리티·커머스 등 다양한 섹터의 550여 포트폴리오사가 스파크랩과 함께하고 있습니다.',
+      'AI 외에도 핀테크·바이오·모빌리티·커머스 등 다양한 섹터의 320여 포트폴리오사가 스파크랩과 함께하고 있습니다.',
     ctaButton: '전체 포트폴리오 보기',
   },
   en: {
@@ -208,7 +206,7 @@ const content = {
       "From AI language learning to industrial AI, financial AI, and research AI — these are the SparkLabs companies writing Korea's next AI chapter.",
     ctaTitle: 'See the full portfolio',
     ctaSubcopy:
-      'Beyond AI, SparkLabs backs 550+ companies across fintech, bio, mobility, commerce, and more — across six continents.',
+      'Beyond AI, SparkLabs backs 320+ companies across fintech, bio, mobility, commerce, and more — across six continents.',
     ctaButton: 'Browse all portfolio',
   },
 } as const;

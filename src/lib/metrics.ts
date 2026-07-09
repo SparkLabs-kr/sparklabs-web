@@ -3,7 +3,7 @@
  * 숫자 업데이트는 이 파일 하나만 수정하면 됨.
  */
 export const headlineMetrics = [
-  { key: 'globalStartups', value: '550+', rawNumber: 550 },
+  { key: 'globalStartups', value: '320+', rawNumber: 320 },
   { key: 'koreanCore', value: '330+', rawNumber: 330 },
   { key: 'valuation', value: '$5.85B', rawNumber: 5_850_000_000 },
   { key: 'exits', value: '17', rawNumber: 17 },

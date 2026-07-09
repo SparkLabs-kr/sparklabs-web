@@ -1,17 +1,17 @@
 {
   "site": {
     "name": "SparkLabs",
-    "tagline": "창업가를 점화하다"
+    "tagline": "창업가가 창업가를 지원합니다"
   },
   "seo": {
     "brand": "SparkLabs",
     "home": {
-      "title": "SparkLabs — 창업가를 점화하다",
-      "description": "스파크랩은 6대륙 14개 엔티티를 갖춘 글로벌 AI-First 투자사입니다. 550+ 포트폴리오, $50M AIM AI Fund, OpenAI·Anthropic 초기 투자 실적으로 AI 시대의 창업자를 지원합니다."
+      "title": "SparkLabs — Global AI-First Investor",
+      "description": "창업가가 창업가를 지원합니다. 스파크랩은 13년, 320개 이상의 포트폴리오, 7개 글로벌 엔티티를 가진 글로벌 AI-First 스타트업 투자자입니다."
     },
     "about": {
       "title": "회사소개",
-      "description": "2013년 설립 이후 6대륙 14개 엔티티를 통해 글로벌 창업 생태계를 연결해온 스파크랩의 비전, 팀, 네트워크를 소개합니다."
+      "description": "2013년 설립 이후 7개 글로벌 엔티티를 통해 글로벌 창업 생태계를 연결해온 스파크랩의 비전, 팀, 네트워크를 소개합니다."
     },
     "team": {
       "title": "팀",
@@ -27,7 +27,7 @@
     },
     "portfolio": {
       "title": "포트폴리오",
-      "description": "550+ 스파크랩 포트폴리오. OpenAI·Anthropic·Perplexity 초기 투자부터 국내 대표 AI 스타트업까지."
+      "description": "320+ 스파크랩 포트폴리오. OpenAI·Anthropic·Perplexity 초기 투자부터 국내 대표 AI 스타트업까지."
     },
     "portfolioAi": {
       "title": "AI 포트폴리오",
@@ -39,7 +39,7 @@
     },
     "programsBatch": {
       "title": "Batch Program",
-      "description": "22주 액셀러레이팅 프로그램. 3억 원 투자, 550+ 포트폴리오 네트워크, 데모데이까지. 한국의 초기 창업자를 위한 스파크랩의 대표 프로그램."
+      "description": "15주간 오직 PMF에 전념하는 액셀러레이팅 프로그램. CPS/SAFE 1억원 이상 투자, 매년 4월·9월 모집. 초기 창업자를 위한 스파크랩의 대표 프로그램."
     },
     "programsPartnership": {
       "title": "Partnership Program",
@@ -129,15 +129,13 @@
     "announcements": "공지사항"
   },
   "hero": {
-    "badge": "Global · AI-First",
-    "headline1": "창업가를",
-    "headline2": "점화하다",
-    "subcopy": "스파크랩은 6대륙을 무대로, AI 시대의 글로벌 창업가를 발굴하고 키워내는 세계적 액셀러레이터 네트워크입니다.",
-    "primaryCta": "액셀러레이터 지원",
-    "secondaryCta": "포트폴리오 보기"
+    "label": "Global AI-First Investor · EST. 2012",
+    "sub": "창업가가 창업가를 지원합니다. 스파크랩은 13년간 320개 이상의 스타트업과 함께해 온 글로벌 투자자입니다. 다음 분기의 생존이 아닌, 앞으로 10년의 성장을 설계합니다.",
+    "primaryCta": "배치 프로그램 알아보기",
+    "secondaryCta": "Our Companies"
   },
   "impact": {
-    "title": "550개 이상의 글로벌 포트폴리오사가 증명한 스파크랩의 실적.",
+    "title": "320개 이상의 글로벌 포트폴리오사가 증명한 스파크랩의 실적.",
     "metrics": {
       "globalStartups": "글로벌 투자 스타트업",
       "koreanCore": "한국 주요 포트폴리오",
@@ -214,7 +212,8 @@
       "sparkLetter": "Spark Letter · 창업가용",
       "vcMailing": "VC Mailing · 투자자용"
     },
-    "copyright": "© {year} SparkLabs. All rights reserved."
+    "copyright": "© {year} SparkLabs. All rights reserved.",
+    "slogan": "AI-First 시대의 글로벌 스타트업 투자자."
   },
   "locale": {
     "ko": "한국어",
@@ -231,5 +230,51 @@
     "subcopy": "첫 투자부터 글로벌 스케일업까지 — 스파크랩의 여정을 함께한 창업가들의 생생한 목소리를 확인하세요.",
     "prev": "이전 증언",
     "next": "다음 증언"
+  },
+  "home": {
+    "stats": {
+      "portfolio": "Portfolio",
+      "years": "Years",
+      "entities": "Global Entities",
+      "batches": "Batches / Year"
+    },
+    "philosophy": {
+      "label": "Why SparkLabs",
+      "statement": "우리는 다음 분기가 아니라 다음 10년을 설계합니다.",
+      "statementThin": "비즈니스의 정수만 남을 때까지, PMF에 집요하게.",
+      "pillar1": {
+        "title": "Entrepreneurs Growing Entrepreneurs",
+        "body": "미국·한국 등에서 창업과 투자를 직접 경험한 연쇄 창업가들이 설립했습니다. 창업가의 언어로 코칭합니다."
+      },
+      "pillar2": {
+        "title": "PMF, Obsessively",
+        "body": "15주간 오직 PMF에 전념합니다. 매주 테스트와 밀착 멘토링으로 아하 모먼트에 도달합니다."
+      },
+      "pillar3": {
+        "title": "Global by Design",
+        "body": "서울에서 시작해 타이베이, 리야드, 시드니까지 — 7개 글로벌 엔티티 네트워크가 해외 진출의 문을 엽니다."
+      }
+    },
+    "network": {
+      "label": "Global Network",
+      "sub": "스파크랩 그룹의 글로벌 엔티티가 산업과 대륙을 가로질러 창업가의 다음 시장을 연결합니다."
+    },
+    "portfolio": {
+      "label": "Our Companies",
+      "viewAll": "View All 320+"
+    },
+    "quotes": {
+      "label": "Founder Voices",
+      "prev": "이전 인용 보기",
+      "next": "다음 인용 보기"
+    },
+    "cta": {
+      "label": "Batch Program",
+      "title": "Ready for the next decade,",
+      "titleThin": "not the next quarter?",
+      "sub": "배치 프로그램 모집은 매년 4월과 9월에 열립니다. 가장 먼저 소식을 받아보세요.",
+      "primary": "모집 알림 신청하기",
+      "secondary": "프로그램 자세히 보기"
+    }
   }
 }

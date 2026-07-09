@@ -31,7 +31,7 @@ export function SubnavClient({ items }: { items: SubnavItem[] }) {
             key={item.href}
             href={item.href as any}
             className={cn(
-              'shrink-0 rounded-full px-4 py-2 font-medium transition',
+              'shrink-0 px-4 py-2 font-medium transition',
               active
                 ? 'bg-ink text-white'
                 : 'text-ink-soft hover:bg-surface-subtle hover:text-ink'

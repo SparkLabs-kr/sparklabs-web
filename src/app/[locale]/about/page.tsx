@@ -31,8 +31,6 @@ export default async function AboutOverviewPage({
   return (
     <>
       <section className="relative overflow-hidden bg-hero-navy text-white">
-        <div className="hero-ray" aria-hidden="true" />
-        <div className="hero-ember" aria-hidden="true" />
         <div className="container-narrow relative py-24 md:py-28">
           <span className="eyebrow !text-spark-yellow">About SparkLabs</span>
           <h1 className="mt-4 text-display-xl max-w-3xl leading-[1.02]">
@@ -122,7 +120,7 @@ export default async function AboutOverviewPage({
                 key={e.slug}
                 className="rounded-2xl border border-surface-border bg-white p-5 transition hover:shadow-card"
               >
-                <div className={`h-1.5 w-10 rounded-full bg-spark-${e.accent}`} />
+                <div className={`h-[3px] w-10 bg-spark-${e.accent}`} />
                 <h3 className="mt-4 text-base font-semibold text-ink">
                   {e.name[locale]}
                 </h3>
@@ -142,7 +140,7 @@ const content = {
   ko: {
     heroTitle: '창업가가 만든, 창업가를 위한.',
     heroSubcopy:
-      '스파크랩은 2013년 설립 이래, 6대륙에서 글로벌 창업가를 발굴·육성해온 AI-First 액셀러레이터 네트워크입니다. 550개 이상의 포트폴리오와 17건의 엑싯, 86.7%의 생존율로 한국을 대표하는 글로벌 VC로 자리잡았습니다.',
+      '스파크랩은 2013년 설립 이래, 6대륙에서 글로벌 창업가를 발굴·육성해온 AI-First 액셀러레이터 네트워크입니다. 320개 이상의 포트폴리오와 17건의 엑싯, 86.7%의 생존율로 한국을 대표하는 글로벌 VC로 자리잡았습니다.',
     missionEyebrow: 'Our Mission',
     missionTitle: '글로벌 창업가의 첫 동반자.',
     missionBody: [
@@ -202,7 +200,7 @@ const content = {
   en: {
     heroTitle: 'Founded by entrepreneurs, for entrepreneurs.',
     heroSubcopy:
-      'Since 2013, SparkLabs has been a global AI-First accelerator network spanning six continents. With 550+ portfolio companies, 17 exits, and an 86.7% survival rate, we have become one of Asia\'s leading global venture platforms.',
+      'Since 2013, SparkLabs has been a global AI-First accelerator network spanning six continents. With 320+ portfolio companies, 17 exits, and an 86.7% survival rate, we have become one of Asia\'s leading global venture platforms.',
     missionEyebrow: 'Our Mission',
     missionTitle: 'The first partner for global founders.',
     missionBody: [
