@@ -1,0 +1,112 @@
+---
+title: "AI Writes the Code. But Will It Take the Responsibility?"
+date: "2026-07-07"
+summary: "AI produces working code — not secure services. Lessons from the Moltbook breach, and the six-point security checklist every builder should run before hitting deploy."
+entity: "korea"
+author: "Jimmy Kim"
+tags: ["sparkclaw", "vibe-coding", "security", "solo-founder"]
+sourceUrl: "https://www.sparkclaw.co.kr/sparkclaw-insight-vibe-coding-security"
+---
+
+> In the vibe-coding era, everything transfers to you the moment you press the deploy button.
+
+AI makes working code easy. It does not make services safe. That gap closes on you the moment you press deploy — and the responsibility quietly becomes yours.
+
+I run an accelerator, and we are building an internal database project of our own — 'SLAB', under our SparkAI initiative. In short: we are moving years of meeting notes and working documents from every team into a shared drive, wiring it into Supabase as one database, and building an app on top so our people can work with AI instead of waiting on a colleague.
+
+Because I have an engineering background, I know how much security matters when you pool an organization's internal data into one DB, and we put real safeguards in place while vibe-coding it. But lately we keep seeing the opposite: builders trusting AI, skipping security, and ending in large-scale data leaks.
+
+## Why the Moltbook incident matters
+
+In January 2026, Moltbook — a Korean AI social-network service — collapsed three days after launch. 1.5 million API tokens, 35,000 email addresses, and private user-to-user messages were exposed wholesale. The founder had not written a single line of code. AI wrote all of it.
+
+The cause was technically simple. The Supabase API key was exposed in client-side JavaScript, and Row Level Security (RLS) was turned off. The service shipped in a state where anyone could reach the database.
+
+"AI wrote the code — why didn't AI take care of this?"
+
+That is the question. And the answer is uncomfortable but clear:
+
+> AI gives you code that runs. It does not give you a service that is safe.
+
+## How today's security failures differ from yesterday's
+
+Security incidents are not new. An outsourced build gets hit by SQL injection; an API key pushed to GitHub gets abused. We have seen all of this before.
+
+But the structure is different now.
+
+In the old outsourcing model there was a development shop, a project manager, and at minimum someone who would say "this part needs a security setting." Responsibility was written into contracts, and the vendor ran basic security checks before delivery. Slow — but humans could hold humans accountable.
+
+Vibe coding works differently. You tell Claude or GPT "build me an app that does X," and the AI hands you finished code. You don't need to be a developer; you don't need to read code at all. Follow the AI's steps, deploy to Vercel, and your app is live in five minutes.
+
+Sometimes the AI even warns you: "this configuration is a security risk." But if the founder says "let's just ship it and fix it later," the AI ships it.
+
+See the difference?
+
+Outsourced development sat on a contract between people. Vibe coding sits on a conversation between a person and a tool. You don't sue the hammer for bending the nail — tools do not take responsibility.
+
+And there is one more decisive difference: speed.
+
+A real service used to take at least three months to ship. If security was missed, someone had time to catch it. Now it's a day from idea to deploy. You can onboard tens of thousands of users through an open security hole — and that speed multiplies the damage.
+
+## The exact moment responsibility becomes yours
+
+Legally and practically, there is exactly one moment when responsibility transfers:
+
+> The moment you press deploy. Before that, it's a conversation with an AI. After that, it's your service.
+
+Data protection law is unambiguous. The moment you collect personal data, you are the data controller. Whether AI wrote the code, an agency wrote it, or you wrote it alone — the law does not ask. The person operating the service is responsible. From the first email address you collect, you carry the duty to publish a privacy policy, implement safeguards, and report breaches.
+
+"But I'm not a developer."
+
+The law doesn't listen.
+
+In the Moltbook case, the fact that the founder never wrote a line of code means nothing to the users whose data leaked. The person who launched the service is accountable.
+
+## The moment I thought, "this is going to hurt someone"
+
+Recently a founder showed me a tool they had just built — an AI-generated dashboard, genuinely slick at organizing data. They barely knew the code; they had deployed exactly what the AI produced.
+
+Flipping through the screens together, my eyes stopped on one line.
+
+The API key was hard-coded into the frontend.
+
+"Your API key is exposed." The founder didn't quite grasp what that meant. It was an internal tool, fortunately — but had it been public, the entire dataset could have walked out the door.
+
+AI hears "build it fast" and builds it fast. Nobody said "build it safe," so security never made the priority list. Requirements that aren't in the prompt fall to defaults — and security defaults are far lower than you think.
+
+## The minimum pre-deploy checklist for builders
+
+There is no perfect security. But basic mistakes are preventable. Even if you are not a developer, check these six things:
+
+1. **Where do your API keys and secrets live?** They must not sit inside the code. Move them to a .env file or server-side environment variables. When you ask AI to build, say: "Handle all API keys via environment variables — never expose them in client code."
+2. **Are database access controls on?** On Supabase, confirm RLS (Row Level Security) is enabled; on Firebase, confirm Security Rules are set. Defaults are often "allow all." Ask the AI: "Is my DB configured so only authenticated users can access their own data?"
+3. **Have you listed the data you collect?** Email, phone, location, payment details — each item carries legal notice obligations. Collecting personal data without a privacy policy is itself a violation.
+4. **Is HTTPS on?** Deploy over HTTP and user data travels unencrypted. Vercel and Netlify provide HTTPS by default; if you run your own server, install an SSL certificate.
+5. **Do your error messages say too much?** AI-generated code often exposes DB structure, queries, and server paths in error messages for debugging convenience. Before deploying, change error handling to "minimal information to users, detailed logs server-side only."
+6. **If AI wrote your auth logic, interrogate it.** "Is there any case in this authentication logic where one user can access another user's data?" That single question catches a surprising share of vulnerabilities.
+
+These six are not complete security. They are the bare minimum — the lock on the front door. A lock won't stop every thief, but without one, anyone walks in.
+
+## If you're about to ship your first app, do one thing
+
+Before deploying, ask your AI this:
+
+> "If this app ships exactly as it is, how could a malicious user access other users' data or abuse my server? Write out concrete scenarios."
+
+The AI re-reads its own code through an attacker's eyes — and is remarkably honest about the holes. You are asking the code's author to hack it.
+
+One question is not the same as hiring a security engineer. But it plugs the most basic gaps. Having AI verify what AI built — that one extra step can be the distance between shipping and shutting down.
+
+At SparkLabs I have watched more than 400 startups. Almost none failed for lack of technology. Far more collapsed because they lost trust — or ran out of cash.
+
+Someone who cannot code can now turn an idea into a service. Vibe coding is a genuinely great shift, and I welcome it. It is why we built the SparkClaw program: we believe the era has arrived where a solo founder, with AI as their team, can build a unicorn.
+
+But a lower barrier to entry means a lower barrier to mistakes. You used to hire a developer or an agency, and a minimum of verification happened along the way. That friction is gone. And where friction disappears, responsibility remains — transferring quietly to you the moment you press deploy.
+
+AI does what you ask. Ask for fast, it builds fast. Ask for safe, it tries to build safe. Ask for both, it weighs both. Say nothing, and it hands you code that merely runs.
+
+> Even if AI wrote every line, the moment it meets the world it is your service. Running and safe are different things. The builders who know that weight are the real ones.
+
+---
+
+*Jimmy Kim — Co-Founder & General Partner, SparkLabs Korea. Originally published on [SparkClaw Insights](https://www.sparkclaw.co.kr/sparkclaw-insight-vibe-coding-security).*
