@@ -50,7 +50,7 @@ export function NewsCard({ item, locale, kindLabel }: Props) {
     <article className="card-light group flex h-full flex-col p-6 transition hover:-translate-y-0.5 hover:shadow-card-hover">
       <div className="flex items-center justify-between">
         <span
-          className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider ${kindAccent[item.kind]}`}
+          className={`inline-flex items-center px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider ${kindAccent[item.kind]}`}
         >
           {kindLabel[item.kind]}
         </span>

@@ -121,9 +121,13 @@ Current inventory (approx.): **10 press releases**, **~21 media coverage** entri
 
 ## 8. Design tokens (Tailwind)
 
-Defined in `tailwind.config.ts`:
-- Palette: `ink`, `navy`, `brand.blue`; accent spectrum `spark.{blue,orange,yellow,green,teal,pink,red,violet}` (per-entity color coding); neutrals `surface.{DEFAULT,subtle,border}`. Current direction is indigo-purple + black + cream.
-- Fonts: `font-sans` = Pretendard Variable (KO) + Inter (EN); `font-display` = Inter first.
+Defined in `tailwind.config.ts`. Current direction (2026-07, brand guide v1.0 "Monochrome Precision"): **black/white base + the 4 logo spark colors as ≤10% accents**. Authoritative brand source: `C:\Users\ebjan\Desktop\01_스파크랩\클로드\스파크랩\sparklabs-web-v2\brand\sparklabs-brand-guide.html` (+ approved page mockups `website/index-v5.html`, `program-v5.html`).
+
+- Spark colors (official, logo-extracted): orange `#F8981B` → pink `#ED1367` → blue `#2C6CB6` → green `#55BA47` — always cycled in that order. Legacy names `spark.{yellow,teal,red,violet,coral}` are aliases to the nearest official color; prefer the 4 canonical names in new code.
+- Neutrals: `ink` `#0F1113`, `muted` `#60666D`, `faint` `#A3A9B0`, `surface.border` (hairline) `#E7E9EC`, `surface.subtle` `#F4F5F7`.
+- Fonts: `font-sans` = Pretendard (KO/body); `font-display` = Inter (EN headlines, 800/400 weight contrast); `font-mono` = IBM Plex Mono (data/captions).
+- **Brand bans (do not add):** box shadows, gradient buttons / large glow gradients, border radius > 8px (legacy radius tokens are clamped in the config), italics, static color photos.
+- Brand motifs in `globals.css`: `.color-bar` (4-color 3px bar), `.spark-dot`, `.spark-hl` (headline highlight, one word max), `.ink-rule` (2px top rule), `.photo-mono` + `.photo-hover` (grayscale photos igniting to color on hover — the signature interaction; always use color originals).
 - **Safelisting:** dynamic accent classes (e.g. `bg-spark-blue/20`) composed from runtime strings are safelisted in `tailwind.config.ts` so they survive purge. If you add a new runtime-composed color class, add it to the safelist or it will be stripped in production.
 
 ---
@@ -191,7 +195,7 @@ Vercel, connected to `main`. Push to `main` → auto-deploy. Staging at `new.spa
 
 ## 15. Current status (as of handoff)
 
-**Done:** full IA + all pages (Home, About/Team/Advisors/Entities, Programs ×4, Portfolio + AI, Newsroom collections, Contact, Apply, legal pages); design system refresh (indigo-purple/black/cream, mobile hamburger nav, footer icons); portfolio populated (~168 companies + logos, taglines rewritten); 10 press releases + ~21 media entries (ko/en); Contact API (Resend + Notion) wired.
+**Done:** full IA + all pages (Home, About/Team/Advisors/Entities, Programs ×4, Portfolio + AI, Newsroom collections, Contact, Apply, legal pages); portfolio populated (~168 companies + logos, taglines rewritten); 10 press releases + ~21 media entries (ko/en); Contact API (Resend + Notion) wired; **full redesign to brand guide v1.0 "Monochrome Precision"** (branch `design/monochrome-v2`, 2026-07-09) — home & batch pages rebuilt 1:1 from the approved v5 mockups, canonical facts unified to 320+ / 13yrs / 7 entities / 15-week batch (CPS/SAFE ₩1억+, ~6%), slogan "Entrepreneurs Growing Entrepreneurs" (이전 "점화/Ignition" 브랜딩은 폐기).
 
 **In progress:** 2nd-pass audit of individual team bios → `src/lib/team.ts`.
 

@@ -55,11 +55,7 @@ export default async function AboutEntitiesPage({
   return (
     <>
       <section className="relative overflow-hidden bg-hero-navy text-white">
-        <div
-          className="pointer-events-none absolute -bottom-24 -right-24 h-[520px] w-[520px] rounded-full bg-spark-ray blur-3xl opacity-70"
-          aria-hidden="true"
-        />
-        <div className="container-narrow relative py-20 md:py-24">
+        <div className="container-narrow relative py-14 md:py-24">
           <span className="eyebrow !text-spark-yellow">{copy.eyebrow}</span>
           <h1 className="mt-4 text-display-lg max-w-3xl leading-[1.05]">
             {copy.heroTitle}
@@ -91,12 +87,13 @@ export default async function AboutEntitiesPage({
               {group.items.map((e) => (
                 <Link
                   key={e.slug}
+                  id={`entity-${e.slug}`}
                   href={`/about/entities/${e.slug}`}
-                  className="card-light group flex flex-col gap-4 p-8 transition hover:-translate-y-0.5 hover:shadow-card-hover"
+                  className="card-light group flex scroll-mt-24 flex-col gap-4 p-8 transition hover:border-ink"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <div className={`h-1.5 w-12 rounded-full bg-spark-${e.accent}`} />
+                      <div className={`h-[3px] w-12 bg-spark-${e.accent}`} />
                       <h3 className="mt-4 text-xl font-semibold text-ink">
                         {e.name[locale]}
                       </h3>
@@ -105,7 +102,7 @@ export default async function AboutEntitiesPage({
                       </p>
                     </div>
                     {e.founded && (
-                      <span className="shrink-0 rounded-full border border-surface-border px-3 py-1 text-xs text-ink-soft">
+                      <span className="shrink-0 border border-surface-border px-3 py-1 text-xs text-ink-soft">
                         Est. {e.founded}
                       </span>
                     )}

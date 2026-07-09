@@ -202,8 +202,8 @@ export async function POST(request: Request) {
 
   const emailHtml = `
     <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 600px; margin: 0 auto; color: #111;">
-      <div style="padding: 24px; background: #0b1226; color: #fff;">
-        <div style="font-size: 12px; letter-spacing: 0.14em; color: #FFD200; text-transform: uppercase;">
+      <div style="padding: 24px; background: #0B0C0E; color: #fff;">
+        <div style="font-size: 12px; letter-spacing: 0.14em; color: #5B96D8; text-transform: uppercase;">
           SparkLabs Contact Form
         </div>
         <div style="margin-top: 8px; font-size: 20px; font-weight: 600;">

@@ -169,7 +169,7 @@ export function PromoPopup({ locale }: { locale: Locale }) {
                   <path d="M6 6l12 12" />
                 </svg>
               </button>
-              <span className="absolute left-4 top-4 inline-flex items-center rounded-full bg-white/90 px-3 py-1 text-xs uppercase tracking-[0.18em] text-ink backdrop-blur-sm">
+              <span className="absolute left-4 top-4 inline-flex items-center bg-white/90 px-3 py-1 text-xs uppercase tracking-[0.18em] text-ink backdrop-blur-sm">
                 {modoo.tag}
               </span>
             </div>
@@ -196,7 +196,7 @@ export function PromoPopup({ locale }: { locale: Locale }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={closeModoo}
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white hover:bg-ink/90 transition"
+                  className="inline-flex items-center justify-center gap-2 bg-ink px-5 py-2.5 text-sm font-semibold text-white hover:bg-ink/90 transition"
                 >
                   {modoo.primaryCta}
                   <svg
@@ -229,7 +229,7 @@ export function PromoPopup({ locale }: { locale: Locale }) {
                   height={36}
                   className="h-9 w-9"
                 />
-                <span className="inline-flex items-center rounded-full bg-[#E74F8E]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#E74F8E]">
+                <span className="inline-flex items-center bg-[#E8326F]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#E8326F]">
                   {scam.tag}
                 </span>
               </div>

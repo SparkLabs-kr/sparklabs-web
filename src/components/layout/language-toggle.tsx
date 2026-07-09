@@ -18,7 +18,7 @@ export function LanguageToggle({ currentLocale }: { currentLocale: string }) {
     <button
       type="button"
       onClick={switchLang}
-      className="rounded-full border border-surface-border bg-white px-3 py-1.5 text-xs font-semibold text-ink-soft transition hover:bg-surface-subtle"
+      className="border border-surface-border bg-white px-3 py-1.5 font-display text-xs font-semibold text-muted transition hover:border-ink hover:text-ink"
       aria-label={`Switch to ${t(next)}`}
     >
       {next.toUpperCase()}

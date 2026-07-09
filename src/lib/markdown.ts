@@ -19,6 +19,11 @@ function escapeHtml(s: string): string {
 
 function renderInline(raw: string): string {
   let s = escapeHtml(raw);
+  // Images ![alt](src) — must run before the link rule
+  s = s.replace(
+    /!\[([^\]]*)\]\(([^)]+)\)/g,
+    '<img src="$2" alt="$1" loading="lazy" class="photo-mono my-2 inline-block max-w-full" />'
+  );
   // Bold **text**
   s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   // Italic *text*
@@ -117,6 +122,19 @@ export function renderMarkdown(md: string): string {
       continue;
     }
 
+    // Standalone image line → full-width figure, grayscale igniting to color on hover
+    const image = /^!\[([^\]]*)\]\(([^)]+)\)$/.exec(trimmed);
+    if (image) {
+      flushParagraph(paragraphBuf);
+      const alt = escapeHtml(image[1]);
+      const src = escapeHtml(image[2]);
+      out.push(
+        `<figure class="photo-hover my-8"><img src="${src}" alt="${alt}" loading="lazy" class="photo-mono w-full" /></figure>`
+      );
+      i++;
+      continue;
+    }
+
     // Blockquote
     if (/^>\s?/.test(trimmed)) {
       flushParagraph(paragraphBuf);
@@ -126,7 +144,7 @@ export function renderMarkdown(md: string): string {
         i++;
       }
       out.push(
-        `<blockquote class="my-6 border-l-4 border-spark-yellow bg-surface-subtle px-5 py-3 text-ink-soft italic">${renderInline(
+        `<blockquote class="my-6 border-l-2 border-ink bg-surface-subtle px-5 py-3 font-medium text-ink">${renderInline(
           buf.join(' ')
         )}</blockquote>`
       );

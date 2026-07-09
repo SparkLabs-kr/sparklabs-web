@@ -42,11 +42,7 @@ export default async function AboutAdvisorsPage({
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-hero-navy text-white">
-        <div
-          className="pointer-events-none absolute -top-40 -right-32 h-[520px] w-[520px] rounded-full bg-spark-ray blur-3xl opacity-75"
-          aria-hidden="true"
-        />
-        <div className="container-narrow relative py-20 md:py-24">
+        <div className="container-narrow relative py-14 md:py-24">
           <span className="eyebrow !text-spark-yellow">{copy.eyebrow}</span>
           <h1 className="mt-4 text-display-lg max-w-3xl leading-[1.05]">
             {copy.heroTitle}
@@ -98,7 +94,7 @@ export default async function AboutAdvisorsPage({
                   </div>
                 )}
                 <div className="min-w-0 flex-1">
-                  <div className="h-1 w-10 rounded-full bg-spark-yellow" />
+                  <div className="h-[3px] w-10 bg-spark-yellow" />
                   <h3 className="mt-3 text-lg font-semibold text-ink">
                     {a.name}
                     {a.koName && (
@@ -149,7 +145,7 @@ export default async function AboutAdvisorsPage({
                   </div>
                 )}
                 <div className="min-w-0 flex-1">
-                  <div className="h-1 w-8 rounded-full bg-spark-teal" />
+                  <div className="h-[3px] w-8 bg-spark-teal" />
                   <h3 className="mt-2 text-base font-semibold text-ink">
                     {a.name}
                     {a.koName && (

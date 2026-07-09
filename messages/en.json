@@ -6,12 +6,12 @@
   "seo": {
     "brand": "SparkLabs",
     "home": {
-      "title": "SparkLabs — Entrepreneurs Growing Entrepreneurs",
-      "description": "SparkLabs is a global AI-First investment firm with 14 entities across six continents. 550+ portfolio companies, a $50M AIM AI Fund, and early positions in OpenAI, Anthropic, and Perplexity — backing the founders of the AI era."
+      "title": "SparkLabs — Global AI-First Investor",
+      "description": "Entrepreneurs Growing Entrepreneurs. SparkLabs is a global, AI-first startup investor — 13 years, 320+ portfolio companies, 7 global entities."
     },
     "about": {
       "title": "About",
-      "description": "Since 2013, SparkLabs has connected founders to the world through 14 entities on six continents. Meet our team, our vision, and our global network."
+      "description": "Since 2013, SparkLabs has connected founders to the world through 7 global entities. Meet our team, our vision, and our global network."
     },
     "team": {
       "title": "Team",
@@ -27,7 +27,7 @@
     },
     "portfolio": {
       "title": "Portfolio",
-      "description": "550+ SparkLabs portfolio companies — from early positions in OpenAI, Anthropic, and Perplexity to leading Korean AI startups."
+      "description": "320+ SparkLabs portfolio companies — from early positions in OpenAI, Anthropic, and Perplexity to leading Korean AI startups."
     },
     "portfolioAi": {
       "title": "AI Portfolio",
@@ -39,7 +39,7 @@
     },
     "programsBatch": {
       "title": "Batch Program",
-      "description": "22-week accelerator. KRW 300M investment, a 550+ portfolio network, and a Demo Day finale — SparkLabs' flagship program for early-stage founders in Korea."
+      "description": "15 weeks, one goal: PMF. KRW 100M+ via CPS or SAFE, applications every April and September — the flagship SparkLabs program for early-stage founders."
     },
     "programsPartnership": {
       "title": "Partnership Program",
@@ -129,15 +129,13 @@
     "announcements": "Announcements"
   },
   "hero": {
-    "badge": "Global · AI-First",
-    "headline1": "Entrepreneurs",
-    "headline2": "Growing Entrepreneurs",
-    "subcopy": "A global accelerator network across six continents, discovering and scaling the founders building the AI era.",
-    "primaryCta": "Apply to Accelerator",
-    "secondaryCta": "Explore Portfolio"
+    "label": "Global AI-First Investor · EST. 2012",
+    "sub": "Entrepreneurs Growing Entrepreneurs. For 13 years and 320+ startups, SparkLabs has backed founders for the next decade — not the next quarter.",
+    "primaryCta": "Explore the Batch Program",
+    "secondaryCta": "Our Companies"
   },
   "impact": {
-    "title": "Proven across 550+ global portfolio companies.",
+    "title": "Proven across 320+ global portfolio companies.",
     "metrics": {
       "globalStartups": "Global Portfolio",
       "koreanCore": "Korean Core",
@@ -214,7 +212,8 @@
       "sparkLetter": "Spark Letter · For Founders",
       "vcMailing": "VC Mailing · For Investors"
     },
-    "copyright": "© {year} SparkLabs. All rights reserved."
+    "copyright": "© {year} SparkLabs. All rights reserved.",
+    "slogan": "A global startup investor for the AI-First era."
   },
   "locale": {
     "ko": "한국어",
@@ -231,5 +230,51 @@
     "subcopy": "Honest reflections from founders who've walked the SparkLabs journey — from first check to global scale.",
     "prev": "Previous testimonial",
     "next": "Next testimonial"
+  },
+  "home": {
+    "stats": {
+      "portfolio": "Portfolio",
+      "years": "Years",
+      "entities": "Global Entities",
+      "batches": "Batches / Year"
+    },
+    "philosophy": {
+      "label": "Why SparkLabs",
+      "statement": "We build for the next decade, not the next quarter.",
+      "statementThin": "Obsessed with PMF until only the essence of the business remains.",
+      "pillar1": {
+        "title": "Entrepreneurs Growing Entrepreneurs",
+        "body": "Founded by serial entrepreneurs who have built and invested in the US, Korea, and beyond. We coach in a founder's language."
+      },
+      "pillar2": {
+        "title": "PMF, Obsessively",
+        "body": "15 weeks devoted to one thing: PMF. Weekly tests and close mentoring drive you to the aha moment."
+      },
+      "pillar3": {
+        "title": "Global by Design",
+        "body": "From Seoul to Taipei, Riyadh, and Sydney — a network of 7 global entities opens the door to your next market."
+      }
+    },
+    "network": {
+      "label": "Global Network",
+      "sub": "SparkLabs entities connect founders to their next market across industries and continents."
+    },
+    "portfolio": {
+      "label": "Our Companies",
+      "viewAll": "View All 320+"
+    },
+    "quotes": {
+      "label": "Founder Voices",
+      "prev": "Previous quote",
+      "next": "Next quote"
+    },
+    "cta": {
+      "label": "Batch Program",
+      "title": "Ready for the next decade,",
+      "titleThin": "not the next quarter?",
+      "sub": "Batch applications open every April and September. Be the first to know.",
+      "primary": "Get Application Alerts",
+      "secondary": "Explore the Program"
+    }
   }
 }

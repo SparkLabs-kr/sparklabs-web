@@ -56,17 +56,20 @@ export async function Header({ locale }: { locale: string }) {
   ];
 
   return (
-    <header className="sticky top-0 z-40 border-b border-surface-border/70 bg-white/80 backdrop-blur">
-      <div className="container-narrow flex h-16 items-center justify-between gap-4">
+    <header className="sticky top-0 z-40 border-b border-surface-border bg-white/85 backdrop-blur-md">
+      <div className="container-narrow flex h-[74px] items-center justify-between gap-4">
         <Link href="/" className="flex items-center text-ink" aria-label="SparkLabs home">
           <SparkLogo variant="dark" height={28} className="h-7 w-auto" />
         </Link>
 
         <NavItems items={items} />
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <LanguageToggle currentLocale={locale} />
-          <Link href="/apply" className="btn-primary hidden md:inline-flex">
+          <Link
+            href="/apply"
+            className="hidden md:inline-flex items-center border border-ink px-5 py-2.5 font-display text-[12.5px] font-semibold text-ink transition-colors hover:border-spark-pink hover:bg-spark-pink hover:text-white"
+          >
             {tNav('apply')}
           </Link>
           <MobileNav items={items} applyLabel={tNav('apply')} />

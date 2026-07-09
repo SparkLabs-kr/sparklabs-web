@@ -68,7 +68,7 @@ export function PortfolioExplorer({ locale, labels }: Props) {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={labels.searchPlaceholder}
-            className="w-full rounded-full border border-surface-border bg-white py-3 pl-10 pr-4 text-sm placeholder:text-ink/40 focus:border-ink focus:outline-none focus:ring-2 focus:ring-ink/10"
+            className="w-full border border-surface-border bg-white py-3 pl-10 pr-4 text-sm placeholder:text-ink/40 focus:border-ink focus:outline-none focus:ring-2 focus:ring-ink/10"
           />
         </div>
         <p className="text-sm text-ink-soft">
@@ -147,7 +147,7 @@ function FilterChip({
       type="button"
       onClick={onClick}
       className={cn(
-        'shrink-0 rounded-full border px-4 py-1.5 text-sm font-medium transition',
+        'shrink-0 border px-4 py-1.5 text-sm font-medium transition',
         active
           ? 'border-ink bg-ink text-white'
           : 'border-surface-border bg-white text-ink-soft hover:border-ink/40 hover:text-ink'
@@ -203,12 +203,12 @@ function PortfolioCard({
         </div>
         <div className="flex flex-wrap gap-1.5">
           {company.aiPick && (
-            <span className="rounded-full bg-spark-violet/10 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-spark-violet">
+            <span className="bg-spark-violet/10 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-spark-violet">
               {labels.aiPick}
             </span>
           )}
           {company.featured && !company.aiPick && (
-            <span className="rounded-full bg-ink/10 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-ink">
+            <span className="bg-ink/10 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-ink">
               {labels.featured}
             </span>
           )}
@@ -225,10 +225,10 @@ function PortfolioCard({
         </p>
       )}
       <div className="mt-auto flex flex-wrap items-center gap-2 pt-4 text-xs text-ink/50">
-        <span className="rounded-full border border-surface-border px-2 py-0.5">
+        <span className="border border-surface-border px-2 py-0.5">
           {categoryLabel[company.category][locale]}
         </span>
-        <span className="rounded-full border border-surface-border px-2 py-0.5">
+        <span className="border border-surface-border px-2 py-0.5">
           {entityMeta?.shortName ?? company.entity}
         </span>
       </div>

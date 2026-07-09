@@ -89,7 +89,7 @@ export default function PersonCard({
   const cardInner = (
     <>
       <div
-        className={`relative ${photoAspect} w-full overflow-hidden rounded-xl bg-surface-subtle`}
+        className={`photo-hover relative ${photoAspect} w-full overflow-hidden bg-surface-subtle`}
       >
         {showPhoto && resolvedPhoto ? (
           <Image
@@ -97,11 +97,11 @@ export default function PersonCard({
             alt={name}
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
-            className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+            className="photo-mono object-cover"
             onError={() => setPhotoFailed(true)}
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-surface-subtle to-white">
+          <div className="flex h-full w-full items-center justify-center bg-surface-subtle">
             <span className="text-3xl font-semibold text-ink/40">
               {getInitials(name)}
             </span>
@@ -109,7 +109,7 @@ export default function PersonCard({
         )}
       </div>
       <div className="mt-4">
-        <div className={`h-1 w-8 rounded-full ${accentMap[accent]}`} />
+        <div className={`h-[3px] w-8 ${accentMap[accent]}`} />
         <h3 className="mt-2 text-base font-semibold text-ink">
           {name}
           {koName && (
@@ -178,19 +178,19 @@ export default function PersonCard({
 
             <div className="flex flex-col gap-6 md:flex-row">
               {showPhoto && resolvedPhoto && (
-                <div className="relative h-40 w-32 shrink-0 overflow-hidden rounded-2xl bg-surface-subtle">
+                <div className="photo-hover relative h-40 w-32 shrink-0 overflow-hidden bg-surface-subtle">
                   <Image
                     src={resolvedPhoto}
                     alt={name}
                     fill
                     sizes="128px"
-                    className="object-cover"
+                    className="photo-mono object-cover"
                     onError={() => setPhotoFailed(true)}
                   />
                 </div>
               )}
               <div className="min-w-0 flex-1">
-                <div className={`h-1 w-10 rounded-full ${accentMap[accent]}`} />
+                <div className={`h-[3px] w-10 ${accentMap[accent]}`} />
                 <h3 className="mt-3 text-xl font-semibold text-ink md:text-2xl">
                   {name}
                   {koName && (

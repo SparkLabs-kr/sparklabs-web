@@ -30,15 +30,7 @@ export default async function ApplyPage({
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-hero-navy text-white">
-        <div
-          className="pointer-events-none absolute -top-32 -right-32 h-[520px] w-[520px] rounded-full bg-spark-yellow/20 blur-3xl"
-          aria-hidden="true"
-        />
-        <div
-          className="pointer-events-none absolute -bottom-24 -left-24 h-[520px] w-[520px] rounded-full bg-spark-violet/30 blur-3xl"
-          aria-hidden="true"
-        />
-        <div className="container-narrow relative py-20 md:py-28">
+        <div className="container-narrow relative py-14 md:py-28">
           <span className="eyebrow !text-spark-yellow">{copy.eyebrow}</span>
           <h1 className="mt-4 text-display-lg max-w-4xl leading-[1.05]">
             {copy.heroTitle}
@@ -65,7 +57,7 @@ export default async function ApplyPage({
               const accents = ['yellow', 'blue', 'red'] as const;
               const accent = accents[i];
               const isExternal = p.href.startsWith('http');
-              const buttonClass = `inline-flex w-full items-center justify-center gap-2 rounded-full bg-spark-${accent} px-5 py-3 text-sm font-semibold text-ink hover:opacity-90 transition`;
+              const buttonClass = `inline-flex w-full items-center justify-center gap-2 bg-spark-${accent} px-5 py-3 text-sm font-semibold text-ink hover:opacity-90 transition`;
 
               return (
                 <article
@@ -73,7 +65,7 @@ export default async function ApplyPage({
                   className="card-light flex flex-col p-8"
                 >
                   <div className="flex items-start justify-between gap-3">
-                    <div className={`h-1.5 w-12 rounded-full bg-spark-${accent}`} />
+                    <div className={`h-[3px] w-12 bg-spark-${accent}`} />
                     <span className="shrink-0 text-xs uppercase tracking-[0.14em] text-ink/50">
                       {p.tag}
                     </span>
@@ -229,13 +221,13 @@ export default async function ApplyPage({
             <div className="flex flex-wrap gap-3 md:justify-end">
               <a
                 href="mailto:apply@sparklabs.co.kr"
-                className="inline-flex items-center rounded-full bg-spark-yellow px-6 py-3 text-sm font-semibold text-ink hover:bg-spark-yellow/90 transition"
+                className="inline-flex items-center border border-white bg-white px-7 py-3.5 font-display text-sm font-semibold text-ink transition-colors hover:border-spark-pink hover:bg-spark-pink hover:text-white"
               >
                 {copy.helpCta}
               </a>
               <Link
                 href={`/${locale}/contact`}
-                className="inline-flex items-center rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white hover:bg-white/5 transition"
+                className="inline-flex items-center border border-white/40 px-7 py-3.5 font-display text-sm font-semibold text-white transition-colors hover:bg-white hover:text-ink"
               >
                 {copy.helpContact}
               </Link>

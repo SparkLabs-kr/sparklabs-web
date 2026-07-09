@@ -15,9 +15,9 @@ export interface NavItem {
 }
 
 const TRIGGER_CLASS =
-  'inline-flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium text-ink-soft transition hover:bg-surface-subtle hover:text-ink';
+  'inline-flex items-center gap-1 px-3 py-2 font-display text-[13.5px] font-medium text-muted transition hover:text-ink';
 const SINGLE_CLASS =
-  'rounded-full px-4 py-2 text-sm font-medium text-ink-soft transition hover:bg-surface-subtle hover:text-ink';
+  'px-3 py-2 font-display text-[13.5px] font-medium text-muted transition hover:text-ink';
 
 export default function NavItems({ items }: { items: NavItem[] }) {
   const [openHref, setOpenHref] = useState<string | null>(null);
@@ -111,7 +111,7 @@ export default function NavItems({ items }: { items: NavItem[] }) {
             >
               <ul
                 role="menu"
-                className="min-w-[200px] overflow-hidden rounded-2xl border border-surface-border bg-white py-2 shadow-xl"
+                className="min-w-[200px] overflow-hidden border border-surface-border bg-white py-2"
               >
                 {item.children.map((child) => (
                   <li key={child.href} role="none">
@@ -119,7 +119,7 @@ export default function NavItems({ items }: { items: NavItem[] }) {
                       href={child.href}
                       role="menuitem"
                       onClick={closeNow}
-                      className="block px-4 py-2 text-sm text-ink-soft transition hover:bg-surface-subtle hover:text-ink"
+                      className="block px-4 py-2 text-sm text-muted transition hover:bg-surface-subtle hover:text-ink"
                     >
                       {child.label}
                     </Link>

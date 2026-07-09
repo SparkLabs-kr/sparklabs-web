@@ -26,58 +26,99 @@ const socialLinks = [
   },
 ];
 
+const networkLinks = [
+  { name: 'SparkLabs Group', href: 'https://sparklabsgroup.com/' },
+  { name: 'SparkLabs Taiwan', href: 'https://www.sparklabstaiwan.com/' },
+  { name: 'SparkLabs Cultiv8', href: 'https://www.sparklabscultiv8.com/' },
+  { name: 'SparkBioLabs', href: 'https://www.sparkbiolabs.com/' },
+];
+
+const colHeading =
+  'mb-5 font-display text-[10.5px] font-semibold uppercase tracking-[0.24em] text-faint';
+const colLink = 'text-sm text-muted transition hover:text-ink';
+
 export async function Footer({ locale }: { locale: string }) {
   const t = await getTranslations({ locale, namespace: 'footer' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
+  const tPrograms = await getTranslations({ locale, namespace: 'programs' });
+  const tAbout = await getTranslations({ locale, namespace: 'about' });
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-24 bg-brand-blue text-white">
-      <div className="container-narrow py-16 grid gap-12 md:grid-cols-[1.5fr_1fr_1fr_1fr_1fr]">
-        <div>
-          <div className="flex items-center">
-            <SparkLogo variant="light" height={32} className="h-8 w-auto" />
-          </div>
-          <p className="mt-4 text-sm text-white/70 leading-relaxed">
-            {t('address')}
+    <footer className="mt-24 border-t border-surface-border bg-white">
+      <div className="container-narrow grid grid-cols-2 gap-x-6 gap-y-10 py-14 md:grid-cols-[2fr_1fr_1fr_1fr_1fr] md:gap-11 md:py-20">
+        <div className="col-span-2 md:col-span-1">
+          <Link href="/" aria-label="SparkLabs home" className="inline-flex">
+            <SparkLogo variant="dark" height={26} className="h-[26px] w-auto" />
+          </Link>
+          <p className="mt-4 max-w-[280px] text-[13.5px] text-muted">
+            Entrepreneurs Growing Entrepreneurs.
+            <br />
+            {t('slogan')}
           </p>
+          <div className="mt-6 flex items-center gap-3 text-muted">
+            {socialLinks.map(({ name, href, Icon }) => (
+              <a
+                key={name}
+                href={href}
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label={name}
+                className="inline-flex h-9 w-9 items-center justify-center border border-surface-border transition hover:border-ink hover:text-ink"
+              >
+                <Icon className="h-4 w-4" aria-hidden="true" />
+              </a>
+            ))}
+          </div>
         </div>
 
-        <nav aria-label="Explore" className="text-sm">
-          <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-white/50">
-            Explore
-          </h4>
-          <ul className="space-y-2">
-            <li><Link href="/about" className="hover:text-white/90">{tNav('about')}</Link></li>
-            <li><Link href="/portfolio" className="hover:text-white/90">{tNav('portfolio')}</Link></li>
-            <li><Link href="/programs" className="hover:text-white/90">{tNav('programs')}</Link></li>
-            <li><Link href="/newsroom" className="hover:text-white/90">{tNav('newsroom')}</Link></li>
-            <li><Link href="/contact" className="hover:text-white/90">{tNav('contact')}</Link></li>
+        <nav aria-label="Program" className="text-sm">
+          <h4 className={colHeading}>Program</h4>
+          <ul className="space-y-2.5">
+            <li><Link href="/programs/batch" className={colLink}>{tPrograms('batch')}</Link></li>
+            <li><Link href="/programs/spark-claw" className={colLink}>{tPrograms('sparkClaw')}</Link></li>
+            <li><Link href="/programs/partnership" className={colLink}>{tPrograms('partnership')}</Link></li>
+            <li><Link href="/apply" className={colLink}>{tNav('apply')}</Link></li>
           </ul>
         </nav>
 
-        <nav aria-label="Legal" className="text-sm">
-          <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-white/50">
-            Legal
-          </h4>
-          <ul className="space-y-2 text-white/80">
-            <li><Link href="/privacy" className="hover:text-white">{t('legal.privacy')}</Link></li>
-            <li><Link href="/terms" className="hover:text-white">{t('legal.terms')}</Link></li>
-            <li><Link href="/cookie-policy" className="hover:text-white">{t('legal.cookie')}</Link></li>
+        <nav aria-label="About" className="text-sm">
+          <h4 className={colHeading}>About</h4>
+          <ul className="space-y-2.5">
+            <li><Link href="/about" className={colLink}>{tAbout('overview')}</Link></li>
+            <li><Link href="/about/team" className={colLink}>{tAbout('team')}</Link></li>
+            <li><Link href="/portfolio" className={colLink}>{tNav('portfolio')}</Link></li>
+            <li><Link href="/contact" className={colLink}>{tNav('contact')}</Link></li>
+          </ul>
+        </nav>
+
+        <nav aria-label="Network" className="text-sm">
+          <h4 className={colHeading}>Network</h4>
+          <ul className="space-y-2.5">
+            {networkLinks.map(({ name, href }) => (
+              <li key={name}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className={colLink}
+                >
+                  {name}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
 
         <nav aria-label="Newsletter" className="text-sm">
-          <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-white/50">
-            {t('newsletter.heading')}
-          </h4>
-          <ul className="space-y-2 text-white/80">
+          <h4 className={colHeading}>{t('newsletter.heading')}</h4>
+          <ul className="space-y-2.5">
             <li>
               <a
                 href="https://page.stibee.com/subscriptions/244667"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="hover:text-white"
+                className={colLink}
               >
                 {t('newsletter.sparkLetter')}
               </a>
@@ -87,44 +128,29 @@ export async function Footer({ locale }: { locale: string }) {
                 href="https://page.stibee.com/subscriptions/207072"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="hover:text-white"
+                className={colLink}
               >
                 {t('newsletter.vcMailing')}
               </a>
             </li>
+            <li>
+              <a href="mailto:hello@sparklabs.co.kr" className={colLink}>
+                hello@sparklabs.co.kr
+              </a>
+            </li>
           </ul>
         </nav>
-
-        <div className="text-sm">
-          <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-white/50">
-            Connect
-          </h4>
-          <div className="flex items-center gap-3 text-white/70">
-            {socialLinks.map(({ name, href, Icon }) => (
-              <a
-                key={name}
-                href={href}
-                target="_blank"
-                rel="noreferrer noopener"
-                aria-label={name}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 transition hover:border-white/40 hover:text-white"
-              >
-                <Icon className="h-4 w-4" aria-hidden="true" />
-              </a>
-            ))}
-          </div>
-          <a
-            href="mailto:hello@sparklabs.co.kr"
-            className="mt-4 inline-block text-white/80 hover:text-white"
-          >
-            hello@sparklabs.co.kr
-          </a>
-        </div>
       </div>
 
-      <div className="border-t border-white/20">
-        <div className="container-narrow py-6 text-xs text-white/75">
-          {t('copyright', { year })}
+      <div className="border-t border-surface-border">
+        <div className="container-narrow flex flex-wrap items-center justify-between gap-x-8 gap-y-3 py-7 font-display text-xs text-faint">
+          <span>{t('copyright', { year })}</span>
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            <span className="hidden md:inline">{t('address')}</span>
+            <Link href="/privacy" className="transition hover:text-ink">{t('legal.privacy')}</Link>
+            <Link href="/terms" className="transition hover:text-ink">{t('legal.terms')}</Link>
+            <Link href="/cookie-policy" className="transition hover:text-ink">{t('legal.cookie')}</Link>
+          </div>
         </div>
       </div>
     </footer>

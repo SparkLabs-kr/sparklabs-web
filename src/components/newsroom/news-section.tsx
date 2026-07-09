@@ -31,10 +31,6 @@ export async function NewsSection({
   return (
     <>
       <section className="relative overflow-hidden bg-hero-navy text-white">
-        <div
-          className="pointer-events-none absolute -top-32 -right-24 h-[480px] w-[480px] rounded-full bg-spark-ray blur-3xl opacity-70"
-          aria-hidden="true"
-        />
         <div className="container-narrow relative py-20 md:py-24">
           <span className="eyebrow !text-spark-yellow">
             {kindLabel[kind]}

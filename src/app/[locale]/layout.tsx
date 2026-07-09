@@ -9,6 +9,7 @@ import { Footer } from '@/components/layout/footer';
 import { LocaleHtmlLang } from '@/components/layout/locale-html-lang';
 import { OrganizationJsonLd } from '@/components/seo/organization-jsonld';
 import { SkipToMain } from '@/components/layout/skip-to-main';
+import { ScrollToTop } from '@/components/layout/scroll-to-top';
 
 export async function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -66,6 +67,7 @@ export default async function LocaleLayout({
         {children}
       </main>
       <Footer locale={locale} />
+      <ScrollToTop locale={locale} />
     </NextIntlClientProvider>
   );
 }

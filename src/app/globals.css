@@ -15,8 +15,8 @@
   }
 
   body {
-    @apply bg-surface text-ink font-sans antialiased;
-    font-feature-settings: 'cv11', 'ss01', 'ss03';
+    @apply bg-white text-ink font-sans antialiased;
+    line-height: 1.7;
   }
 
   /* Focus ring (accessible) */
@@ -38,38 +38,113 @@
 
 @layer components {
   .container-narrow {
-    @apply mx-auto w-full max-w-[1240px] px-6 md:px-10;
+    @apply mx-auto w-full max-w-[1200px] px-6 md:px-10;
   }
 
   .section {
-    @apply py-20 md:py-28;
+    @apply py-16 md:py-32;
   }
 
+  /* Section label — Inter 600, wide tracking, colored per section (spark cycle) */
   .eyebrow {
-    @apply text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue;
+    @apply font-display text-[11.5px] font-semibold uppercase tracking-[0.3em];
   }
 
+  /* Buttons — square, ink base, spark accent on hover. No shadows, no gradients. */
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-sm px-7 py-3.5 text-[13px] font-semibold uppercase tracking-[0.08em] transition-all disabled:opacity-50 disabled:pointer-events-none;
+    @apply inline-flex items-center justify-center gap-3 font-display text-sm font-semibold px-8 py-4 transition-colors duration-200 disabled:opacity-50 disabled:pointer-events-none;
   }
 
   .btn-primary {
-    @apply btn bg-brand-blue text-white hover:bg-brand-blue-soft;
+    @apply btn border border-ink bg-ink text-white hover:bg-spark-pink hover:border-spark-pink;
+  }
+
+  .btn-accent {
+    @apply btn border border-spark-pink bg-spark-pink text-white hover:bg-white hover:border-white hover:text-ink;
   }
 
   .btn-ghost-dark {
-    @apply btn border border-white/30 text-white hover:bg-white/10;
+    @apply btn border border-white/40 text-white hover:bg-white hover:text-ink;
   }
 
   .btn-ghost-light {
-    @apply btn border border-ink text-ink hover:bg-ink hover:text-white;
+    @apply btn border border-ink text-ink bg-transparent hover:bg-ink hover:text-white;
   }
 
+  /* Text link with underline that stretches on hover */
+  .tlink {
+    @apply inline-flex items-center gap-2.5 border-b-[1.5px] border-ink pb-1.5 font-display text-sm font-semibold transition-all duration-200 hover:gap-4 hover:text-spark-pink hover:border-spark-pink;
+  }
+
+  .tlink-light {
+    @apply inline-flex items-center gap-2.5 border-b-[1.5px] border-white/50 pb-1.5 font-display text-sm font-semibold text-white transition-all duration-200 hover:gap-4 hover:opacity-70;
+  }
+
+  /* Brand motif 02 — the four-color bar (3px), orange → pink → blue → green */
+  .color-bar {
+    @apply h-[3px] bg-color-bar;
+  }
+
+  /* Brand motif 01 — spark dot (conic of the four logo colors) */
+  .spark-dot {
+    @apply inline-block h-[13px] w-[13px] rounded-full;
+    background: conic-gradient(#F8981B, #ED1367, #2C6CB6, #55BA47, #F8981B);
+  }
+
+  /* Brand motif 03 — highlight under exactly one key word of a headline */
+  .spark-hl {
+    background-image: linear-gradient(
+      90deg,
+      rgba(248, 152, 27, 0.32),
+      rgba(237, 19, 103, 0.28),
+      rgba(44, 108, 182, 0.28),
+      rgba(85, 186, 71, 0.32)
+    );
+    background-size: 100% 0.22em;
+    background-position: 0 88%;
+    background-repeat: no-repeat;
+  }
+
+  /* Brand motif 04 — ink rule: 2px top baseline for lists and cards */
+  .ink-rule {
+    @apply border-t-2 border-ink;
+  }
+
+  /* Signature interaction — photos live in grayscale, ignite to color on hover.
+     Put .photo-mono on the img and .photo-hover on the interactive ancestor. */
+  .photo-mono {
+    filter: grayscale(100%) contrast(1.04);
+    transition: filter 0.6s ease;
+  }
+
+  .photo-hover:hover .photo-mono,
+  .photo-hover:focus-visible .photo-mono {
+    filter: grayscale(0%) contrast(1);
+  }
+
+  /* Hairline-bordered cards (legacy class names kept; now flat, square, shadowless) */
   .card-light {
-    @apply rounded-2xl border border-surface-border bg-white shadow-card transition-shadow hover:shadow-card-hover;
+    @apply border border-surface-border bg-white;
   }
 
   .card-dark {
-    @apply rounded-2xl bg-navy text-white shadow-card;
+    @apply bg-ink text-white;
+  }
+
+  /* Mono caption — IBM Plex Mono, small caps facts (e.g. SEOUL — 05:48 AM) */
+  .mono-cap {
+    @apply font-mono text-[10.5px] uppercase tracking-[0.22em] text-faint;
+  }
+
+  /* Scroll reveal (paired with the <Reveal> client component) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal.in {
+    opacity: 1;
+    transform: none;
   }
 }
