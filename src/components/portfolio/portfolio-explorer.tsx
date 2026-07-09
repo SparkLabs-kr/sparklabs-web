@@ -68,7 +68,7 @@ export function PortfolioExplorer({ locale, labels }: Props) {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={labels.searchPlaceholder}
-            className="w-full rounded-full border border-surface-border bg-white py-3 pl-10 pr-4 text-sm placeholder:text-ink/40 focus:border-ink focus:outline-none focus:ring-2 focus:ring-ink/10"
+            className="w-full border border-surface-border bg-white py-3 pl-10 pr-4 text-sm placeholder:text-ink/40 focus:border-ink focus:outline-none focus:ring-2 focus:ring-ink/10"
           />
         </div>
         <p className="text-sm text-ink-soft">

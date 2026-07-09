@@ -24,10 +24,10 @@ export function StatLine({
           {stats.map((stat, i) => (
             <div
               key={stat.label}
-              className={`border-surface-border px-7 py-8 ${
-                i % 2 === 0 ? 'border-r' : 'md:border-r'
+              className={`border-surface-border px-5 py-6 md:px-7 md:py-8 ${
+                i % 2 === 0 ? 'max-md:border-r' : ''
               } ${i < 2 ? 'max-md:border-b' : ''} ${
-                i === stats.length - 1 ? 'md:border-r-0' : ''
+                i < stats.length - 1 ? 'md:border-r' : ''
               }`}
             >
               <b

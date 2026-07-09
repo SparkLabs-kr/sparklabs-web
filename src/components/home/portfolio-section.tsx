@@ -66,9 +66,9 @@ export async function PortfolioSection({ locale }: { locale: Locale }) {
   const t = await getTranslations('home.portfolio');
 
   return (
-    <section className="pb-24 md:pb-32" id="portfolio">
+    <section className="pb-16 md:pb-32" id="portfolio">
       <div className="container-narrow">
-        <Reveal className="mb-14 flex flex-wrap items-end justify-between gap-7">
+        <Reveal className="mb-10 flex flex-wrap items-end justify-between gap-7 md:mb-14">
           <div>
             <span className="eyebrow text-spark-pink">{t('label')}</span>
             <h2 className="mt-5 font-display text-display-lg">

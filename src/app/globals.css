@@ -42,7 +42,7 @@
   }
 
   .section {
-    @apply py-24 md:py-32;
+    @apply py-16 md:py-32;
   }
 
   /* Section label — Inter 600, wide tracking, colored per section (spark cycle) */

@@ -80,7 +80,7 @@ export default async function EntityDetailPage({
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-hero-navy text-white">
-        <div className="container-narrow relative py-20 md:py-24">
+        <div className="container-narrow relative py-14 md:py-24">
           <Link
             href="/about/entities"
             className="inline-flex items-center gap-1.5 text-sm text-white/70 hover:text-white"

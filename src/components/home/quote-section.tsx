@@ -22,9 +22,9 @@ export function QuoteSection({ locale }: { locale: Locale }) {
       id="stories"
     >
       <div className="container-narrow">
-        <Reveal className="mx-auto max-w-[820px] text-center">
+        <Reveal className="max-w-[820px] text-left md:mx-auto md:text-center">
           <span className="eyebrow text-spark-green">{t('label')}</span>
-          <blockquote className="mt-8 font-display text-[clamp(22px,3vw,34px)] font-semibold leading-[1.4] tracking-[-0.025em]">
+          <blockquote className="mt-6 font-display text-[clamp(20px,3vw,34px)] font-semibold leading-[1.45] tracking-[-0.025em] md:mt-8">
             &ldquo;{current.quote[locale]}&rdquo;
           </blockquote>
           <div className="mt-8">
@@ -35,7 +35,7 @@ export function QuoteSection({ locale }: { locale: Locale }) {
               {current.role[locale]}
             </span>
           </div>
-          <div className="mt-10 flex justify-center gap-2.5">
+          <div className="mt-10 flex justify-start gap-2.5 md:justify-center">
             <button
               type="button"
               aria-label={t('prev')}

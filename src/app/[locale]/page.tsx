@@ -68,7 +68,7 @@ export default async function Home({
       />
 
       {/* Flagship portfolio wordmarks */}
-      <div className="container-narrow pt-14">
+      <div className="container-narrow pt-10 md:pt-14">
         <div className="flex flex-wrap items-center justify-center gap-x-7 gap-y-3 md:justify-between">
           {heroLogos.map((name) => (
             <span

@@ -18,20 +18,21 @@ export async function PhilosophySection() {
   const pillars = [1, 2, 3] as const;
 
   return (
-    <section className="section text-center" id="about">
+    <section className="section text-left md:text-center" id="about">
       <div className="container-narrow">
         <Reveal as="span" className="eyebrow inline-block text-spark-orange">
           {t('label')}
         </Reveal>
         <Reveal
           as="p"
-          className="mx-auto mt-7 max-w-[860px] font-display text-[clamp(24px,3.4vw,42px)] font-semibold leading-[1.3] tracking-[-0.03em]"
+          className="mt-6 max-w-[860px] font-display text-[clamp(24px,3.4vw,42px)] font-semibold leading-[1.3] tracking-[-0.03em] md:mx-auto md:mt-7"
         >
-          {t('statement')}
-          <br />
-          <span className="font-normal text-muted">{t('statementThin')}</span>
+          {t('statement')}{' '}
+          <span className="font-normal text-muted md:block">
+            {t('statementThin')}
+          </span>
         </Reveal>
-        <div className="mt-20 grid gap-9 text-left md:mt-24 md:grid-cols-3 md:gap-12">
+        <div className="mt-12 grid gap-9 text-left md:mt-24 md:grid-cols-3 md:gap-12">
           {pillars.map((n, i) => (
             <Reveal
               key={n}

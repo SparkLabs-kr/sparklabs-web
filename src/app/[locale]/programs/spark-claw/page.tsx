@@ -33,7 +33,7 @@ export default async function SparkClawPage({
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-hero-navy text-white">
-        <div className="container-narrow relative py-20 md:py-28">
+        <div className="container-narrow relative py-14 md:py-28">
           <span className="inline-flex items-center gap-2 border border-spark-red/40 bg-spark-red/10 px-3 py-1 text-xs font-medium text-spark-red">
             <span className="h-1.5 w-1.5 rounded-full bg-spark-red animate-pulse" />
             {copy.badge}

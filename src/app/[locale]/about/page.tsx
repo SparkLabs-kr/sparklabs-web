@@ -31,7 +31,7 @@ export default async function AboutOverviewPage({
   return (
     <>
       <section className="relative overflow-hidden bg-hero-navy text-white">
-        <div className="container-narrow relative py-24 md:py-28">
+        <div className="container-narrow relative py-14 md:py-28">
           <span className="eyebrow !text-spark-yellow">About SparkLabs</span>
           <h1 className="mt-4 text-display-lg max-w-3xl leading-[1.05]">
             {copy.heroTitle}

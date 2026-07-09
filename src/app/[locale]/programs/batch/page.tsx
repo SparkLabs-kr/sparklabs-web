@@ -41,7 +41,7 @@ export default async function BatchProgramPage({
       {/* HERO */}
       <header className="bg-white">
         <div className="container-narrow">
-          <div className="grid items-center gap-12 pb-20 pt-16 md:pt-24 lg:grid-cols-[1fr_.9fr] lg:gap-16">
+          <div className="grid items-center gap-10 pb-14 pt-10 md:gap-12 md:pb-20 md:pt-24 lg:grid-cols-[1fr_.9fr] lg:gap-16">
             <div>
               <span className="eyebrow text-spark-pink">{copy.heroLabel}</span>
               <h1 className="mt-6 font-display text-[clamp(42px,5.8vw,74px)] font-extrabold leading-[1] tracking-[-0.045em]">
@@ -86,7 +86,7 @@ export default async function BatchProgramPage({
       {/* 4 PHASES */}
       <section className="section">
         <div className="container-narrow">
-          <Reveal className="mb-16 max-w-[640px] md:mb-20">
+          <Reveal className="mb-10 max-w-[640px] md:mb-20">
             <span className="eyebrow text-spark-orange">{copy.phasesLabel}</span>
             <h2 className="mt-5 font-display text-display-lg">
               {copy.phasesTitle}
@@ -101,7 +101,7 @@ export default async function BatchProgramPage({
             {copy.phases.map((phase, i) => (
               <Reveal
                 key={phase.name}
-                className="grid items-baseline gap-4 border-b border-surface-border px-1 py-10 transition-all duration-200 hover:bg-surface-subtle hover:pl-4 md:grid-cols-[110px_1fr_1.6fr] md:gap-10"
+                className="grid items-baseline gap-2.5 border-b border-surface-border px-1 py-7 transition-all duration-200 hover:bg-surface-subtle hover:pl-4 md:grid-cols-[110px_1fr_1.6fr] md:gap-10 md:py-10"
               >
                 <span
                   className={`font-display text-xs font-semibold tracking-[0.2em] ${phaseAccents[i]}`}
@@ -119,7 +119,7 @@ export default async function BatchProgramPage({
       </section>
 
       {/* WHAT YOU GET */}
-      <section className="border-y border-surface-border bg-surface-subtle py-24 md:py-32">
+      <section className="border-y border-surface-border bg-surface-subtle py-16 md:py-32">
         <div className="container-narrow">
           <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
             <Reveal>
@@ -162,7 +162,7 @@ export default async function BatchProgramPage({
       {/* HOW TO JOIN */}
       <section className="section">
         <div className="container-narrow">
-          <Reveal className="mb-16 max-w-[640px] md:mb-20">
+          <Reveal className="mb-10 max-w-[640px] md:mb-20">
             <span className="eyebrow text-spark-green">{copy.timelineLabel}</span>
             <h2 className="mt-5 font-display text-display-lg">
               {copy.timelineTitle}{' '}
@@ -173,7 +173,7 @@ export default async function BatchProgramPage({
             {copy.timeline.map((step, i) => (
               <Reveal
                 key={step.title}
-                className="grid items-baseline gap-4 border-b border-surface-border px-1 py-8 transition-all duration-200 hover:bg-surface-subtle hover:pl-4 md:grid-cols-[110px_1fr_1.6fr] md:gap-10"
+                className="grid items-baseline gap-2.5 border-b border-surface-border px-1 py-6 transition-all duration-200 hover:bg-surface-subtle hover:pl-4 md:grid-cols-[110px_1fr_1.6fr] md:gap-10 md:py-8"
               >
                 <span className="font-display text-[11.5px] font-semibold uppercase tracking-[0.22em] text-spark-blue">
                   Step 0{i + 1}
@@ -189,10 +189,10 @@ export default async function BatchProgramPage({
       </section>
 
       {/* FAQ */}
-      <section className="pb-24 md:pb-32">
+      <section className="pb-16 md:pb-32">
         <div className="container-narrow">
           <div className="max-w-[800px]">
-            <Reveal className="mb-14">
+            <Reveal className="mb-10 md:mb-14">
               <span className="eyebrow text-spark-pink">FAQ</span>
               <h2 className="mt-5 font-display text-display-lg">
                 {copy.faqTitle}{' '}
@@ -227,23 +227,23 @@ export default async function BatchProgramPage({
       </section>
 
       {/* CTA */}
-      <section className="bg-ink py-28 text-center text-white md:py-36">
+      <section className="bg-ink py-20 text-left text-white md:py-36 md:text-center">
         <div className="container-narrow">
           <Reveal as="span" className="eyebrow inline-block text-spark-orange">
             Batch Program
           </Reveal>
           <Reveal
             as="h2"
-            className="mx-auto mt-6 font-display text-[clamp(34px,5vw,62px)] font-extrabold leading-[1.05] tracking-[-0.04em]"
+            className="mt-6 font-display text-[clamp(32px,5vw,62px)] font-extrabold leading-[1.05] tracking-[-0.04em] md:mx-auto"
           >
             Your aha moment
             <br />
             <span className="font-normal text-white/55">starts here.</span>
           </Reveal>
-          <Reveal as="p" className="mx-auto mt-5 max-w-[440px] text-[16.5px] text-white/60">
+          <Reveal as="p" className="mt-5 max-w-[440px] text-[16.5px] text-white/60 md:mx-auto">
             {copy.ctaSub}
           </Reveal>
-          <Reveal className="mt-11 flex flex-wrap items-center justify-center gap-7">
+          <Reveal className="mt-10 flex flex-wrap items-center justify-start gap-x-7 gap-y-5 md:mt-11 md:justify-center">
             <a
               href={NEWSLETTER_URL}
               target="_blank"

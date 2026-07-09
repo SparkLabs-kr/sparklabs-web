@@ -8,7 +8,7 @@ export async function HeroSection() {
   return (
     <header className="bg-white">
       <div className="container-narrow">
-        <div className="grid items-center gap-12 pb-20 pt-16 md:pt-24 lg:grid-cols-[1.15fr_.85fr] lg:gap-16">
+        <div className="grid items-center gap-10 pb-14 pt-10 md:gap-12 md:pb-20 md:pt-24 lg:grid-cols-[1.15fr_.85fr] lg:gap-16">
           {/* Left: copy */}
           <div>
             <span className="eyebrow text-spark-pink">{t('label')}</span>

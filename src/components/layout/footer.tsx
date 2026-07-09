@@ -46,8 +46,8 @@ export async function Footer({ locale }: { locale: string }) {
 
   return (
     <footer className="mt-24 border-t border-surface-border bg-white">
-      <div className="container-narrow grid gap-11 py-20 md:grid-cols-[2fr_1fr_1fr_1fr_1fr]">
-        <div>
+      <div className="container-narrow grid grid-cols-2 gap-x-6 gap-y-10 py-14 md:grid-cols-[2fr_1fr_1fr_1fr_1fr] md:gap-11 md:py-20">
+        <div className="col-span-2 md:col-span-1">
           <Link href="/" aria-label="SparkLabs home" className="inline-flex">
             <SparkLogo variant="dark" height={26} className="h-[26px] w-auto" />
           </Link>
