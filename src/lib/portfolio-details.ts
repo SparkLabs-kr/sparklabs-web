@@ -7,6 +7,7 @@
 
 import { portfolio, type PortfolioCompany } from './portfolio';
 import { portfolioCompanies } from './portfolio-full';
+import { websiteBySlug } from './portfolio-websites';
 
 /** portfolio.ts slug → portfolio-full.ts slug (이름만 다른 동일 회사). */
 const slugAliases: Record<string, string> = {
@@ -60,6 +61,7 @@ function cleanDescription(text: string): string {
 export interface PortfolioDetail {
   company: PortfolioCompany;
   description: { ko: string; en: string };
+  website?: string;
 }
 
 export function getPortfolioDetail(slug: string): PortfolioDetail | undefined {
@@ -77,5 +79,6 @@ export function getPortfolioDetail(slug: string): PortfolioDetail | undefined {
       ko: cleanDescription(raw.ko),
       en: cleanDescription(raw.en),
     },
+    website: company.website ?? websiteBySlug[slugAliases[slug] ?? slug],
   };
 }

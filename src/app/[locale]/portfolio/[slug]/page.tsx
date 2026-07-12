@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
-import { ArrowLeft, ArrowUpRight } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Globe } from 'lucide-react';
 import { portfolio, categoryLabel, type PortfolioCompany } from '@/lib/portfolio';
 import { getPortfolioDetail } from '@/lib/portfolio-details';
 import { entities } from '@/lib/entities';
@@ -122,7 +122,7 @@ export default async function PortfolioDetailPage({
     notFound();
   }
 
-  const { company, description } = detail;
+  const { company, description, website } = detail;
   const copy = content[locale];
   const entityMeta = entities.find((e) => e.slug === company.entity);
   const accent = entityMeta?.accent ?? 'pink';
@@ -184,6 +184,19 @@ export default async function PortfolioDetailPage({
             ))}
           </div>
 
+          {website && (
+            <div className="mt-8">
+              <a
+                href={website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                <Globe className="h-4 w-4" /> {copy.visitWebsite}
+              </a>
+            </div>
+          )}
+
           {company.highlight && (
             <div className={`mt-8 max-w-2xl border-l-2 border-spark-${accent} bg-surface-subtle px-4 py-3`}>
               <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-ink/50">
@@ -243,7 +256,19 @@ export default async function PortfolioDetailPage({
             </>
           )}
 
-          <div className={related.length > 0 ? 'mt-12' : ''}>
+          <div
+            className={`flex flex-wrap gap-3${related.length > 0 ? ' mt-12' : ''}`}
+          >
+            {website && (
+              <a
+                href={website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-ghost-light"
+              >
+                <Globe className="h-4 w-4" /> {copy.visitWebsite}
+              </a>
+            )}
             <Link href="/portfolio" className="btn-ghost-light">
               {copy.browseAll} <ArrowUpRight className="h-4 w-4" />
             </Link>
@@ -257,6 +282,7 @@ export default async function PortfolioDetailPage({
 const content = {
   ko: {
     back: '전체 포트폴리오로',
+    visitWebsite: '웹사이트 방문',
     highlightLabel: '주요 이력',
     aboutEyebrow: 'About',
     aboutTitle: '회사 소개',
@@ -266,6 +292,7 @@ const content = {
   },
   en: {
     back: 'Back to Portfolio',
+    visitWebsite: 'Visit website',
     highlightLabel: 'Milestone',
     aboutEyebrow: 'About',
     aboutTitle: 'About the company',
