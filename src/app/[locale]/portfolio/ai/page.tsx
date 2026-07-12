@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { portfolio, type PortfolioCompany } from '@/lib/portfolio';
 import { entities } from '@/lib/entities';
 import { buildPageMetadata } from '@/lib/seo';
@@ -135,7 +135,10 @@ function AiSpotlightCard({
   const accent = entityMeta?.accent ?? 'violet';
 
   return (
-    <article className="flex h-full flex-col rounded-2xl border border-surface-border bg-white p-6 transition hover:-translate-y-0.5 hover:shadow-card">
+    <Link
+      href={`/portfolio/${company.slug}`}
+      className="group flex h-full flex-col border border-surface-border bg-white p-6 transition hover:-translate-y-0.5 hover:border-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-ink"
+    >
       <div className={`h-[3px] w-12 bg-spark-${accent}`} />
       <h3 className="mt-4 text-xl font-semibold text-ink">{company.name}</h3>
       <p className="mt-2 text-sm text-ink-soft leading-relaxed">
@@ -155,8 +158,9 @@ function AiSpotlightCard({
         <span className="border border-surface-border px-2 py-0.5">
           {entityMeta?.shortName ?? company.entity}
         </span>
+        <ArrowUpRight className="ml-auto h-4 w-4 text-ink/30 opacity-0 transition group-hover:opacity-100" />
       </div>
-    </article>
+    </Link>
   );
 }
 
