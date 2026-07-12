@@ -2,7 +2,8 @@
 
 import { useMemo, useState } from 'react';
 import Image from 'next/image';
-import { Search } from 'lucide-react';
+import { ArrowUpRight, Search } from 'lucide-react';
+import { Link } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
 import {
   portfolio,
@@ -170,7 +171,10 @@ function PortfolioCard({
   const entityMeta = entities.find((e) => e.slug === company.entity);
 
   return (
-    <article className="flex h-full flex-col rounded-2xl border border-surface-border bg-white p-6 transition hover:-translate-y-0.5 hover:shadow-card">
+    <Link
+      href={`/portfolio/${company.slug}`}
+      className="group flex h-full flex-col border border-surface-border bg-white p-6 transition hover:-translate-y-0.5 hover:border-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-ink"
+    >
       <div className="flex items-start justify-between gap-3">
         <div className="flex h-16 w-32 shrink-0 items-center justify-center overflow-hidden">
           {company.logoFile ? (
@@ -231,7 +235,8 @@ function PortfolioCard({
         <span className="border border-surface-border px-2 py-0.5">
           {entityMeta?.shortName ?? company.entity}
         </span>
+        <ArrowUpRight className="ml-auto h-4 w-4 text-ink/30 opacity-0 transition group-hover:opacity-100" />
       </div>
-    </article>
+    </Link>
   );
 }
